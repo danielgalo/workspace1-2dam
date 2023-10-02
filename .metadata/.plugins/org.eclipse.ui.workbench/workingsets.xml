@@ -6,14 +6,20 @@
 <item elementID="=di-evaluacion-inicial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud1-ejemplos" type="4"/>
+<item elementID="=psp-ud1-ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=psp-ud1-ac1.03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=psp-ud1-ac1.04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695885738022_6" label="Acceso a Datos" name="Acceso a Datos">
 <item elementID="=tarea1-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=tarea01-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1696240710560_7" label="Seguridad en Programacion" name="Seguridad en Programacion">
+<item elementID="=ud02-actividad2.01" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ud02-ejemplo-cifrado" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
+<mruList name="Seguridad en Programacion"/>
 <mruList name="Acceso a Datos"/>
 <mruList name="Programacion de Servicios y Procesos"/>
 <mruList name="Desarrollo de Interfaces"/>
