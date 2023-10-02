@@ -1,0 +1,30 @@
+package aadd.ud1.ej1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Ficheros {
+
+	public static void main(String[] args) {
+
+		PrintWriter salida = null;
+		
+		try {
+			salida = new PrintWriter(new FileWriter("prueba.txt"));
+			for (int i = 0; i < 100; i++) {
+				salida.println(i);
+			}
+		
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			
+			salida.close();
+			
+		}
+		
+		
+	}
+
+}

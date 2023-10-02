@@ -1,0 +1,10 @@
+package aadd.ud1.ej1;
+
+public class EmpleadosManagement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

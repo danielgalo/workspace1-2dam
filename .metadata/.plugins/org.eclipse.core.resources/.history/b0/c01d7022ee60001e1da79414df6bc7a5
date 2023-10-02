@@ -1,0 +1,11 @@
+package aadd.ud1.ej1;
+
+public class EmpleadosManagement {
+
+	public static void main(String[] args) {
+
+		BufferedReader buffer = null;
+		
+	}
+
+}

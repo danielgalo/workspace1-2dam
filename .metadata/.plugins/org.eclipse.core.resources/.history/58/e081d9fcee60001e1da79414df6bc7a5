@@ -1,0 +1,33 @@
+package aadd.ud1.ej1;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class EmpleadosManagement {
+
+	public static void main(String[] args) {
+
+		// Buffer para leer
+		BufferedReader buffer = null;
+
+		try {
+
+			// Inicio el buffer con el fichero a trabajar
+			buffer = new BufferedReader(new FileReader("empleados.txt"));
+
+			String line;
+			String[] employeeData = new String[3];
+
+			while ((line = buffer.readLine()) != null) {
+
+			}
+
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+
+	}
+
+}

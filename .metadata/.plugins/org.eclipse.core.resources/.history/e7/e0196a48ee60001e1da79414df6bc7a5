@@ -1,0 +1,16 @@
+package aadd.ud1.ej1;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class EmpleadosManagement {
+
+	public static void main(String[] args) {
+
+		BufferedReader buffer = null;
+
+		buffer = new BufferedReader(new FileReader("empleados.txt"));
+
+	}
+
+}

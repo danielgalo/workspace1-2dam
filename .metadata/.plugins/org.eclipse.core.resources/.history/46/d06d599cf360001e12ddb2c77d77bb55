@@ -1,0 +1,76 @@
+package utils;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import models.Empleado;
+
+public class UtilsFicheroArray {
+
+	public static void toArchivoTexto(List<Empleado> employeeList) {
+
+	}
+
+	/**
+	 * Creates a list of employees with the data from a text
+	 * 
+	 * @param args
+	 * @return
+	 */
+	public static List<Empleado> getEmployeeList(String[] args) {
+
+		// Buffer to read file
+		BufferedReader buffer;
+
+		// Line of the file
+		String line;
+
+		// Data of the employee
+		String[] employeeData;
+		String empEmpresa;
+		int empEdad;
+		int empNumEmps;
+
+		// Employee list
+		List<Empleado> employeeList = new ArrayList<Empleado>();
+
+		try {
+
+			// Inicio el buffer con el fichero a trabajar
+			buffer = new BufferedReader(new FileReader(args[0]));
+
+			// Read the file
+			while ((line = buffer.readLine()) != null) {
+
+				// Split words by coma
+				employeeData = line.split(",");
+
+				// Assing the data to the array
+				empEmpresa = employeeData[0];
+				empEdad = Integer.valueOf(employeeData[1]);
+				empNumEmps = Integer.valueOf(employeeData[2]);
+
+				// Create employee with the data
+				Empleado emp = new Empleado(empEmpresa, empEdad, empNumEmps);
+
+				// Add the employee to the list
+				employeeList.add(emp);
+			}
+
+		} catch (FileNotFoundException e) {
+
+			System.err.println("No se encontró el archivo." + e.getMessage());
+
+		} catch (IOException e) {
+
+			System.err.println("Error accediendo al archivo." + e.getMessage());
+		}
+
+		return employeeList;
+	}
+
+}

@@ -1,0 +1,27 @@
+package dgv.psp.ud1.ac1.ej3;
+
+public class EchoCommandLineOptional {
+
+	public static void main(String[] args) {
+
+		String[] defaultParams = new String[2];
+		defaultParams[0] = "parametro1";
+		defaultParams[1] = "parametro2";
+		
+		if (args.length < 2) {
+			System.err.println("Se necesitan al menos dos parámetros.");
+			return;
+		} else {
+			
+			int paramCount = 0;
+			
+			for (String param: args) {
+				paramCount++;
+				System.out.println("Parameter " + paramCount + " = " + param);
+			}		
+			
+		}
+		
+	}
+
+}

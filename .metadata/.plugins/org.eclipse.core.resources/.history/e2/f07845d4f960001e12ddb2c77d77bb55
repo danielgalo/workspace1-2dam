@@ -1,0 +1,17 @@
+package main;
+
+import java.util.List;
+
+import models.Empleado;
+import utils.UtilsFicheroArray;
+
+public class mainApp {
+
+	public static void main(String[] args) {
+
+		List<Empleado> lista = UtilsFicheroArray.getEmployeeList(args);
+		// UtilsFicheroArray.toArchivoTexto(lista);
+		UtilsFicheroArray.toArchivoBinarioInverso(lista);
+
+	}
+}

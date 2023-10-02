@@ -1,0 +1,13 @@
+package aadd.ud1.ej1;
+
+import java.io.BufferedReader;
+
+public class EmpleadosManagement {
+
+	public static void main(String[] args) {
+
+		BufferedReader buffer = null;
+
+	}
+
+}
