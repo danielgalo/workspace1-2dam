@@ -15,7 +15,7 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-public class CifraAESApp {
+public class DescifraAESApp {
 
 	private static byte[] SAL = { 21, 19, 8, 34, 40 };
 	private static final int ITERACIONES = 10;
@@ -38,10 +38,10 @@ public class CifraAESApp {
 		Parametro param = new Parametro(args);
 
 		// Cifrar el mensaje
-		String mensajeCifrado = cifraMensaje(param.getMensaje(), param.getPassword());
+		String mensajeCifrado = descifraMensaje(param.getMensaje(), param.getPassword());
 
 		// Mostrar el mensaje
-		System.out.println("Mensaje cifrado: " + mensajeCifrado);
+		System.out.println("Mensaje descifrado: " + mensajeCifrado);
 	}
 
 	/**
@@ -56,9 +56,12 @@ public class CifraAESApp {
 	 * @throws IllegalBlockSizeException
 	 * @throws InvalidKeySpecException
 	 */
-	private static String cifraMensaje(String mensaje, String password)
+	private static String descifraMensaje(String mensaje, String password)
 			throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException,
 			BadPaddingException, InvalidKeySpecException {
+
+		// Descodifica el mensaje de manera que sea legible
+		byte[] mensajeOriginal = Base64.getDecoder().decode(mensaje);
 
 		// Preparar clave (password a clave aes, obtener objeto secret key)
 		Key clave = preparaClave(password);
@@ -66,13 +69,12 @@ public class CifraAESApp {
 		/* Objeto Cipher para cifrar, iniciarlo y cifrar */
 		Cipher cifrador = Cipher.getInstance("AES");
 
-		cifrador.init(Cipher.ENCRYPT_MODE, clave);
+		cifrador.init(Cipher.DECRYPT_MODE, clave);
 
-		byte[] mensajeCifrado = cifrador.doFinal(mensaje.getBytes());
+		byte[] mensajeDescifrado = cifrador.doFinal(mensajeOriginal);
 
 		/* Pasar a base64 */
-		return Base64.getEncoder().encodeToString(mensajeCifrado);
-
+		return new String(mensajeDescifrado);
 	}
 
 	/**

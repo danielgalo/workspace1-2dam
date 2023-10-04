@@ -39,9 +39,11 @@
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
-		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Ejercicio03 - psp-ud1-ac1.04"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="psp-ud1-ac1.04\Ejercicio03.jar"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="DescifraAESApp - ud02-actividad2.01"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="ud02-actividad2.01\DescifraAES.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="ud02-actividad2.01\DescifraAES.jar"/>
+			<item value="ud02-actividad2.01/CifraAES.jar"/>
 			<item value="psp-ud1-ac1.04/Ejercicio03.jar"/>
 			<item value="C:\dev\Software\Eclipse\prueba-jar.jar"/>
 		</list>
