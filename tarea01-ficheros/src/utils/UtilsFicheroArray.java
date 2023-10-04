@@ -147,13 +147,14 @@ public class UtilsFicheroArray {
 
 		} catch (FileNotFoundException e) {
 
-			System.err.println("No se encontró el archivo." + e.getMessage());
+			System.err.println("File not found." + e.getMessage());
 
 		} catch (IOException e) {
 
-			System.err.println("Error accediendo al archivo." + e.getMessage());
+			System.err.println("Error accesing the file ." + e.getMessage());
 		}
 
+		// Print all employees data
 		for (Empleado e : employeeList) {
 			System.out.println("EMPLEADO");
 			System.out.println(e.toString());
@@ -188,7 +189,6 @@ public class UtilsFicheroArray {
 			}
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 
