@@ -11,7 +11,6 @@
 <item elementID="=psp-ud1-ac1.04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695885738022_6" label="Acceso a Datos" name="Acceso a Datos">
-<item elementID="=tarea1-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=tarea01-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1696240710560_7" label="Seguridad en Programacion" name="Seguridad en Programacion">

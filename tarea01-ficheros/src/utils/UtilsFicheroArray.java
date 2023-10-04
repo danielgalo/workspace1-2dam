@@ -7,12 +7,16 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
 import models.Empleado;
 
+/**
+ * Utility class to work with text and binary files
+ */
 public class UtilsFicheroArray {
 
 	/**
@@ -23,12 +27,15 @@ public class UtilsFicheroArray {
 	 */
 	public static void toArchivoTexto(List<Empleado> employeeList) {
 
+		// Printwriter object
 		PrintWriter writer = null;
 
 		try {
 
+			// Initialize printwriter with the file to work with
 			writer = new PrintWriter(new FileWriter("ficheros/datos.txt"));
 
+			// Print into the file toString method from all the employees in the list
 			for (Empleado e : employeeList) {
 				writer.println("EMPLEADO");
 				writer.println(e.toString());
@@ -36,33 +43,60 @@ public class UtilsFicheroArray {
 			}
 
 		} catch (IOException e) {
+
 			e.printStackTrace();
+
 		} finally {
-			writer.close();
+
+			// Close the writer if not null
+			if (writer != null) {
+				writer.close();
+			}
 		}
 
 	}
 
 	/**
-	 * Stores into a binary file all employees from given list
+	 * Stores into a binary file all employees from given list in reverse order
 	 * 
 	 * @param employeeList
 	 */
 	public static void toArchivoBinarioInverso(List<Empleado> employeeList) {
-		FileOutputStream fos = null;
+
+		ObjectOutputStream oos = null;
 
 		try {
+			// Output object with the file to work with
+			oos = new ObjectOutputStream(new FileOutputStream("ficheros/inverso.dat"));
 
-			fos = new FileOutputStream("ficheros/inverso.txt");
-
+			// Loop through the list in reverse order
 			for (int i = employeeList.size() - 1; i >= 0; i--) {
-				fos.write(employeeList.get(i).toString().getBytes());
+
+				// Write employee's data
+				oos.writeObject(employeeList.get(i).toString());
+
 			}
 
 		} catch (IOException e) {
 
 			e.printStackTrace();
+		} finally {
+
+			// Close output stream if not null
+			if (oos != null) {
+
+				try {
+
+					oos.close();
+
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+			}
+
 		}
+
 	}
 
 	/**
@@ -134,14 +168,42 @@ public class UtilsFicheroArray {
 	 * 
 	 * @param archivo
 	 */
-	public static void leerEmpleadosB(String archivo) {
+	public static void leerEmpleadosB(String pathToBinaryFile) {
 
 		FileInputStream fis = null;
 
 		try {
-			fis = new FileInputStream(archivo);
-		} catch (FileNotFoundException e) {
+
+			// File input we want to read
+			fis = new FileInputStream(pathToBinaryFile);
+
+			// byte readen
+			int readByte;
+
+			// if there is a byte to read, print it
+			while ((readByte = fis.read()) != -1) {
+
+				System.out.print((char) readByte);
+
+			}
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+
+			try {
+
+				// Close inputstream if not null
+				if (fis != null) {
+					fis.close();
+				}
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+
 		}
 
 	}

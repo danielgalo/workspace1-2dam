@@ -9,14 +9,21 @@ import java.util.Base64;
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-import javax.crypto.spec.SecretKeySpec;
 
 public class CifraAESApp {
 
+	/**
+	 * 
+	 * @param args
+	 * @throws InvalidKeyException
+	 * @throws NoSuchAlgorithmException
+	 * @throws NoSuchPaddingException
+	 * @throws IllegalBlockSizeException
+	 * @throws BadPaddingException
+	 * @throws InvalidKeySpecException
+	 */
 	public static void main(String[] args) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException,
 			IllegalBlockSizeException, BadPaddingException, InvalidKeySpecException {
 
@@ -64,14 +71,20 @@ public class CifraAESApp {
 
 	}
 
+	/**
+	 * 
+	 * @param password
+	 * @return
+	 * @throws InvalidKeySpecException
+	 * @throws NoSuchAlgorithmException
+	 */
 	private static Key preparaClave(String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
 
-		SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
-		PBEKeySpec spec = new PBEKeySpec(password.toCharArray());
-		SecretKey sk = factory.generateSecret(spec);
-		SecretKeySpec secret = new SecretKeySpec(sk.getEncoded(), "AES");
-
-		return factory.generateSecret(spec);
+		// Generador de claves, la instancio con AES
+		KeyGenerator kg = KeyGenerator.getInstance("AES");
+		// Inicio la clave
+		kg.init(128);
+		return kg.generateKey();
 	}
 
 }
