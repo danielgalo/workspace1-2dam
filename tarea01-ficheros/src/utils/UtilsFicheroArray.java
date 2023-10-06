@@ -181,7 +181,7 @@ public class UtilsFicheroArray {
 			// byte readen
 			int readByte;
 
-			// if there is a byte to read, print it
+			// if there is a byte to read, print its char value
 			while ((readByte = fis.read()) != -1) {
 
 				System.out.print((char) readByte);

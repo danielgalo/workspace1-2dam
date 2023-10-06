@@ -17,15 +17,19 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="utils.UtilsFicheroArray"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.security.Key"/>
-    <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
     <fullyQualifiedTypeName name="java.security.KeyFactory"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="javax.crypto.SecretKeyFactory"/>
-    <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
     <fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
     <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
     <fullyQualifiedTypeName name="java.util.Base64"/>
+    <fullyQualifiedTypeName name="java.security.Key"/>
+    <fullyQualifiedTypeName name="javax.crypto.SecretKeyFactory"/>
+    <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
+    <fullyQualifiedTypeName name="javax.crypto.CipherOutputStream"/>
+    <fullyQualifiedTypeName name="sp.ud02.pract02.Parametro"/>
+    <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="javax.crypto.CipherInputStream"/>
+    <fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
 </qualifiedTypeNameHistroy>
