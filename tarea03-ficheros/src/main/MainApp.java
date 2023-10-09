@@ -1,15 +1,14 @@
 package main;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +44,7 @@ public class MainApp {
 
 		// guardarEmpleados(listaEmpleados);
 
-		imprimirFicheroEmpleados(true);
+		imprimirFicheroEmpleados(false);
 
 	}
 
@@ -117,67 +116,57 @@ public class MainApp {
 
 	}
 
+	/**
+	 * Imprime los empleados por pantalla o en un fichero de texto de nombre
+	 * "empleados.txt", dependiendo del parámetro pasado. En el caso de imprimir en
+	 * el fichero, si no está creado, lo creará y guardará los empleados. Si ya está
+	 * creado, añadirá los nuevos empleados a los que ya hubiera. Los empleados se
+	 * guardarán siempre de uno en uno.
+	 * 
+	 * @param printPantalla
+	 */
 	public static void imprimirFicheroEmpleados(boolean printPantalla) {
 
-		String archivo = "empleados.dat";
+		String archivoBinario = "empleados.dat";
 
-		// Si se elige imprimir por pantalla
+		// Si se imprime por pantalla
 		if (printPantalla) {
 
-			try {
-
-				FileInputStream fis = new FileInputStream(archivo);
-				ObjectInputStream ois = new ObjectInputStream(fis);
-
-				Empleado emp;
-
-				while (ois.available() > 0) {
-
-					emp = (Empleado) ois.readObject();
-					System.out.println(emp);
-				}
-
-				fis.close();
-			} catch (FileNotFoundException e) {
-
-				e.printStackTrace();
-
-			} catch (IOException e) {
-
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			// Si se elige salida a fichero de texto
+			// Salida por fichero
 		} else {
 
-			PrintWriter writer = null;
+			File salida = new File("empleados.txt");
 
-			try {
+			if (salida.exists()) {
 
-				writer = new PrintWriter(new FileWriter("empleados.txt"));
+				// Si el archivo no existe
+			} else {
 
-				FileInputStream fis = new FileInputStream(archivo);
-				ObjectInputStream ois = new ObjectInputStream(fis);
+				try {
 
-				Empleado emp;
+					// Abrir archivo binario para leer
+					FileInputStream archivoEntrada = new FileInputStream(archivoBinario);
+					BufferedInputStream bufferEntrada = new BufferedInputStream(archivoEntrada);
 
-				while (ois.available() > 0) {
+					// Abir archivo de texto para escribir
+					FileWriter writer = new FileWriter(salida);
+					BufferedWriter bufferSalida = new BufferedWriter(writer);
 
-					emp = (Empleado) ois.readObject();
-					writer.print(emp);
+					int byteLeido;
+
+					while ((byteLeido = bufferEntrada.read()) != -1) {
+						char caracter = (char) byteLeido;
+						bufferSalida.write(caracter);
+					}
+
+					bufferEntrada.close();
+					bufferSalida.close();
+				} catch (IOException e) {
+
+					e.printStackTrace();
+
 				}
 
-				fis.close();
-				writer.close();
-			} catch (IOException e) {
-
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 
 		}
