@@ -13,10 +13,12 @@ public class PruebaProcesos {
 		ProcessBuilder builder2 = new ProcessBuilder("comando/programa parámetros");
 		ProcessBuilder builder3 = new ProcessBuilder("comando/programa", "parámetro", "parámetro");
 
-		ProcessBuilder builder = new ProcessBuilder("java", "bin\\com\\example\\ProcesoHijo");
+		ProcessBuilder builder = new ProcessBuilder("xcopy", "origen.txt", "destinoooo.txt");
 
 		// hijo del builder1
 		Process proceso = builder.start();
+
+		System.out.println(builder.command());
 
 	}
 

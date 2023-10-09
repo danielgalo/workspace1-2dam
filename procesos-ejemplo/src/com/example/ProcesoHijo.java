@@ -4,8 +4,8 @@ public class ProcesoHijo {
 
 	public static void main(String[] args) {
 
-		while (true) {
-
+		for (int i = 0; i < 500000; i++) {
+			System.out.println(i);
 		}
 
 	}
