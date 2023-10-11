@@ -5,7 +5,7 @@ public class Producto {
 	private String nombre;
 	private double precioUnidad;
 	private boolean perecedero;
-	
+
 	/**
 	 * @param nombre
 	 * @param precioUnidad
@@ -17,7 +17,21 @@ public class Producto {
 		setNombre(nombre);
 		setPrecioUnidad(precioUnidad);
 		setPerecedero(perecedero);
-		
+
+	}
+
+	public String getDatosProducto() {
+
+		String perecederoStr;
+
+		if (perecedero) {
+			perecederoStr = "Sí";
+		} else {
+			perecederoStr = "No";
+		}
+
+		return "Nombre : " + getNombre() + " | Precio unitario: " + getPrecioUnidad() + " | Perecedero: "
+				+ perecederoStr;
 	}
 
 	/**
@@ -61,7 +75,5 @@ public class Producto {
 	public void setPerecedero(boolean perecedero) {
 		this.perecedero = perecedero;
 	}
-	
-	
-	
+
 }

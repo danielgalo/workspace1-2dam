@@ -24,7 +24,7 @@ public class AltaCliente extends JDialog {
 	private JTextField txtApellidos;
 	private JTextField txtEdad;
 	private JButton btnAlta;
-	private JComboBox cboxProvincia;
+	private JComboBox<?> cboxProvincia;
 	private JButton btnVolver;
 	private PantallaPrincipal pantallaPrincipal;
 	private JLabel lblInfoClienteAlta;
@@ -32,6 +32,7 @@ public class AltaCliente extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
+
 	public AltaCliente(PantallaPrincipal padre, boolean modal) {
 
 		pantallaPrincipal = padre;
@@ -40,43 +41,20 @@ public class AltaCliente extends JDialog {
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Nombre del cliente:");
-		lblNewLabel.setBounds(10, 11, 124, 14);
-		getContentPane().add(lblNewLabel);
+		initializeLabels();
 
-		JLabel lblApellidosDelCliente = new JLabel("Apellidos del cliente:");
-		lblApellidosDelCliente.setBounds(10, 36, 124, 14);
-		getContentPane().add(lblApellidosDelCliente);
+		initializeTextFields();
 
-		JLabel lblEdadElCliente = new JLabel("Edad el cliente:");
-		lblEdadElCliente.setBounds(10, 61, 124, 14);
-		getContentPane().add(lblEdadElCliente);
+		initializeComboBoxes();
 
-		txtNombre = new JTextField();
-		txtNombre.setBounds(179, 8, 245, 20);
-		getContentPane().add(txtNombre);
-		txtNombre.setColumns(10);
+		initializeButtons();
 
-		txtApellidos = new JTextField();
-		txtApellidos.setColumns(10);
-		txtApellidos.setBounds(179, 33, 245, 20);
-		getContentPane().add(txtApellidos);
+	}
 
-		txtEdad = new JTextField();
-		txtEdad.setColumns(10);
-		txtEdad.setBounds(179, 58, 245, 20);
-		getContentPane().add(txtEdad);
-
-		cboxProvincia = new JComboBox();
-		cboxProvincia.setModel(new DefaultComboBoxModel(
-				new String[] { "Málaga", "Granada", "Sevilla", "Córdoba", "Cádiz", "Huelva", "Jaén", "Almería" }));
-		cboxProvincia.setBounds(179, 89, 245, 22);
-		getContentPane().add(cboxProvincia);
-
-		JLabel lblProvincia = new JLabel("Provincia");
-		lblProvincia.setBounds(10, 93, 124, 14);
-		getContentPane().add(lblProvincia);
-
+	/**
+	 * Inicia los botones
+	 */
+	private void initializeButtons() {
 		btnAlta = new JButton("Dar de alta");
 		btnAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -96,6 +74,55 @@ public class AltaCliente extends JDialog {
 		});
 		btnVolver.setBounds(10, 227, 89, 23);
 		getContentPane().add(btnVolver);
+	}
+
+	/**
+	 * Inicia los combo boxes
+	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private void initializeComboBoxes() {
+		cboxProvincia = new JComboBox();
+		cboxProvincia.setModel(new DefaultComboBoxModel(
+				new String[] { "Málaga", "Granada", "Sevilla", "Córdoba", "Cádiz", "Huelva", "Jaén", "Almería" }));
+		cboxProvincia.setBounds(179, 89, 245, 22);
+		getContentPane().add(cboxProvincia);
+	}
+
+	/**
+	 * Inicia los text fields
+	 */
+	private void initializeTextFields() {
+		txtNombre = new JTextField();
+		txtNombre.setBounds(179, 8, 245, 20);
+		getContentPane().add(txtNombre);
+		txtNombre.setColumns(10);
+
+		txtApellidos = new JTextField();
+		txtApellidos.setColumns(10);
+		txtApellidos.setBounds(179, 33, 245, 20);
+		getContentPane().add(txtApellidos);
+
+		txtEdad = new JTextField();
+		txtEdad.setColumns(10);
+		txtEdad.setBounds(179, 58, 245, 20);
+		getContentPane().add(txtEdad);
+	}
+
+	/**
+	 * Inicia los labels
+	 */
+	private void initializeLabels() {
+		JLabel lblNewLabel = new JLabel("Nombre del cliente:");
+		lblNewLabel.setBounds(10, 11, 124, 14);
+		getContentPane().add(lblNewLabel);
+
+		JLabel lblApellidosDelCliente = new JLabel("Apellidos del cliente:");
+		lblApellidosDelCliente.setBounds(10, 36, 124, 14);
+		getContentPane().add(lblApellidosDelCliente);
+
+		JLabel lblEdadElCliente = new JLabel("Edad el cliente:");
+		lblEdadElCliente.setBounds(10, 61, 124, 14);
+		getContentPane().add(lblEdadElCliente);
 
 		lblInfoClienteAlta = new JLabel(" ");
 		lblInfoClienteAlta.setBounds(10, 150, 414, 14);
@@ -104,8 +131,14 @@ public class AltaCliente extends JDialog {
 		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
+		JLabel lblProvincia = new JLabel("Provincia");
+		lblProvincia.setBounds(10, 93, 124, 14);
+		getContentPane().add(lblProvincia);
 	}
 
+	/**
+	 * Acciones realizadas al pulsar el botón de volver
+	 */
 	protected void btnVolverPressed() {
 
 		pantallaPrincipal.actualizaTextAreaClientes();

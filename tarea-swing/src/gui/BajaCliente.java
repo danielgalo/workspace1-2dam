@@ -26,29 +26,24 @@ public class BajaCliente extends JDialog {
 	 * Create the dialog.
 	 */
 	public BajaCliente(PantallaPrincipal padre, boolean modal) {
+
 		pantallaPrincipal = padre;
 		setTitle("Baja cliente");
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Nombre del cliente a eliminar:");
-		lblNewLabel.setBounds(10, 11, 182, 14);
-		getContentPane().add(lblNewLabel);
+		initializeLabels();
 
-		JLabel lblApellidosDelCliente = new JLabel("Apellidos del cliente a eliminar:");
-		lblApellidosDelCliente.setBounds(10, 36, 182, 14);
-		getContentPane().add(lblApellidosDelCliente);
+		initializeTextFields();
 
-		txtNombreElim = new JTextField();
-		txtNombreElim.setBounds(202, 8, 222, 20);
-		getContentPane().add(txtNombreElim);
-		txtNombreElim.setColumns(10);
+		initializeButtons();
 
-		txtApellidoElim = new JTextField();
-		txtApellidoElim.setColumns(10);
-		txtApellidoElim.setBounds(202, 33, 222, 20);
-		getContentPane().add(txtApellidoElim);
+	}
 
+	/**
+	 * Inicia los botones
+	 */
+	private void initializeButtons() {
 		btnEliminar = new JButton("Eliminar");
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -70,26 +65,62 @@ public class BajaCliente extends JDialog {
 		});
 		btnVolver.setBounds(10, 227, 89, 23);
 		getContentPane().add(btnVolver);
+	}
+
+	/**
+	 * Inicia los text fields
+	 */
+	private void initializeTextFields() {
+		txtNombreElim = new JTextField();
+		txtNombreElim.setBounds(202, 8, 222, 20);
+		getContentPane().add(txtNombreElim);
+		txtNombreElim.setColumns(10);
+
+		txtApellidoElim = new JTextField();
+		txtApellidoElim.setColumns(10);
+		txtApellidoElim.setBounds(202, 33, 222, 20);
+		getContentPane().add(txtApellidoElim);
+	}
+
+	/**
+	 * Inicia los labels
+	 */
+	private void initializeLabels() {
+		JLabel lblNewLabel = new JLabel("Nombre del cliente a eliminar:");
+		lblNewLabel.setBounds(10, 11, 182, 14);
+		getContentPane().add(lblNewLabel);
+
+		JLabel lblApellidosDelCliente = new JLabel("Apellidos del cliente a eliminar:");
+		lblApellidosDelCliente.setBounds(10, 36, 182, 14);
+		getContentPane().add(lblApellidosDelCliente);
 
 		lblInfoClienteElim = new JLabel("  ");
 		lblInfoClienteElim.setBounds(10, 108, 414, 14);
 		getContentPane().add(lblInfoClienteElim);
-
 	}
 
+	/**
+	 * Acciones realizadas al presionar el botón de volver
+	 */
 	protected void btnVolverPressed() {
 		pantallaPrincipal.vaciaTextAreaClientes();
 		pantallaPrincipal.actualizaTextAreaClientes();
 		setVisible(false);
 	}
 
+	/**
+	 * Acciones realizadas al presionar el botón de eliminar clientes
+	 */
 	protected void btnEliminaClientePressed() {
 
 		darBajaCliente();
-		pantallaPrincipal.actualizaTextAreaClientes();
 
 	}
 
+	/**
+	 * Da de baja a un cliente de la lista de clientes, tomando como referencia sus
+	 * nombres y apellidos
+	 */
 	private void darBajaCliente() {
 
 		String nombreEliminar = txtNombreElim.getText();
