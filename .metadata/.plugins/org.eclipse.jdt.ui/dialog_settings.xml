@@ -4,9 +4,10 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-17"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1\di-evaluacion-inicial\lib"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea01-jdbc\lib"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Tareas\HLC\hlc-ud02-ac203"/>
 	<list key="workingset_selection_history">
-		<item value="Acceso a Datos"/>
+		<item value="Seguridad en Programacion"/>
 	</list>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
