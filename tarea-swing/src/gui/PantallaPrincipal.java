@@ -1,15 +1,17 @@
 package gui;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
@@ -46,6 +48,7 @@ public class PantallaPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -54,7 +57,8 @@ public class PantallaPrincipal extends JFrame {
 		initializeMenu();
 
 		JLabel lblNewLabel = new JLabel("Información de clientes");
-		lblNewLabel.setBounds(10, 44, 143, 14);
+		lblNewLabel.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		lblNewLabel.setBounds(10, 44, 188, 14);
 		contentPane.add(lblNewLabel);
 
 		initializeTextAreaClientes();
@@ -66,26 +70,20 @@ public class PantallaPrincipal extends JFrame {
 	 * Initializes all the buttons
 	 */
 	private void initializeButtons() {
-		JButton btnNewButton = new JButton("Ver productos");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				btnVerProductosPressed();
-
-			}
-		});
-		btnNewButton.setBounds(150, 227, 128, 23);
-		contentPane.add(btnNewButton);
 	}
 
 	/**
 	 * Inicia el textArea
 	 */
 	private void initializeTextAreaClientes() {
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 69, 414, 181);
+		contentPane.add(scrollPane);
 		textAreaClientes = new JTextArea();
+		textAreaClientes.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+		scrollPane.setViewportView(textAreaClientes);
 		textAreaClientes.setEditable(false);
-		textAreaClientes.setBounds(10, 69, 414, 125);
-		contentPane.add(textAreaClientes);
 	}
 
 	/**
@@ -93,6 +91,7 @@ public class PantallaPrincipal extends JFrame {
 	 */
 	private void initializeMenu() {
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBackground(new Color(255, 255, 255));
 		menuBar.setBounds(10, 11, 143, 22);
 		contentPane.add(menuBar);
 

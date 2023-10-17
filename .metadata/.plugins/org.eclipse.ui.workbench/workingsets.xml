@@ -3,28 +3,29 @@
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021285504_0" label="Java Main Sources" name="Java Main Sources"/>
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021285512_1" label="Java Test Sources" name="Java Test Sources"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695106047511_3" label="Desarrollo de Interfaces" name="Desarrollo de Interfaces">
-<item elementID="=di-evaluacion-inicial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=tarea-swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-evaluacion-inicial" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Swing" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tarea-swing" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
 <item elementID="=psp-ud1-ejemplos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=psp-ud1-ac1.03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=psp-ud1-ac1.04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=procesos-ejemplo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=psp-ac105" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695885738022_6" label="Acceso a Datos" name="Acceso a Datos">
-<item elementID="=tarea01-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=tarea03-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=aadd-tarea01-jdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tarea01-ficheros" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tarea03-ficheros" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-tarea01-jdbc" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1696240710560_7" label="Seguridad en Programacion" name="Seguridad en Programacion">
-<item elementID="=ud02-actividad2.01" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ud02-ejemplo-cifrado" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ud02-practica02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=ejemplo-asimetrica" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=hlc-ud02-ac204" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=hlc-ud02-ac203" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ud02-actividad2.01" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ud02-ejemplo-cifrado" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ud02-practica02" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ejemplo-asimetrica" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-ac204" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-ac203" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>

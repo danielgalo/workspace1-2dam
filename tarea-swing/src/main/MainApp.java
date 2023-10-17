@@ -2,6 +2,9 @@ package main;
 
 import gui.PantallaPrincipal;
 
+/**
+ * Clase principal para arrancar
+ */
 public class MainApp {
 
 	/**

@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class PantallaSecundaria extends JDialog {
@@ -44,6 +46,13 @@ public class PantallaSecundaria extends JDialog {
 		txtNombre.setBounds(165, 8, 184, 20);
 		getContentPane().add(txtNombre);
 		txtNombre.setColumns(10);
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(40, 75, 326, 120);
+		getContentPane().add(scrollPane);
+
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
 
 	}
 
