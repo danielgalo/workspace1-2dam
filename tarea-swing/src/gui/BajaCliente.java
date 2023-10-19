@@ -1,11 +1,14 @@
 package gui;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import dto.Cliente;
@@ -26,6 +29,7 @@ public class BajaCliente extends JDialog {
 	 * Create the dialog.
 	 */
 	public BajaCliente(PantallaPrincipal padre, boolean modal) {
+		getContentPane().setBackground(new Color(255, 255, 128));
 
 		pantallaPrincipal = padre;
 		setTitle("Baja cliente");
@@ -45,6 +49,7 @@ public class BajaCliente extends JDialog {
 	 */
 	private void initializeButtons() {
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setFont(new Font("Segoe UI", Font.PLAIN, 11));
 		btnEliminar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -56,6 +61,7 @@ public class BajaCliente extends JDialog {
 		getContentPane().add(btnEliminar);
 
 		btnVolver = new JButton("Volver");
+		btnVolver.setFont(new Font("Segoe UI", Font.PLAIN, 11));
 		btnVolver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -87,14 +93,17 @@ public class BajaCliente extends JDialog {
 	 */
 	private void initializeLabels() {
 		JLabel lblNewLabel = new JLabel("Nombre del cliente a eliminar:");
+		lblNewLabel.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		lblNewLabel.setBounds(10, 11, 182, 14);
 		getContentPane().add(lblNewLabel);
 
 		JLabel lblApellidosDelCliente = new JLabel("Apellidos del cliente a eliminar:");
+		lblApellidosDelCliente.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		lblApellidosDelCliente.setBounds(10, 36, 182, 14);
 		getContentPane().add(lblApellidosDelCliente);
 
 		lblInfoClienteElim = new JLabel("  ");
+		lblInfoClienteElim.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		lblInfoClienteElim.setBounds(10, 108, 414, 14);
 		getContentPane().add(lblInfoClienteElim);
 	}
@@ -127,6 +136,7 @@ public class BajaCliente extends JDialog {
 		String apellidosEliminar = txtApellidoElim.getText();
 
 		ClienteManagement.eliminaClientes(nombreEliminar, apellidosEliminar);
+		JOptionPane.showMessageDialog(null, "Cliente eliminado.");
 
 	}
 }

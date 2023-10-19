@@ -184,7 +184,7 @@ public class AltaProducto extends JDialog {
 
 		ProductoManagement.addProducto(producto);
 
-		lblInfo.setText("Producto dado de alta: ");
+		lblInfo.setText("Producto dado de alta: " + producto.getDatosProducto());
 
 	}
 }

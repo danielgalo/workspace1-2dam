@@ -22,8 +22,10 @@ public class ClienteManagement {
 			if (listaClientes.get(i).getNombre().equalsIgnoreCase(nombreEliminar)
 					&& listaClientes.get(i).getApellidos().equalsIgnoreCase(apellidosEliminar)) {
 				listaClientes.remove(i);
+
 			}
 		}
+
 	}
 
 }

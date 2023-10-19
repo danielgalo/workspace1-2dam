@@ -5,7 +5,8 @@
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea01-jdbc\lib"/>
-	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Tareas\HLC\hlc-ud02-ac203"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac106"/>
+	<item key="filters_last_used" value="filter_imports;"/>
 	<list key="workingset_selection_history">
 		<item value="Programacion de Servicios y Procesos"/>
 	</list>
@@ -35,6 +36,10 @@
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="renameSubpackages" value="false"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
 	</section>
 	<section name="FatJarPackageWizard">
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
@@ -90,7 +95,7 @@
 	</section>
 	<section name="ExtractMethodWizard">
 		<item key="ThrowRuntimeExceptions" value="false"/>
-		<item key="GenerateJavadoc" value="false"/>
+		<item key="GenerateJavadoc" value="true"/>
 		<item key="AccessModifier" value="2"/>
 	</section>
 	<section name="WorkingSetModelAwareSelectionDialog">
@@ -108,5 +113,21 @@
 		</section>
 	</section>
 	<section name="BreadcrumbItemDropDown">
+	</section>
+	<section name="SourceActionDialog.constructors">
+		<item key="VisibilityModifier" value="1"/>
+		<item key="FinalModifier" value="false"/>
+		<item key="SynchronizedModifier" value="false"/>
+		<item key="Comments" value="true"/>
+	</section>
+	<section name="GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="OmitCallToSuper" value="true"/>
+	</section>
+	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="285"/>
+		<item key="DIALOG_Y_ORIGIN" value="71"/>
+		<item key="DIALOG_WIDTH" value="517"/>
+		<item key="DIALOG_HEIGHT" value="678"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>
