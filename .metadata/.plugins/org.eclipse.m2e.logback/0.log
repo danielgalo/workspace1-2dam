@@ -2038,3 +2038,171 @@ org.eclipse.core.runtime.CoreException: Launch configuration SakilaMain referenc
 2023-10-19 13:53:39,841 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
 2023-10-19 13:53:39,842 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-10-19 13:53:39,843 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:53:53,691 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:53:53,691 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:53:53,692 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:53:53,692 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:55:25,692 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:55:25,692 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:55:25,693 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:55:25,693 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:55:34,906 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:55:34,906 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:55:34,908 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:55:34,908 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:56:00,433 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:56:00,434 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:56:00,435 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:56:00,435 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:57:05,108 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:57:05,108 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:57:05,110 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:57:05,110 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 13:57:18,896 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:57:18,896 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 13:57:18,897 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 13:57:18,897 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:02:43,131 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:02:43,131 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:02:43,133 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:02:43,133 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:03:26,757 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:03:26,757 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:03:26,758 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:03:26,759 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:03:40,622 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:03:40,623 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:03:40,624 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:03:40,624 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:04:13,728 [Worker-56: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:04:13,729 [Worker-56: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:04:13,731 [Worker-56: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:04:13,732 [Worker-56: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:06:56,218 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:06:56,218 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:06:56,219 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:06:56,219 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:07:07,645 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:07,645 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:07:07,646 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:07,646 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:07:13,820 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:13,821 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:07:13,822 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:13,822 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:07:25,042 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:25,043 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:07:25,044 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:07:25,044 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:08:12,425 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:08:12,425 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:08:12,426 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:08:12,427 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:09:03,500 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:09:03,501 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:09:03,503 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:09:03,503 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:09:35,572 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:09:35,573 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:09:35,574 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:09:35,574 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:11:05,229 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:05,229 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:11:05,230 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:05,231 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:11:21,188 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:21,188 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:11:21,190 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:21,190 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:11:29,215 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:29,215 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:11:29,216 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:11:29,216 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:12:38,284 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:12:38,284 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:12:38,285 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:12:38,285 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:16:15,236 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:15,236 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:16:15,238 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:15,238 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:16:39,470 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:39,470 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:16:39,472 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:39,472 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:16:45,770 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:45,770 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:16:45,771 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:16:45,771 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:17:18,810 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:17:18,811 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:17:18,812 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:17:18,812 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:18:30,565 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:18:30,565 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:18:30,568 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:18:30,568 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:19:35,602 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:19:35,602 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:19:35,604 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:19:35,604 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:20:20,907 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:20,908 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:20:20,909 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:20,910 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:20:34,963 [Worker-58: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:34,963 [Worker-58: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:20:34,964 [Worker-58: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:34,964 [Worker-58: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:20:42,692 [Worker-65: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:42,692 [Worker-65: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:20:42,693 [Worker-65: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:20:42,693 [Worker-65: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:21:17,293 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:17,293 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:21:17,294 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:17,295 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:21:29,000 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:29,000 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:21:29,001 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:29,001 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:21:30,873 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:30,874 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:21:30,875 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:21:30,875 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:22:59,019 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:22:59,019 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:22:59,020 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:22:59,021 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:23:48,252 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:23:48,252 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:23:48,253 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:23:48,253 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:24:00,689 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:24:00,689 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:24:00,690 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:24:00,690 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:26:27,489 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:26:27,490 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:26:27,492 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:26:27,492 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:26:52,610 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:26:52,610 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:26:52,611 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:26:52,612 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:28:43,148 [Worker-70: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:28:43,148 [Worker-70: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:28:43,149 [Worker-70: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:28:43,149 [Worker-70: Launching PantallaPrincipal (2)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:29:54,695 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:29:54,696 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:29:54,700 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:29:54,700 [Worker-71: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:30:10,573 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:30:10,573 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:30:10,574 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:30:10,575 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources
+2023-10-19 14:30:17,598 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:30:17,598 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\main\resources
+2023-10-19 14:30:17,599 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-10-19 14:30:17,599 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea03-jdbc\src\test\resources

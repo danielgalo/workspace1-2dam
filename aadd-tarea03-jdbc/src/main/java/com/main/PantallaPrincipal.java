@@ -14,7 +14,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
-import dto.Pelicula;
 import utils.SakilaManagement;
 
 public class PantallaPrincipal {
@@ -32,7 +31,7 @@ public class PantallaPrincipal {
 	private JTextArea txtACosteReemplazo;
 	private JTextArea txtARating;
 	private JTextArea txtACaract;
-	private JTextArea txt_UltimaAct;
+	private JTextArea txtAUltimaAct;
 	private JButton btnPrimero;
 	private JButton btnAnterior;
 	private JButton btnSiguiente;
@@ -41,6 +40,7 @@ public class PantallaPrincipal {
 	private JButton btnGuardar;
 
 	private static ResultSet peliculas;
+	private static SakilaManagement sm;
 
 	/**
 	 * Launch the application.
@@ -64,10 +64,6 @@ public class PantallaPrincipal {
 	public PantallaPrincipal() {
 		initialize();
 
-		SakilaManagement sm = new SakilaManagement();
-
-		sm.getAllPeliculas();
-
 	}
 
 	/**
@@ -83,25 +79,60 @@ public class PantallaPrincipal {
 
 		iniciaBotones();
 
-		iniciaPelicula();
+		sm = new SakilaManagement();
+
+		sm.getAllPeliculas();
+
+		peliculas = sm.getResultSetPeliculas();
+		siguientePelicula();
 
 	}
 
-	private void iniciaPelicula() {
+	private void siguientePelicula() {
+
+		try {
+			if (peliculas.next()) {
+				setCampos();
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
 	}
 
 	/**
-	 * @return
+	 * Rellena las text areas con datos del ResultSet de peliculas
+	 * 
 	 * @throws SQLException
 	 */
-	private Pelicula getPelicula() throws SQLException {
-		return new Pelicula(peliculas.getInt("film_id"), peliculas.getString("title"),
-				peliculas.getString("description"), peliculas.getInt("release_year"), peliculas.getInt("language_id"),
-				peliculas.getInt("original_language_id"), peliculas.getInt("rental_duration"),
-				peliculas.getDouble("rental_rate"), peliculas.getInt("length"), peliculas.getDouble("replacement_cost"),
-				peliculas.getString("rating"), peliculas.getString("special_features"),
-				peliculas.getString("last_update"));
+	private void setCampos() throws SQLException {
+		txtAId.setText(String.valueOf(peliculas.getInt("film_id")));
+		txtATitulo.setText(peliculas.getString("title"));
+		txtADesc.setText(peliculas.getString("description"));
+		txtALanzam.setText(String.valueOf(peliculas.getInt("release_year")));
+		txtAIDIdioma.setText(String.valueOf(peliculas.getInt("language_id")));
+		txtAIDIdiomaOrig.setText(String.valueOf(peliculas.getInt("original_language_id")));
+		txtADuracionAlq.setText(String.valueOf(peliculas.getInt("rental_duration")));
+		txtACosteAlq.setText(String.valueOf(peliculas.getDouble("rental_rate")));
+		txtADuracionPeli.setText(String.valueOf(peliculas.getInt("length")));
+		txtACosteReemplazo.setText(String.valueOf(peliculas.getDouble("replacement_cost")));
+		txtARating.setText(peliculas.getString("rating"));
+		txtACaract.setText(peliculas.getString("special_features"));
+		txtAUltimaAct.setText(peliculas.getString("last_update"));
+
+	}
+
+	private void peliculaAnterior() {
+
+		try {
+			if (peliculas.previous()) {
+				setCampos();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	/**
@@ -169,9 +200,9 @@ public class PantallaPrincipal {
 		txtACaract.setBounds(225, 414, 397, 22);
 		frmPelculas.getContentPane().add(txtACaract);
 
-		txt_UltimaAct = new JTextArea();
-		txt_UltimaAct.setBounds(225, 447, 397, 22);
-		frmPelculas.getContentPane().add(txt_UltimaAct);
+		txtAUltimaAct = new JTextArea();
+		txtAUltimaAct.setBounds(225, 447, 397, 22);
+		frmPelculas.getContentPane().add(txtAUltimaAct);
 	}
 
 	/**
@@ -190,7 +221,7 @@ public class PantallaPrincipal {
 		btnAnterior.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				// cambiaPelicula(-1);
+				peliculaAnterior();
 
 			}
 		});
@@ -201,7 +232,7 @@ public class PantallaPrincipal {
 		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				// cambiaPelicula(+1);
+				siguientePelicula();
 
 			}
 		});

@@ -13,6 +13,11 @@ import dto.Pelicula;
 public class SakilaManagement {
 
 	private ResultSet resultSetPeliculas;
+	private Connection con;
+
+	public SakilaManagement() {
+		con = Conexion.conectar();
+	}
 
 	/**
 	 * Saca todas las películas de la tabla film a una lista de objetos Pelicula
@@ -22,11 +27,11 @@ public class SakilaManagement {
 	public void getAllPeliculas() {
 
 		// List<Pelicula> peliculas = new ArrayList<Pelicula>();
-		Connection con = Conexion.conectar();
+
 		String select = "SELECT * FROM film";
 		try {
 
-			Statement sentencia = con.createStatement(ResultSet.FETCH_FORWARD, ResultSet.FETCH_REVERSE);
+			Statement sentencia = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			resultSetPeliculas = sentencia.executeQuery(select);
 
 			/*
@@ -47,10 +52,6 @@ public class SakilaManagement {
 		} catch (SQLException e) {
 
 			e.printStackTrace();
-
-		} finally {
-
-			closeConnection(con);
 
 		}
 
@@ -111,7 +112,7 @@ public class SakilaManagement {
 	 * 
 	 * @param con
 	 */
-	private static void closeConnection(Connection con) {
+	public void closeConnection() {
 		try {
 			con.close();
 		} catch (SQLException e) {
