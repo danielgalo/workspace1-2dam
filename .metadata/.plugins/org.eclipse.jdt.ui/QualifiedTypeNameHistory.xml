@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="aadd.ud1.ej1.EmpleadosManagement"/>
-    <fullyQualifiedTypeName name="utils.UtilsFicheroArray"/>
-    <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.security.KeyFactory"/>
     <fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
     <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
     <fullyQualifiedTypeName name="java.util.Base64"/>
@@ -16,9 +7,7 @@
     <fullyQualifiedTypeName name="javax.crypto.spec.PBEKeySpec"/>
     <fullyQualifiedTypeName name="javax.crypto.CipherOutputStream"/>
     <fullyQualifiedTypeName name="sp.ud02.pract02.Parametro"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="javax.crypto.CipherInputStream"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="utils.MyObjectOutPutStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
@@ -28,7 +17,6 @@
     <fullyQualifiedTypeName name="utils.ClienteManagement"/>
     <fullyQualifiedTypeName name="gui.AltaProducto"/>
     <fullyQualifiedTypeName name="gui.ListadoProductos"/>
-    <fullyQualifiedTypeName name="utils.ProductoManagement"/>
     <fullyQualifiedTypeName name="java.security.KeyStore"/>
     <fullyQualifiedTypeName name="java.security.PrivateKey"/>
     <fullyQualifiedTypeName name="java.security.Key"/>
@@ -47,10 +35,29 @@
     <fullyQualifiedTypeName name="com.utils.CreateTable"/>
     <fullyQualifiedTypeName name="com.ac2.Parametros"/>
     <fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
-    <fullyQualifiedTypeName name="java.sql.Statement"/>
-    <fullyQualifiedTypeName name="gui.PantallaPrincipal"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="utils.SakilaManagement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="utils.SakilaManagement"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="gui.PantallaPrincipal"/>
+    <fullyQualifiedTypeName name="psp.unidad01.practica111.utils.ProcessManagement"/>
+    <fullyQualifiedTypeName name="java.awt.PageAttributes"/>
+    <fullyQualifiedTypeName name="hlc.ud02.utils.Parametros"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="hlc.ud02.utils.ResumeContenido"/>
+    <fullyQualifiedTypeName name="hlc.ud02.utils.CifraContenido"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="utils.FileUtils"/>
+    <fullyQualifiedTypeName name="utils.DBManagement"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="javax.swing.UIManager"/>
+    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
+    <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatLightLaf"/>
+    <fullyQualifiedTypeName name="utils.ProductoManagement"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="utils.NeptunoManagement"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
 </qualifiedTypeNameHistroy>

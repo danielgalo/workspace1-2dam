@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
+import dao.Pelicula;
 import utils.SakilaManagement;
 
 public class PantallaPrincipal {
@@ -41,6 +42,8 @@ public class PantallaPrincipal {
 
 	private static ResultSet peliculas;
 	private static SakilaManagement sm;
+	private JLabel lblNewLabel_1_1_12;
+	private JTextArea txtAActor;
 
 	/**
 	 * Launch the application.
@@ -88,6 +91,9 @@ public class PantallaPrincipal {
 
 	}
 
+	/**
+	 * Mueve el cursor del resultset hacia alante
+	 */
 	private void siguientePelicula() {
 
 		try {
@@ -107,22 +113,44 @@ public class PantallaPrincipal {
 	 * @throws SQLException
 	 */
 	private void setCampos() throws SQLException {
-		txtAId.setText(String.valueOf(peliculas.getInt("film_id")));
-		txtATitulo.setText(peliculas.getString("title"));
-		txtADesc.setText(peliculas.getString("description"));
-		txtALanzam.setText(String.valueOf(peliculas.getInt("release_year")));
-		txtAIDIdioma.setText(String.valueOf(peliculas.getInt("language_id")));
-		txtAIDIdiomaOrig.setText(String.valueOf(peliculas.getInt("original_language_id")));
-		txtADuracionAlq.setText(String.valueOf(peliculas.getInt("rental_duration")));
-		txtACosteAlq.setText(String.valueOf(peliculas.getDouble("rental_rate")));
-		txtADuracionPeli.setText(String.valueOf(peliculas.getInt("length")));
-		txtACosteReemplazo.setText(String.valueOf(peliculas.getDouble("replacement_cost")));
-		txtARating.setText(peliculas.getString("rating"));
-		txtACaract.setText(peliculas.getString("special_features"));
-		txtAUltimaAct.setText(peliculas.getString("last_update"));
 
+		Pelicula pelicula = getPelicula();
+
+		txtAId.setText(String.valueOf(pelicula.getId()));
+		txtATitulo.setText(pelicula.getTitle());
+		txtADesc.setText(pelicula.getDescription());
+		txtALanzam.setText(String.valueOf(pelicula.getReleaseYear()));
+		txtAIDIdioma.setText(String.valueOf(pelicula.getLanguageId()));
+		txtAIDIdiomaOrig.setText(String.valueOf(pelicula.getOriginalLanguageId()));
+		txtADuracionAlq.setText(String.valueOf(pelicula.getRentalDuration()));
+		txtACosteAlq.setText(String.valueOf(pelicula.getRentalRate()));
+		txtADuracionPeli.setText(String.valueOf(pelicula.getLenght()));
+		txtACosteReemplazo.setText(String.valueOf(pelicula.getDecimalCost()));
+		txtARating.setText(pelicula.getRating());
+		txtACaract.setText(pelicula.getSpecialFeatures());
+		txtAUltimaAct.setText(String.valueOf(pelicula.getLastUpdate()));
+		// stxtAActor.setText(peliculas.getString("first_name"));
 	}
 
+	/**
+	 * Devuelve una película con los campos introducidos
+	 * 
+	 * @return
+	 * @throws SQLException
+	 */
+	private Pelicula getPelicula() throws SQLException {
+		Pelicula pelicula = new Pelicula(peliculas.getInt("film_id"), peliculas.getString("title"),
+				peliculas.getString("description"), peliculas.getInt("release_year"), peliculas.getInt("language_id"),
+				peliculas.getInt("original_language_id"), peliculas.getInt("rental_duration"),
+				peliculas.getDouble("rental_rate"), peliculas.getInt("length"), peliculas.getDouble("replacement_cost"),
+				peliculas.getString("rating"), peliculas.getString("special_features"),
+				peliculas.getString("last_update"));
+		return pelicula;
+	}
+
+	/**
+	 * Mueve el cursor del resultset una posición atrás
+	 */
 	private void peliculaAnterior() {
 
 		try {
@@ -136,19 +164,19 @@ public class PantallaPrincipal {
 	}
 
 	/**
-	 * 
+	 * Inicia el frame de la pantalla
 	 */
 	private void iniciaFrame() {
 		frmPelculas = new JFrame();
 		frmPelculas.getContentPane().setBackground(new Color(0, 0, 64));
 		frmPelculas.setTitle("Películas");
-		frmPelculas.setBounds(100, 100, 648, 618);
+		frmPelculas.setBounds(100, 100, 648, 654);
 		frmPelculas.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPelculas.getContentPane().setLayout(null);
 	}
 
 	/**
-	 * 
+	 * Inicia los textAreas de la pantalla
 	 */
 	private void iniciaTextAreas() {
 
@@ -206,15 +234,29 @@ public class PantallaPrincipal {
 	}
 
 	/**
-	 * 
+	 * Inicia los botones de la pantalla
 	 */
 	private void iniciaBotones() {
 		btnPrimero = new JButton("Primero");
-		btnPrimero.setBounds(10, 492, 89, 23);
+		btnPrimero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				btnPrimeroPressed();
+
+			}
+
+		});
+		btnPrimero.setBounds(10, 545, 89, 23);
 		frmPelculas.getContentPane().add(btnPrimero);
 
 		btnUltimo = new JButton("Último");
-		btnUltimo.setBounds(533, 492, 89, 23);
+		btnUltimo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				btnUltimoPressed();
+			}
+		});
+		btnUltimo.setBounds(533, 545, 89, 23);
 		frmPelculas.getContentPane().add(btnUltimo);
 
 		btnAnterior = new JButton("Anterior");
@@ -225,7 +267,7 @@ public class PantallaPrincipal {
 
 			}
 		});
-		btnAnterior.setBounds(182, 492, 89, 23);
+		btnAnterior.setBounds(182, 545, 89, 23);
 		frmPelculas.getContentPane().add(btnAnterior);
 
 		btnSiguiente = new JButton("Siguiente");
@@ -236,18 +278,138 @@ public class PantallaPrincipal {
 
 			}
 		});
-		btnSiguiente.setBounds(373, 492, 89, 23);
+		btnSiguiente.setBounds(371, 545, 89, 23);
 		frmPelculas.getContentPane().add(btnSiguiente);
 
 		btnNuevo = new JButton("Nuevo");
-		btnNuevo.setBounds(10, 545, 89, 23);
+		btnNuevo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				btnNuevoPressed();
+
+			}
+		});
+		btnNuevo.setBounds(10, 581, 89, 23);
 		frmPelculas.getContentPane().add(btnNuevo);
 
 		btnGuardar = new JButton("Guardar");
-		btnGuardar.setBounds(182, 545, 89, 23);
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnGuardarPressed();
+			}
+		});
+		btnGuardar.setBounds(182, 581, 89, 23);
 		frmPelculas.getContentPane().add(btnGuardar);
+
+		lblNewLabel_1_1_12 = new JLabel("Actor");
+		lblNewLabel_1_1_12.setForeground(Color.WHITE);
+		lblNewLabel_1_1_12.setBounds(10, 485, 192, 14);
+		frmPelculas.getContentPane().add(lblNewLabel_1_1_12);
+
+		txtAActor = new JTextArea();
+		txtAActor.setBounds(225, 480, 397, 22);
+		frmPelculas.getContentPane().add(txtAActor);
 	}
 
+	/**
+	 * Acciones realizadas al presionar el botón de guardar
+	 */
+	protected void btnGuardarPressed() {
+
+		if (!btnNuevo.isEnabled()) {
+			insertaPelicula();
+		} else {
+			actualizaPelicula();
+		}
+
+		btnNuevo.setEnabled(true);
+	}
+
+	private void actualizaPelicula() {
+
+		try {
+			sm.updatePelicula(getPelicula());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Inserta la pelicula a la bbdd con los campos escritos
+	 */
+	private void insertaPelicula() {
+
+		Pelicula pelicula = null;
+		try {
+			pelicula = getPelicula();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		sm.insertPelicula(pelicula);
+	}
+
+	/**
+	 * Acciones realizadas al presionar el botón de nuevo
+	 */
+	protected void btnNuevoPressed() {
+
+		clearCampos();
+		btnNuevo.setEnabled(false);
+
+	}
+
+	/**
+	 * Vacía todos los textAreas
+	 */
+	private void clearCampos() {
+
+		txtAId.setText("");
+		txtATitulo.setText("");
+		txtADesc.setText("");
+		txtALanzam.setText("");
+		txtAIDIdioma.setText("");
+		txtAIDIdiomaOrig.setText("");
+		txtADuracionAlq.setText("");
+		txtACosteAlq.setText("");
+		txtADuracionPeli.setText("");
+		txtACosteReemplazo.setText("");
+		txtARating.setText("");
+		txtACaract.setText("");
+		txtAUltimaAct.setText("");
+	}
+
+	/**
+	 * Acciones realizadas al presionar el botón de último
+	 */
+	protected void btnUltimoPressed() {
+
+		try {
+			peliculas.last();
+			setCampos();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * Acciones realizadas al presionar el botón de primero
+	 */
+	private void btnPrimeroPressed() {
+
+		try {
+			peliculas.first();
+			setCampos();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * Inicia los labels de la pantalla
+	 */
 	private void iniciaLabels() {
 
 		JLabel lblNewLabel_1_1 = new JLabel("Título: ");

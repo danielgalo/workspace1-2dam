@@ -153,7 +153,7 @@ public class PantallaPrincipal extends JFrame {
 	 * Acciones realizadas al presionar el menú de alta de productos
 	 */
 	protected void menuAltaProductoPressed() {
-		AltaProducto ap = new AltaProducto(this, false);
+		AltaProducto ap = new AltaProducto(this, true);
 		ap.setVisible(true);
 	}
 
@@ -161,7 +161,7 @@ public class PantallaPrincipal extends JFrame {
 	 * Acciones realizadas al presionar el menú de baja de clientes
 	 */
 	protected void menuBajaClientePressed() {
-		BajaCliente bc = new BajaCliente(this, false);
+		BajaCliente bc = new BajaCliente(this, true);
 		bc.setVisible(true);
 	}
 
@@ -169,7 +169,7 @@ public class PantallaPrincipal extends JFrame {
 	 * Acciones realizadas al presionar el menú de alta de clientes
 	 */
 	protected void menuAltaClientePressed() {
-		AltaCliente ac = new AltaCliente(this, false);
+		AltaCliente ac = new AltaCliente(this, true);
 		ac.setVisible(true);
 	}
 

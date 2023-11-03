@@ -4,11 +4,15 @@
 	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-17"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-tarea01-jdbc\lib"/>
-	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac106"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Tareas\DI\di-swing-tarea02\lib"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Tareas\DI\di-swing-tarea02"/>
 	<item key="filters_last_used" value="filter_imports;"/>
+	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
+	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
+	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
+	<item key="TypeHierarchyViewPart.orientation" value="3"/>
 	<list key="workingset_selection_history">
-		<item value="Programacion de Servicios y Procesos"/>
+		<item value="Seguridad en Programacion"/>
 	</list>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
@@ -40,14 +44,20 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
 	</section>
 	<section name="FatJarPackageWizard">
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
-		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Generador - psp-ac105"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="psp-ac105\Generador.jar"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="MainApp (3) - di-swing-tarea02"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="C:\Users\Alumnado\Desktop\PicassoApp.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Alumnado\Desktop\PicassoApp.jar"/>
+			<item value="C:\Users\Alumnado\Desktop\Esclava.jar"/>
+			<item value="C:\Users\Alumnado\Desktop\DesviacionTipica.jar"/>
+			<item value="hlc-ud02-examen/Firmado.jar"/>
 			<item value="psp-ac105/Generador.jar"/>
 			<item value="ud02-actividad2.01\DescifraAES.jar"/>
 			<item value="ud02-actividad2.01/CifraAES.jar"/>
@@ -129,5 +139,39 @@
 		<item key="DIALOG_WIDTH" value="517"/>
 		<item key="DIALOG_HEIGHT" value="678"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item key="DIALOG_X_ORIGIN" value="524"/>
+		<item key="DIALOG_Y_ORIGIN" value="150"/>
+		<item key="DIALOG_WIDTH" value="888"/>
+		<item key="DIALOG_HEIGHT" value="567"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="javadoc">
+		<item key="javadoc_command_history" value="C:\dev\Software\Eclipse\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\javadoc.exe"/>
+		<item key="fromStandard" value="true"/>
+		<item key="docletname" value=""/>
+		<item key="docletpath" value=""/>
+		<item key="access" value="public"/>
+		<item key="use" value="true"/>
+		<item key="author" value="true"/>
+		<item key="version" value="true"/>
+		<item key="nodeprecated" value="false"/>
+		<item key="nodeprecatedlist" value="false"/>
+		<item key="splitindex" value="true"/>
+		<item key="noindex" value="false"/>
+		<item key="notree" value="false"/>
+		<item key="nonavbar" value="false"/>
+		<item key="openinbrowser" value="false"/>
+		<item key="source" value="17"/>
+		<item key="antpath" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac111\javadoc.xml"/>
+		<item key="destdir" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac111\doc"/>
+		<section name="projects">
+			<section name="psp-ac111">
+				<item key="href" value=""/>
+				<item key="destdir" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac111\doc"/>
+				<item key="antpath" value="C:\dev\Software\Eclipse\Workspaces\Workspace casa\psp-ac111\javadoc.xml"/>
+			</section>
+		</section>
 	</section>
 </section>
