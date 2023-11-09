@@ -15,7 +15,8 @@ public class NeptunoMain {
 	 */
 	public static void main(String[] args) {
 
-		NeptunoManagement.insertaCategoriasBatch();
+		// NeptunoManagement.insertaCategoriasBatch();
+		NeptunoManagement.modificaCategoriasBatch();
 
 	}
 }

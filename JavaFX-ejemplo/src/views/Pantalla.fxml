@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controller.PantallaController">
+   <children>
+      <BorderPane prefHeight="521.0" prefWidth="547.0">
+         <center>
+            <CheckBox fx:id="chckBox" mnemonicParsing="false" onAction="#cboxpressed" text="CheckBox" textFill="#0051ff" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Button id="btnhola" fx:id="bntHola" mnemonicParsing="false" onMousePressed="#btnHolaPressed" text="Hola" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <Label fx:id="lblHola" prefHeight="17.0" prefWidth="147.0" text="textp" BorderPane.alignment="CENTER" />
+         </top>
+         <right>
+            <PasswordField fx:id="txtPassword" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Button fx:id="btnPswd" mnemonicParsing="false" onMousePressed="#btnPswdPressed" text="Contraseña" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
