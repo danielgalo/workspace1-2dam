@@ -4,11 +4,13 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controller.PantallaController">
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PantallaController">
    <children>
       <BorderPane prefHeight="521.0" prefWidth="547.0">
          <center>
@@ -27,5 +29,15 @@
             <Button fx:id="btnPswd" mnemonicParsing="false" onMousePressed="#btnPswdPressed" text="Contraseña" BorderPane.alignment="CENTER" />
          </left>
       </BorderPane>
+      <Pane prefHeight="196.0" prefWidth="196.0">
+         <children>
+            <TableView layoutX="-2.0" layoutY="-2.0" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

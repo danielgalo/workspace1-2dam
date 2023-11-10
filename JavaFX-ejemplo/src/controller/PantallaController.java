@@ -2,11 +2,15 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 public class PantallaController {
 
@@ -25,6 +29,14 @@ public class PantallaController {
 	@FXML
 	void btnHolaPressed(MouseEvent event) {
 		lblHola.setText("Hola mundo");
+		// Mensajes
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setContentText("illu");
+		alert.setHeaderText("header");
+		alert.showAndWait();
+		Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+		stage.getIcons().add(new Image("resources/imagen.png")); // To add an icon
+		alert.showAndWait();
 	}
 
 	@FXML
