@@ -77,9 +77,9 @@ public class Productos implements Serializable {
 	}
 
 	public String getDatosProducto() {
-		return getId() + "|" + getProducto() + "|" + getProveedorId() + "|" + getCategoriaId() + "|"
-				+ getCantidadPorUnidad() + "|" + getPrecioUnidad() + "|" + getUnidadesExistencia() + "|"
-				+ getUnidadesPedido() + "|" + getNivelNuevoPedido() + "|" + getSuspendido();
+		return getId() + ";" + getProducto() + ";" + getProveedorId() + ";" + getCategoriaId() + ";"
+				+ getCantidadPorUnidad() + ";" + getPrecioUnidad() + ";" + getUnidadesExistencia() + ";"
+				+ getUnidadesPedido() + ";" + getNivelNuevoPedido() + ";" + getSuspendido();
 	}
 
 	/**

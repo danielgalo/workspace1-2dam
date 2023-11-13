@@ -28,6 +28,10 @@ public class Categorias implements Serializable {
 	public Categorias() {
 	}
 
+	public String getDatosCategoria() {
+		return getId() + ";" + getCategoria() + ";" + getDescripcion();
+	}
+
 	/**
 	 * @param id
 	 * @param categoria

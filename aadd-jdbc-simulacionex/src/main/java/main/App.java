@@ -1,6 +1,5 @@
 package main;
 
-import dao.Productos;
 import utils.DBManagement;
 
 /**
@@ -17,11 +16,8 @@ public class App {
 	public static void main(String[] args) {
 
 		// Crear tabla usuarios
-		// DBManagement.crearTablaSuperUsuarios("Alumnado_nuevo.txt");
+		DBManagement.crearTablaSuperUsuarios("Alumnado_nuevo.txt");
 		DBManagement.almacenarProductosEnFichero(2, "fichero.txt");
-
-		for (Productos p : DBManagement.getListaProductos()) {
-			System.out.println(p.getDatosProducto());
-		}
+		DBManagement.ficheroATablas("fichero.txt");
 	}
 }

@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.crypto.CipherInputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="utils.MyObjectOutPutStream"/>
-    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.ArrayBlockingQueue"/>
-    <fullyQualifiedTypeName name="gui.BajaCliente"/>
     <fullyQualifiedTypeName name="dto.Cliente"/>
     <fullyQualifiedTypeName name="utils.ClienteManagement"/>
     <fullyQualifiedTypeName name="gui.AltaProducto"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="utils.DBManagement"/>
     <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="javafx.scene.input.KeyCombination"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Alert.AlertType"/>
+    <fullyQualifiedTypeName name="javafx.stage.Stage"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+    <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
+    <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
 </qualifiedTypeNameHistroy>

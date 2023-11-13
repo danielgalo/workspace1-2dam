@@ -29,7 +29,7 @@ public class Proveedores implements Serializable {
 	}
 
 	public String getDatosProveedor() {
-		return getId() + "|" + getEmpresa() + "|" + getContacto();
+		return getId() + ";" + getEmpresa() + ";" + getContacto();
 	}
 
 	/**

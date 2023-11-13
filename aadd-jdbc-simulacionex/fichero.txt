@@ -1,0 +1,33 @@
+PRODUCTOS
+id;producto;proveedor_id;categoria_id;cantidad_por_unidad;precio_unidad;unidades_existencia;unidades_pedido;nivel_nuevo;pedido;suspendido
+3;Sirope de regaliz;1;2;12 - bot. 550 ml;10.0;13;70;25;0
+4;Especias Cajun del chef Anton;2;2;48 - frascos 6 l;22.0;53;0;0;0
+5;Mezcla Gumbo del chef Anton;2;2;36 cajas;21.35;0;0;0;-1
+6;Mermelada de grosellas de la abuela;3;2;12 - frascos 8 l;25.0;120;0;25;0
+8;Salsa de arándanos Northwoods;3;2;12 - frascos 12 l;40.0;6;0;0;0
+15;Salsa de soja baja en sodio;6;2;24 - bot. 250 ml;15.5;39;0;5;0
+44;Azúcar negra Malacca;20;2;20 - bolsas 2 kg;19.45;27;0;15;0
+61;Sirope de arce;29;2;24 - bot. 500 ml;28.5;113;0;25;0
+63;Sandwich de vegetales;7;2;15 - frascos 625 g;43.9;24;0;5;0
+65;Salsa de pimiento picante de Luisiana;2;2;32 - bot. 8 l;21.05;76;0;0;0
+66;Especias picantes de Luisiana;2;2;24 - frascos 8 l;17.0;4;100;20;0
+77;Salsa verde original Frankfurter;12;2;12 cajas;13.0;32;0;15;0
+
+PROVEEDORES
+id;empresa;contacto
+1;Exotic Liquids;Charlotte Cooper
+2;New Orleans Cajun Delights;Shelley Burke
+2;New Orleans Cajun Delights;Shelley Burke
+3;Grandma Kelly's Homestead;Regina Murphy
+3;Grandma Kelly's Homestead;Regina Murphy
+6;Mayumi's;Mayumi Ohno
+20;Leka Trading;Chandra Leka
+29;Forêts d'érables;Chantal Goulet
+7;Pavlova, Ltd.;Ian Devling
+2;New Orleans Cajun Delights;Shelley Burke
+2;New Orleans Cajun Delights;Shelley Burke
+12;Plutzer Lebensmittelgroßmärkte AG;Martin Bein
+
+CATEGORIA
+id;categoria;descripcion
+2;Condimentos;Salsas dulces y picantes, delicias, comida para untar y aderezos
