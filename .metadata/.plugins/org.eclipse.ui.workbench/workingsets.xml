@@ -18,9 +18,10 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/procesos-ejemplo" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ac105" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ac106" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ac111" type="4"/>
+<item elementID="=psp-ac111" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=psp-hilos-ejemplo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Philosophers" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=psp-ud02-ac201" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695885738022_6" label="Acceso a Datos" name="Acceso a Datos">
 <item elementID="=tarea01-ficheros" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -42,7 +43,8 @@
 <item elementID="=hlc-ud02-ac203" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=hlc-ud02-examen" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=hlc-ud03-ac302" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=hlc-ud03-ac303" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=hlc-ud03-ac303-javaproject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>

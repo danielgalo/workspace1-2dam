@@ -6,6 +6,9 @@ import java.io.IOException;
 
 public class CSVReaderImpl implements FileReaderI {
 
+	/** Separator used in CSV files */
+	private static final String CSV_SEPARATOR = ",";
+
 	/** Path of the CSV file */
 	private String path;
 
@@ -25,7 +28,6 @@ public class CSVReaderImpl implements FileReaderI {
 
 	@Override
 	public boolean next() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -40,16 +42,31 @@ public class CSVReaderImpl implements FileReaderI {
 		try {
 
 			reader = new BufferedReader(new FileReader(path));
-			String[] line = reader.readLine().split(",");
+			String[] line = reader.readLine().split(CSV_SEPARATOR);
 			coulumnCount = line.length;
 
 		} catch (IOException e) {
 
 			e.printStackTrace();
 
+		} finally {
+
+			closeConnection(reader);
+
 		}
 
 		return coulumnCount;
+	}
+
+	/**
+	 * @param reader
+	 */
+	private void closeConnection(BufferedReader reader) {
+		try {
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

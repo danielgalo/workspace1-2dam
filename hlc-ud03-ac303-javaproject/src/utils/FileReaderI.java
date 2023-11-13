@@ -22,7 +22,7 @@ public interface FileReaderI {
 	/**
 	 * Obtains the data from a column
 	 * 
-	 * @param column position
+	 * @param column position: min 1, max the count of columns
 	 * @return the data of the column specified
 	 */
 	public String getData(int column);

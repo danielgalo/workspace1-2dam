@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="dto.Cliente"/>
-    <fullyQualifiedTypeName name="utils.ClienteManagement"/>
-    <fullyQualifiedTypeName name="gui.AltaProducto"/>
-    <fullyQualifiedTypeName name="gui.ListadoProductos"/>
-    <fullyQualifiedTypeName name="java.security.KeyStore"/>
-    <fullyQualifiedTypeName name="java.security.PrivateKey"/>
     <fullyQualifiedTypeName name="java.security.Key"/>
     <fullyQualifiedTypeName name="java.security.cert.Certificate"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
@@ -51,8 +45,6 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="dao.Productos"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="utils.DBManagement"/>
     <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
     <fullyQualifiedTypeName name="javafx.scene.input.KeyCombination"/>
     <fullyQualifiedTypeName name="javafx.scene.control.Alert.AlertType"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
     <fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
     <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
+    <fullyQualifiedTypeName name="utils.DBManagement"/>
+    <fullyQualifiedTypeName name="utils.CSVReaderImpl"/>
+    <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
+    <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
+    <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
+    <fullyQualifiedTypeName name="hilos.HiloCalculaPrimo"/>
 </qualifiedTypeNameHistroy>
