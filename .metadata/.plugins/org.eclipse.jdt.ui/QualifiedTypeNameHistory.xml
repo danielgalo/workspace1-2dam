@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.security.Key"/>
-    <fullyQualifiedTypeName name="java.security.cert.Certificate"/>
-    <fullyQualifiedTypeName name="java.security.PublicKey"/>
-    <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-    <fullyQualifiedTypeName name="java.io.OutputStream"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-    <fullyQualifiedTypeName name="com.utils.Conexion"/>
     <fullyQualifiedTypeName name="com.utils.CreateTable"/>
     <fullyQualifiedTypeName name="com.ac2.Parametros"/>
     <fullyQualifiedTypeName name="java.lang.ProcessBuilder"/>
@@ -38,11 +25,9 @@
     <fullyQualifiedTypeName name="utils.NeptunoManagement"/>
     <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
     <fullyQualifiedTypeName name="utils.NeptunoProcedures"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="utils.FileUtils"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="utils.Validation"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="dao.Productos"/>
     <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
@@ -57,7 +42,22 @@
     <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
     <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
     <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
     <fullyQualifiedTypeName name="hilos.HiloCalculaPrimo"/>
+    <fullyQualifiedTypeName name="gui.PantallaPrincipalAdmin"/>
+    <fullyQualifiedTypeName name="gui.PantallaAddClase"/>
+    <fullyQualifiedTypeName name="gui.PantallaListadoClientes"/>
+    <fullyQualifiedTypeName name="gui.PantallaListarReservas"/>
+    <fullyQualifiedTypeName name="gui.PantallaPrincipalCliente"/>
+    <fullyQualifiedTypeName name="gui.PantallaRegistro"/>
+    <fullyQualifiedTypeName name="gui.PantallaReservaClase"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.HashAttributeSet"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="gui.WarningPasswords"/>
+    <fullyQualifiedTypeName name="utils.PersonaManagement"/>
 </qualifiedTypeNameHistroy>
