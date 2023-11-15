@@ -3,6 +3,8 @@ package utils;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CSVReaderImpl implements FileReaderI {
 
@@ -27,52 +29,107 @@ public class CSVReaderImpl implements FileReaderI {
 	}
 
 	@Override
-	public boolean next() {
-		return false;
+	public int getColumnCount(Integer rowNumber) {
+
+		List<String[]> data = getData();
+
+		int count = 0;
+
+		// If rowNumber is valid
+		if (rowNumber != null && rowNumber >= 0 && rowNumber <= data.size()) {
+			count = data.get(rowNumber - 1).length;
+			// If it's null or not valid
+		} else {
+			count = data.get(0).length;
+		}
+
+		return count;
+
 	}
 
 	@Override
-	public int getColumnCount() {
+	public List<String> getValidationErrors() {
 
-		int coulumnCount = 0;
+		List<String> errorList = new ArrayList<String>();
+		return errorList;
 
-		BufferedReader reader = null;
+	}
 
-		// Read the first line, see how many columns it has by splitting it
-		try {
+	@Override
+	public List<String> getValidationsCorrect() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-			reader = new BufferedReader(new FileReader(path));
-			String[] line = reader.readLine().split(CSV_SEPARATOR);
-			coulumnCount = line.length;
+	@Override
+	public void printAllData() {
 
-		} catch (IOException e) {
+		List<String[]> data = getData();
 
-			e.printStackTrace();
+		for (String[] strings : data) {
+			for (int i = 0; i < strings.length; i++) {
+				System.out.print(strings[i] + " | ");
+			}
+			System.out.println();
+		}
 
-		} finally {
+	}
 
-			closeConnection(reader);
+	private void validate() {
+
+		List<String[]> data = getData();
+
+		for (String[] strings : data) {
 
 		}
 
-		return coulumnCount;
 	}
 
 	/**
+	 * 
+	 * @return
+	 */
+	private List<String[]> getData() {
+
+		List<String[]> data = new ArrayList<String[]>();
+
+		BufferedReader reader = null;
+
+		try {
+			reader = new BufferedReader(new FileReader(path));
+
+			// If it has header, skip it
+			if (hasHeader) {
+				reader.readLine();
+			}
+
+			String lineRead;
+
+			// Read the file
+			while ((lineRead = reader.readLine()) != null) {
+				// Store data, splitting by [,]
+				data.add(lineRead.split(CSV_SEPARATOR));
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			closeReader(reader);
+		}
+		return data;
+	}
+
+	/**
+	 * Closes reader's Buffer
+	 * 
 	 * @param reader
 	 */
-	private void closeConnection(BufferedReader reader) {
+	private void closeReader(BufferedReader reader) {
 		try {
 			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	@Override
-	public String getData(int column) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

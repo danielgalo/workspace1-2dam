@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=psp-hilos-ejemplo/src&lt;ejemplo{Animal.java[Animal" modifiers="1" timestamp="1699015272880"/>
-    <typeInfo handle="=psp-ud02-ac201/C:\/dev\/Entornos\/JDK\/jdk-17.0.8.1+1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1692807806000"/>
-    <typeInfo handle="=psp-ud02-ac201/C:\/dev\/Entornos\/JDK\/jdk-17.0.8.1+1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1692807806000"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

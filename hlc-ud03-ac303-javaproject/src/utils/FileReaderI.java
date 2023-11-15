@@ -1,30 +1,39 @@
 package utils;
 
+import java.util.List;
+
 /**
  * Interface used to work with files
  */
 public interface FileReaderI {
 
 	/**
-	 * Retuns true if the new row is valid
+	 * Obtains the number of columns of a row
 	 * 
-	 * @return true only if the new row is valid, false if there isn't a row
+	 * @param rowNumber Optional. If null the row is by default the first one. Must
+	 *                  be 0 or greater and less than the count of rows, if it's not
+	 *                  the default row will be used.
+	 * @return the column count
 	 */
-	public boolean next();
+	public int getColumnCount(Integer rowNumber);
 
 	/**
-	 * Obtains the number of columns
-	 * 
-	 * @return the number of columns
+	 * Prints data from a list
 	 */
-	public int getColumnCount();
+	public void printAllData();
 
 	/**
-	 * Obtains the data from a column
+	 * Obtains a list with data with validation errors
 	 * 
-	 * @param column position: min 1, max the count of columns
-	 * @return the data of the column specified
+	 * @return error message list
 	 */
-	public String getData(int column);
+	public List<String> getValidationErrors();
+
+	/**
+	 * Obtains a list with the correct data validated
+	 * 
+	 * @return validated data list
+	 */
+	public List<String> getValidationsCorrect();
 
 }
