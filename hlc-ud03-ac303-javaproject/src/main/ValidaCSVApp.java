@@ -9,7 +9,7 @@ public class ValidaCSVApp {
 
 		CSVReaderImpl csv = new CSVReaderImpl(args[0], false);
 
-		System.out.println(Validation.validateURL("http://hola.es"));
+		System.out.println(Validation.validateURL(""));
 
 	}
 

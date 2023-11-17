@@ -7,6 +7,9 @@ import exceptions.ParametrosException;
 import hilos.HiloCalculaPrimo;
 import utils.ProcesaParametros;
 
+/**
+ * 
+ */
 public class CalculaPrimosHilosApp {
 
 	/** Número de procesadores del equipo */

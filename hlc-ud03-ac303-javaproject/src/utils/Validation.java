@@ -1,5 +1,8 @@
 package utils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.regex.Pattern;
 
 public class Validation {
@@ -11,6 +14,9 @@ public class Validation {
 	private static final String REGEX_CP = "^(0[1-9]|[1-4][0-9]|5[0-2])\\d{3}$";
 	private static final String REGEX_EMAIL = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 	private static final String REGEX_URL = "^(http://|https://)(www\\.)?[a-zA-Z0-9-]+(\\.[a-zA-Z]{2,})?(:\\d+)?(/\\S*)?$";
+	private static final String REGEX_USERNAME = "[a-zA-Z_\\-\\d]{1,10}";
+	private static final String REGEX_PASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[.;,:/*%$()])[a-zA-Z\\d.;,:/*%$()]{8,16}$";
+	private static final String REGEX_FECHA = "^(\\d{4})/(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])$";
 
 	/**
 	 * Private constructor so it can't be instantiated
@@ -135,5 +141,88 @@ public class Validation {
 		}
 
 		return result;
+	}
+
+	/**
+	 * Validates an username (Obligatory field)
+	 * 
+	 * @param username
+	 * @return true only if the username is between 1 and 10 characters long and
+	 *         only contains characters like letters, digits or [_], [-]. It also
+	 *         cannot be null
+	 */
+	public static boolean validateUserName(String username) {
+
+		boolean result = false;
+
+		if (username != null) {
+			result = Pattern.matches(REGEX_USERNAME, username);
+
+		}
+
+		return result;
+
+	}
+
+	/**
+	 * Validates a password (Obligatory field)
+	 * 
+	 * @param password
+	 * @return true only if the password is between 8 and 16 characters long and
+	 *         contains at least an uppercase letter, a lowercase letter, a digit
+	 *         and a special character. Cant be null
+	 */
+	public static boolean validatePassword(String password) {
+
+		boolean result = false;
+
+		if (password != null) {
+			result = Pattern.matches(REGEX_PASSWORD, password);
+		}
+		return result;
+	}
+
+	/**
+	 * Comprueba una fecha de nacimiento
+	 * 
+	 * @param registerDate
+	 * @return true sólo si la fecha es menor a la actual, cumple con el formato
+	 *         "dd/MM/yyyy" y no está vacía
+	 */
+	public static boolean validateRegisterDate(String registerDate) {
+		boolean result = false;
+
+		if (registerDate != null) {
+			result = Pattern.matches(REGEX_FECHA, registerDate) && isDatePrevious(registerDate)
+					&& !registerDate.isBlank();
+		}
+
+		return result;
+	}
+
+	/**
+	 * Compara la fecha con la actual
+	 * 
+	 * @param date
+	 * @return true sólo si la fecha pasada es menor que la actual
+	 */
+	private static boolean isDatePrevious(String date) {
+
+		try {
+			// Fecha y formato
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Date fechaIngresada = sdf.parse(date);
+
+			// Fecha actual
+			Date fechaActual = new Date();
+
+			// Comparar fechas
+			return fechaIngresada.before(fechaActual);
+
+		} catch (ParseException e) {
+
+			return false;
+
+		}
 	}
 }
