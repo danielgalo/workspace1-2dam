@@ -1,8 +1,5 @@
 package utils;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.regex.Pattern;
 
 public class Validation {
@@ -16,7 +13,7 @@ public class Validation {
 	private static final String REGEX_URL = "^(http://|https://)(www\\.)?[a-zA-Z0-9-]+(\\.[a-zA-Z]{2,})?(:\\d+)?(/\\S*)?$";
 	private static final String REGEX_USERNAME = "[a-zA-Z_\\-\\d]{1,10}";
 	private static final String REGEX_PASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[.;,:/*%$()])[a-zA-Z\\d.;,:/*%$()]{8,16}$";
-	private static final String REGEX_FECHA = "^(\\d{4})/(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])$";
+	private static final String REGEX_FECHA = "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$";
 
 	/**
 	 * Private constructor so it can't be instantiated
@@ -193,36 +190,10 @@ public class Validation {
 		boolean result = false;
 
 		if (registerDate != null) {
-			result = Pattern.matches(REGEX_FECHA, registerDate) && isDatePrevious(registerDate)
-					&& !registerDate.isBlank();
+			result = Pattern.matches(REGEX_FECHA, registerDate) && !registerDate.isBlank();
 		}
 
 		return result;
 	}
 
-	/**
-	 * Compara la fecha con la actual
-	 * 
-	 * @param date
-	 * @return true sólo si la fecha pasada es menor que la actual
-	 */
-	private static boolean isDatePrevious(String date) {
-
-		try {
-			// Fecha y formato
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-			Date fechaIngresada = sdf.parse(date);
-
-			// Fecha actual
-			Date fechaActual = new Date();
-
-			// Comparar fechas
-			return fechaIngresada.before(fechaActual);
-
-		} catch (ParseException e) {
-
-			return false;
-
-		}
-	}
 }

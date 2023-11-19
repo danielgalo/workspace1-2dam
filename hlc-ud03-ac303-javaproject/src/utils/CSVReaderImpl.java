@@ -17,6 +17,10 @@ public class CSVReaderImpl implements FileReaderI {
 	/** If the file has a header with the column type */
 	private boolean hasHeader;
 
+	List<String> errorData = new ArrayList<String>();
+
+	List<String> correctData = new ArrayList<String>();
+
 	/**
 	 * Constructor
 	 * 
@@ -49,16 +53,13 @@ public class CSVReaderImpl implements FileReaderI {
 
 	@Override
 	public List<String> getValidationErrors() {
-
-		List<String> errorList = new ArrayList<String>();
-		return errorList;
+		return errorData;
 
 	}
 
 	@Override
 	public List<String> getValidationsCorrect() {
-		// TODO Auto-generated method stub
-		return null;
+		return correctData;
 	}
 
 	@Override
@@ -75,14 +76,58 @@ public class CSVReaderImpl implements FileReaderI {
 
 	}
 
-	private void validate() {
+	public void validateAll() {
 
 		List<String[]> data = getData();
+		int counter = 1;
 
-		for (String[] strings : data) {
+		for (String[] row : data) {
 
+			String title = row[0];
+			String name = row[1];
+			String surname = row[2];
+			String phoneNumber = row[3];
+			String cp = row[4];
+			String email = row[5];
+			String url = row[6];
+			String userName = row[7];
+			String password = row[8];
+			String registerDate = row[9];
+
+			validateField(Validation.validateTitle(title), title, counter);
+			validateField(Validation.validateName(name), name, counter);
+			validateField(Validation.validateSurNames(surname), surname, counter);
+			validateField(Validation.validatePhoneNumber(phoneNumber), phoneNumber, counter);
+			validateField(Validation.validateCP(cp), cp, counter);
+			validateField(Validation.validateEmail(email), email, counter);
+			validateField(Validation.validateURL(url), url, counter);
+			validateField(Validation.validateUserName(userName), userName, counter);
+			validateField(Validation.validatePassword(password), password, counter);
+			validateField(Validation.validateRegisterDate(registerDate), registerDate, counter);
+			counter++;
 		}
 
+	}
+
+	public void printValidation() {
+		System.out.println("--CORRECT FIELDS--");
+		printList(correctData);
+		System.out.println("--INCORRECT FIELDS--");
+		printList(errorData);
+	}
+
+	private void printList(List<String> list) {
+		for (String string : list) {
+			System.out.println(string);
+		}
+	}
+
+	private void validateField(boolean fieldValidation, String field, int counter) {
+		if (fieldValidation) {
+			correctData.add("Row " + counter + "-> OK: " + field);
+		} else {
+			errorData.add("Row " + counter + "-> Incorrect: " + field);
+		}
 	}
 
 	/**
