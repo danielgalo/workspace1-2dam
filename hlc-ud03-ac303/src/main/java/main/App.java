@@ -11,12 +11,14 @@ public class App {
 
 	public static void main(String[] args) {
 
-		CSVFileUtils csvUtils = new CSVFileUtils(args[0], false);
-		csvUtils.getDataList();
-
-		ValidateCSV validation = new ValidateCSV(csvUtils);
-
-		validation.printValidation();
+		if (args.length < 1) {
+			System.err.println("Must provide a path for a CSV File.");
+		} else {
+			CSVFileUtils csvUtils = new CSVFileUtils(args[0], false);
+			ValidateCSV validation = new ValidateCSV(csvUtils);
+			validation.validateAll();
+			validation.printValidation();
+		}
 
 	}
 

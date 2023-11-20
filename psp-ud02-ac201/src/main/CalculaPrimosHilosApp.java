@@ -58,6 +58,7 @@ public class CalculaPrimosHilosApp {
 		// Iniciar lista de hilos
 		List<HiloCalculaPrimo> hilos = new ArrayList<HiloCalculaPrimo>();
 
+		int numHilo = 1;
 		int contador = 0;
 		for (int i = 0; i < NUMERO_PROCESADORES; i++) {
 
@@ -76,9 +77,10 @@ public class CalculaPrimosHilosApp {
 				elementosExtra--;
 			}
 
-			hilos.add(new HiloCalculaPrimo(minimo, maximo));
+			hilos.add(new HiloCalculaPrimo(minimo, maximo, numHilo));
 
 			contador += reparticion;
+			numHilo++;
 		}
 
 		return hilos;

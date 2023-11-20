@@ -153,6 +153,8 @@ public class CSVFileUtils {
 	public void setPath(String path) {
 		if (path != null && !path.isBlank() && isFicheroCSV(path)) {
 			this.path = path;
+		} else {
+			System.err.println("Path not valid " + path);
 		}
 	}
 

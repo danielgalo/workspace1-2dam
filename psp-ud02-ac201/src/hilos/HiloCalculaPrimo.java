@@ -8,22 +8,23 @@ import commons.CalculaPrimosApp;
 public class HiloCalculaPrimo extends Thread {
 
 	int minimo;
-
 	int maximo;
+	int numHilo;
 
 	/**
 	 * @param minimo
 	 * @param maximo
 	 */
-	public HiloCalculaPrimo(int minimo, int maximo) {
+	public HiloCalculaPrimo(int minimo, int maximo, int numHilo) {
 		this.minimo = minimo;
 		this.maximo = maximo;
+		this.numHilo = numHilo;
 	}
 
 	@Override
 	public void run() {
 		CalculaPrimosApp.imprimirNumerosPrimosEntre(minimo, maximo);
-		System.out.println("\nTiempo del hilo: " + System.currentTimeMillis());
+		System.out.println("\nTiempo del hilo: " + numHilo + "-> " + System.currentTimeMillis());
 		System.out.println("----------------------------------");
 	}
 
