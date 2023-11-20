@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="hlc.ud02.utils.Parametros"/>
-    <fullyQualifiedTypeName name="hlc.ud02.utils.ResumeContenido"/>
-    <fullyQualifiedTypeName name="hlc.ud02.utils.CifraContenido"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="javax.swing.UIManager"/>
-    <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
-    <fullyQualifiedTypeName name="com.formdev.flatlaf.FlatLightLaf"/>
-    <fullyQualifiedTypeName name="utils.ProductoManagement"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="utils.NeptunoManagement"/>
     <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
@@ -24,9 +16,6 @@
     <fullyQualifiedTypeName name="utils.DBManagement"/>
     <fullyQualifiedTypeName name="utils.CSVReaderImpl"/>
     <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
-    <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
-    <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
-    <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
     <fullyQualifiedTypeName name="hilos.HiloCalculaPrimo"/>
     <fullyQualifiedTypeName name="gui.PantallaPrincipalAdmin"/>
     <fullyQualifiedTypeName name="gui.PantallaAddClase"/>
@@ -52,7 +41,6 @@
     <fullyQualifiedTypeName name="utils.NorthwindManagement"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
@@ -60,4 +48,16 @@
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="org.apache.commons.csv.CSVPrinter"/>
+    <fullyQualifiedTypeName name="org.apache.commons.csv.CSVFormat"/>
+    <fullyQualifiedTypeName name="org.apache.commons.csv.CSVRecord"/>
+    <fullyQualifiedTypeName name="utils.CSVFileUtils"/>
+    <fullyQualifiedTypeName name="utils.ValidateCSV"/>
+    <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
+    <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
+    <fullyQualifiedTypeName name="hilos.Worker"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
+    <fullyQualifiedTypeName name="commons.ListaPrimos"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>
