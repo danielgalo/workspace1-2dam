@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>hlc.ud03</groupId>
-	<artifactId>hlc-ud03-ac303</artifactId>
+	<groupId>aadd.examen</groupId>
+	<artifactId>aadd-jdbc-examen</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>hlc-ud03-ac303</name>
+	<name>aadd-jdbc-examen</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -28,18 +28,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-csv</artifactId>
-			<version>1.10.0</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-csv</artifactId>
-			<version>1.10.0</version>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>

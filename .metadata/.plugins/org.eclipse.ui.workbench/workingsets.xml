@@ -35,7 +35,8 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-tarea04" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-tarea05" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-tarea06" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-simulacionex" type="4"/>
+<item elementID="=aadd-jdbc-simulacionex" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-examen" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1696240710560_7" label="Seguridad en Programacion" name="Seguridad en Programacion">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ud02-actividad2.01" type="4"/>
@@ -47,7 +48,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-examen" type="4"/>
 <item elementID="=hlc-ud03-ac302" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=hlc-ud03-ac303-javaproject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303" type="4"/>
+<item elementID="=hlc-ud03-ac303" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>

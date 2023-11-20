@@ -1,0 +1,30 @@
+ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued
+"Producto 1",2,2,"36 boxes",21.3500,0,0,0,1
+"Producto 2",4,6,"18 - 500 g pkgs.",97.0000,29,0,0,1
+"Producto 3",7,6,"20 - 1 kg tins",39.0000,0,0,0,0
+"Producto 4",10,1,"12 - 355 ml cans",4.5000,20,0,0,0
+"Producto 5",12,7,"25 - 825 g cans",45.6000,26,0,0,0
+"Producto 6",12,6,"50 bags x 30 sausgs.",123.7900,0,0,0,0
+"Producto 7",20,5,"32 - 1 kg pkgs.",14.0000,26,0,0,0
+"Producto 8",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 9",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 10",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 11",2,2,"36 boxes",21.3500,0,0,0,0
+"Producto 12",4,6,"18 - 500 g pkgs.",97.0000,29,0,0,0
+"Producto 13",7,6,"20 - 1 kg tins",39.0000,0,0,0,0
+"Producto 14",10,1,"12 - 355 ml cans",4.5000,20,0,0,0
+"Producto 15",12,7,"25 - 825 g cans",45.6000,26,0,0,0
+"Producto 16",12,6,"50 bags x 30 sausgs.",123.7900,0,0,0,0
+"Producto 17",20,5,"32 - 1 kg pkgs.",14.0000,26,0,0,0
+"Producto 18",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 19",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 20",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 21",2,2,"36 boxes",21.3500,0,0,0,0
+"Producto 22",4,6,"18 - 500 g pkgs.",97.0000,29,0,0,0
+"Producto 23",7,6,"20 - 1 kg tins",39.0000,0,0,0,0
+"Producto 24",10,1,"12 - 355 ml cans",4.5000,20,0,0,0
+"Producto 25",12,7,"25 - 825 g cans",45.6000,26,0,0,0
+"Producto 26",12,6,"50 bags x 30 sausgs.",123.7900,0,0,0,0
+"Producto 27",20,5,"32 - 1 kg pkgs.",14.0000,26,0,0,0
+"Producto 28",24,6,"48 pieces",32.8000,0,0,0,0
+"Producto 29",24,6,"48 pieces",32.8000,0,0,0,0
