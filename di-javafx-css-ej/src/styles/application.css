@@ -1,0 +1,17 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color: #e7f0f8;
+}
+
+.label{
+	-fx-font-size: 20px;
+	-fx-font-family: "Lucida Console"
+}
+
+#btnButton{
+	-fx-padding: 20px;
+	-fx-border-color: #000000;
+	-fx-border-radius: 20px;
+	-fx-background-color: #FFF;	
+}

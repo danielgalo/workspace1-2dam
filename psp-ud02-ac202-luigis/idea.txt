@@ -1,0 +1,12 @@
+> paquete main
+	* mainapp -> crea pizzeros y clientes, recibe por parámetros (opcionales) la cantidad a crear.
+		- param1 = nº pizzeros
+		- param2 = nº clientes
+		
+		   -> pone en marcha los procesos de los clientes y los pizzeros
+> paquete commons
+	* bandeja -> objeto compartido entre clientes y pizzeros
+		- método para depositar una pizza
+		- método para sacar una pizza
+		- método para saber la cantidad de pizzas
+

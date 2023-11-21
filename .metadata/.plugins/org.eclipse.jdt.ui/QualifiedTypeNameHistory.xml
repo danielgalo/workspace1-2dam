@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="utils.NeptunoManagement"/>
-    <fullyQualifiedTypeName name="java.sql.CallableStatement"/>
-    <fullyQualifiedTypeName name="utils.NeptunoProcedures"/>
-    <fullyQualifiedTypeName name="utils.FileUtils"/>
-    <fullyQualifiedTypeName name="dao.Productos"/>
-    <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
     <fullyQualifiedTypeName name="javafx.scene.input.KeyCombination"/>
     <fullyQualifiedTypeName name="javafx.scene.control.Alert.AlertType"/>
     <fullyQualifiedTypeName name="javafx.stage.Stage"/>
@@ -56,8 +49,15 @@
     <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
     <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
     <fullyQualifiedTypeName name="hilos.Worker"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
     <fullyQualifiedTypeName name="commons.ListaPrimos"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
+    <fullyQualifiedTypeName name="application.Main"/>
+    <fullyQualifiedTypeName name="java.awt.PageAttributes"/>
+    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.utils.Parametros"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.models.Pizzero"/>
+    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.commons.Bandeja"/>
+    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.PizzeriaLuigi"/>
 </qualifiedTypeNameHistroy>

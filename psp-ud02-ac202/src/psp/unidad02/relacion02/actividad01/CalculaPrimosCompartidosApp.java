@@ -30,6 +30,7 @@ public class CalculaPrimosCompartidosApp {
 
 			Collections.sort(ListaPrimos.getPrimos());
 			ListaPrimos.printLista();
+
 		} catch (ParametrosException e) {
 			System.err.println(e.getLocalizedMessage());
 		}
@@ -68,12 +69,13 @@ public class CalculaPrimosCompartidosApp {
 
 			/*
 			 * Máximo del hilo, empieza por la cantidad a repartir, se le va sumando esta
-			 * misma a cada vuelta, Si hay elementos extra se le suma uno al final
+			 * misma a cada vuelta, Si hay elementos extra se le suma uno
 			 */
 			int maximo = contador + reparticion;
 
 			if (elementosExtra > 0) {
 				maximo++;
+				minimo++;
 				elementosExtra--;
 			}
 
