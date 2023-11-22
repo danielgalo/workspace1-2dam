@@ -53,6 +53,7 @@
 <item elementID="=hlc-ud03-ac302" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=hlc-ud03-ac303-javaproject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=hlc-ud03-ac303" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=hlc-ud03-ac304" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>
