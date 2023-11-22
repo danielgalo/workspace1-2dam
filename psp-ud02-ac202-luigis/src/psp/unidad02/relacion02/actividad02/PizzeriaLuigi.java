@@ -37,11 +37,20 @@ public class PizzeriaLuigi {
 		addPizzeros(numeroPizzeros);
 		addClientes(numeroClientes);
 
-		Pizzero p = new Pizzero(2);
-		p.run();
+		System.out.println("--- Abre la pizzería ---");
+		System.out.println("Clientes: " + numeroClientes);
+		System.out.println("Pizzeros : " + numeroPizzeros);
 
-		Cliente c = new Cliente(2);
-		c.run();
+		// Ejecutar los pizzeros y clientes
+		for (Pizzero p : pizzeros) {
+			p.start();
+
+		}
+		for (Cliente c : clientes) {
+			c.start();
+
+		}
+
 	}
 
 	/**
@@ -79,6 +88,13 @@ public class PizzeriaLuigi {
 	 */
 	public static void reduceClientela() {
 		clientela--;
+	}
+
+	/**
+	 * @return the clientela
+	 */
+	public static int getClientela() {
+		return clientela;
 	}
 
 }

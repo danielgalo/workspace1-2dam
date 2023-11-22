@@ -14,6 +14,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/filtro-tabla" type="4"/>
 <item elementID="=di-javafx-css-ej" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=di-javafx-tutorial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=di-swing-examen-corregido" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud1-ejemplos" type="4"/>

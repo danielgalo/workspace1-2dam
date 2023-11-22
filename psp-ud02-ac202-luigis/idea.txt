@@ -9,4 +9,11 @@
 		- método para depositar una pizza
 		- método para sacar una pizza
 		- método para saber la cantidad de pizzas
+> paquete models
 
+	* persona -> clase padre con atributos que comparten pizzeros y clientes
+	* pizzero -> hereda 
+	* cliente ->
+> paquete utils
+
+	* Parametros -> controla los parametros de la mainapp

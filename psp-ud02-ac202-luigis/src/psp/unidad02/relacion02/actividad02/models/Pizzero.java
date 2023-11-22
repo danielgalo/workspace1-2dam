@@ -2,12 +2,14 @@ package psp.unidad02.relacion02.actividad02.models;
 
 import java.util.Random;
 
+import psp.unidad02.relacion02.actividad02.PizzeriaLuigi;
 import psp.unidad02.relacion02.actividad02.commons.Bandeja;
+import psp.unidad02.relacion02.actividad02.utils.UsuarioPizzeriaI;
 
 /**
  * Representa a un Pizzero de la Pizzeria Luigi's
  */
-public class Pizzero extends Thread {
+public class Pizzero extends Thread implements UsuarioPizzeriaI {
 
 	private static final int MIN_TIEMPO_COCINA = 5000;
 	private static final int MAX_TIEMPO_COCINA = 10000;
@@ -26,51 +28,63 @@ public class Pizzero extends Thread {
 
 	@Override
 	public void run() {
+		// Pizzero empieza a trabajar
+		System.out.println(msgUsuario() + " empieza a trabajar...");
 
 		try {
+			// Hace pizzas mientras haya clientes
+			do {
 
-			// Pizzero empieza a trabajar
-			System.out.println(msgPizzero() + " empieza a trabajar...");
-			System.out.println(msgPizzero() + " empieza a cocinar...");
+				System.out.println(msgUsuario() + " empieza a cocinar...");
+				// Cocina la pizza
+				cocinaPizza();
+				// Cuando termine, crear una pizza y añadirla a la bandeja
+				addPizzaToBandeja();
 
-			// Calcular el tiempo que tarda en cocinar una pizza
-			int tiempoCocina = getTiempoCocina();
-			sleep(tiempoCocina);
-			int segundosCocina = tiempoCocina / 1000;
-			System.out.println(msgPizzero() + " terminó de cocinar en " + segundosCocina + " segundos.");
+			} while (PizzeriaLuigi.getClientela() > 0);
 
-			// Cuando termine, crear una pizza y añadirla a la bandeja
-			Pizza pizza = new Pizza();
-			Bandeja.addPizza(pizza);
-			System.out.println(msgPizzero() + " añade la pizza a la bandeja, que ahora tiene "
-					+ Bandeja.getNumeroPizzas() + " pizza(s).");
+			System.out.println(msgUsuario() + " acabó su jornada.");
 
-			// TODO añadir todo esto a un bucle, que acabe cuando no hayan clientes
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			System.err.println("Error interrumpiendo el hilo.");
 		}
 
 	}
 
 	/**
-	 * Genera un número aleatorio entre MIN_TIEMPO_COCINA y MAX_TIEMPO_COCINA
+	 * Cocina la pizza. Duerme el hilo
 	 * 
-	 * @return un entero aleatorio en rango
+	 * @throws InterruptedException
 	 */
-	private int getTiempoCocina() {
+	private void cocinaPizza() throws InterruptedException {
+		// Calcular el tiempo que tarda en cocinar una pizza
+		int tiempoCocina = getTiempoEspera(MAX_TIEMPO_COCINA, MIN_TIEMPO_COCINA);
+		sleep(tiempoCocina);
+		int segundosCocina = tiempoCocina / 1000;
+		System.out.println(msgUsuario() + " terminó de cocinar en " + segundosCocina + " segundos.");
+	}
+
+	/**
+	 * Añade una pizza a la bandeja
+	 */
+	private void addPizzaToBandeja() {
+		Pizza pizza = new Pizza();
+		Bandeja.addPizza(pizza);
+		System.out.println(msgUsuario() + " añade la pizza " + pizza.getTipoPizza() + " a la bandeja, que ahora tiene "
+				+ Bandeja.getNumeroPizzas() + " pizza(s).");
+	}
+
+	@Override
+	public int getTiempoEspera(int max, int min) {
 
 		Random random = new Random();
-		int numeroAleatorio = random.nextInt(MAX_TIEMPO_COCINA - MIN_TIEMPO_COCINA + 1) + MIN_TIEMPO_COCINA;
+		int numeroAleatorio = random.nextInt(max - min + 1) + min;
 		return numeroAleatorio;
 
 	}
 
-	/**
-	 * Mensaje del pizzero
-	 * 
-	 * @return
-	 */
-	private String msgPizzero() {
+	@Override
+	public String msgUsuario() {
 		return "Pizzero " + numeroPizzero;
 	}
 

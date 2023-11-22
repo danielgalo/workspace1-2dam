@@ -20,29 +20,38 @@ public class Bandeja {
 	 */
 	public static synchronized void addPizza(Pizza p) {
 		pizzas.add(p);
-		System.out.println("Pizza añadida a la bandeja.");
+		System.out.println("--- Pizza añadida a la bandeja (" + pizzas.size() + ") restantes ---");
 	}
 
 	/**
-	 * Coge la primera pizza de la bandeja, si hay pizzas disponibles. Elimina a su
-	 * vez esta pizza de la bandeja
+	 * Coge la primera pizza de la bandeja y se la añade a la lista de pizzas
+	 * tomadas del cliente si hay pizzas disponibles. Elimina a su vez esta pizza de
+	 * la bandeja.
 	 * 
+	 * @param pizzasCliente lista de pizzas del cliente, donde se añadirá la pizza
+	 *                      si se pudo tomar
 	 * @return true si pudo tomar una pizza
 	 */
-	public static synchronized boolean cogePizza() {
+	public static synchronized boolean cogePizza(List<Pizza> pizzasCliente) {
 
 		boolean isPizzaCogida = false;
 
 		// Si hay al menos una pizza
 		if (pizzas.size() > 0) {
 
+			// Le da la pizza al cliente
+			Pizza pizzaTomada = pizzas.get(0);
+			pizzasCliente.add(pizzaTomada);
+
+			// La elimina de la bandeja
 			pizzas.remove(pizzas.get(0));
+
 			System.out.println("--- Pizza recojida de la bandeja ---");
 			isPizzaCogida = true;
 
 			// Si la bandeja está vacía
 		} else {
-			System.out.println("--- No hay pizzas disponibles ---");
+			System.out.println("--- No hay pizzas disponibles para tomar ---");
 		}
 
 		return isPizzaCogida;
