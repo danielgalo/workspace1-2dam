@@ -28,26 +28,17 @@ public class Parametros {
 
 		int numeroPizzeros = 0;
 		int numeroClientes = 0;
-		try {
-			numeroPizzeros = Integer.parseInt(argumentos[0]);
-			numeroClientes = Integer.parseInt(argumentos[1]);
-		} catch (NumberFormatException e) {
-			System.err.println("Error al parsear los parámetros. Se utilizarán los valores por defecto.");
+
+		if (argumentos.length < 1) {
+			this.pizzeros = PIZZEROS_DEFECTO;
+		} else {
+			pizzeros = Integer.parseInt(argumentos[0]);
 		}
 
-		// Si se proporciona al menos un parámetro actualizar los pizzeros
-		if (argumentos.length > 0 && numeroPizzeros > 0) {
-
-			pizzeros = numeroPizzeros;
-
-		}
-
-		// Si se han proporcionado los dos parámetros o más, actualizar también los
-		// clientes
-		if (argumentos.length > 1 && numeroClientes > 0) {
-
-			clientes = numeroClientes;
-
+		if (argumentos.length < 2) {
+			this.clientes = CLIENTES_DEFECTO;
+		} else {
+			clientes = Integer.parseInt(argumentos[1]);
 		}
 
 	}
