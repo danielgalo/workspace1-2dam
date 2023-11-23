@@ -5,7 +5,7 @@
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\dev\Tareas\DI\di-swing-tarea02\lib"/>
-	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Tareas\filtro-tabla"/>
+	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\dev\Tareas\DI\di-swing-examen-corregido"/>
 	<item key="filters_last_used" value="filter_imports;"/>
 	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
 	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
@@ -19,7 +19,7 @@
 	<item key="CallHierarchyViewPart.orientation" value="3"/>
 	<item key="CallHierarchyViewPart.ratio1" value="500"/>
 	<list key="workingset_selection_history">
-		<item value="Programacion de Servicios y Procesos"/>
+		<item value="Desarrollo de Interfaces"/>
 	</list>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
@@ -58,9 +58,10 @@
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
 		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\dev\Software\Eclipse\Workspaces\Workspace 1"/>
 		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
-		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="GYMPicassoMain - di-swing-examen"/>
-		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="C:\Users\Alumnado\Desktop\GymPicasso.jar"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="GymPicassoMain - di-swing-examen-corregido"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="di-swing-examen-corregido\GymPicasso.jar"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="di-swing-examen-corregido/GymPicasso.jar"/>
 			<item value="C:\Users\Alumnado\Desktop\GymPicasso.jar"/>
 			<item value="C:\Users\Alumnado\Desktop\PicassoApp.jar"/>
 			<item value="C:\Users\Alumnado\Desktop\Esclava.jar"/>

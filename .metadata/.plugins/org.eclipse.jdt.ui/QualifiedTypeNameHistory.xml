@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javafx.scene.input.KeyCombination"/>
     <fullyQualifiedTypeName name="javafx.scene.control.Alert.AlertType"/>
     <fullyQualifiedTypeName name="javafx.stage.Stage"/>
     <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
@@ -8,7 +7,6 @@
     <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
     <fullyQualifiedTypeName name="utils.DBManagement"/>
     <fullyQualifiedTypeName name="utils.CSVReaderImpl"/>
-    <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
     <fullyQualifiedTypeName name="hilos.HiloCalculaPrimo"/>
     <fullyQualifiedTypeName name="gui.PantallaPrincipalAdmin"/>
     <fullyQualifiedTypeName name="gui.PantallaAddClase"/>
@@ -56,8 +54,10 @@
     <fullyQualifiedTypeName name="application.Main"/>
     <fullyQualifiedTypeName name="java.awt.PageAttributes"/>
     <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.utils.Parametros"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.models.Pizzero"/>
     <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.commons.Bandeja"/>
     <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.PizzeriaLuigi"/>
+    <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.TextField"/>
 </qualifiedTypeNameHistroy>
