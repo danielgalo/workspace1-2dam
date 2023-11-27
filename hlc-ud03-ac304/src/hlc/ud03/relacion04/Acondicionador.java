@@ -2,6 +2,8 @@ package hlc.ud03.relacion04;
 
 public class Acondicionador {
 
+	private static final char[] caracteresCss = { '\'', '(', '<', '>', '&', ')', '/', '\"', '\\' };
+
 	/**
 	 * 
 	 * @param elementoHtml
@@ -33,11 +35,23 @@ public class Acondicionador {
 	 */
 	public static String acondicionaContenidoCss(String contenidoCss) {
 
-		// Quitar dobles comillas
-		String sinComillasDob = contenidoCss.replaceAll("\"", "\\" + Integer.toHexString('"'));
-		String sinComillasSimp = sinComillasDob.replaceAll("'", "\\27");
+		// Añadir espacios si tiene un número despues de un carácter especial
+		String contenidoConEspacios = insertarEspacio(contenidoCss);
 
-		return contenidoCss;
+		// Sustituir carácteres especiales paso a paso
+		String sinComillasSimp = contenidoConEspacios.replaceAll("'", "\\27");
+		String sinComillasDob = sinComillasSimp.replaceAll("\"", "\\22");
+		String sinParentApert = sinComillasDob.replaceAll("\\(", "\\28");
+		String sinParentCierre = sinParentApert.replaceAll("\\)", "\\29");
+		String sinEtiqApert = sinParentCierre.replaceAll("<", "\\3c");
+		String sinEtiqCierre = sinEtiqApert.replaceAll(">", "\\3e");
+		String sinBarraInvertida = sinEtiqCierre.replaceAll("\\\\", "\\5c");
+		String sinBarra = sinBarraInvertida.replaceAll("/", "\\2f");
+		String resultado = sinBarra.replaceAll("&", "\\26");
+
+		System.out.println(resultado);
+
+		return resultado;
 	}
 
 	/**
@@ -85,6 +99,34 @@ public class Acondicionador {
 			return atributoAcondicionado;
 		}
 
+	}
+
+	/**
+	 * Obtiene una cadena con espacios insertados después de los carácteres
+	 * especiales de CSS si a estos le sigue un número
+	 * 
+	 * @param input
+	 * 
+	 * @return cadena con los espacios insertados
+	 */
+
+	public static String insertarEspacio(String input) {
+		StringBuilder result = new StringBuilder();
+
+		for (int i = 0; i < input.length(); i++) {
+			char currentChar = input.charAt(i);
+			result.append(currentChar);
+
+			// Verificar si el carácter actual es el especificado y si le sigue un número
+			for (int j = 0; j < caracteresCss.length; j++) {
+				if (caracteresCss[j] == currentChar && i + 1 < input.length()
+						&& Character.isDigit(input.charAt(i + 1))) {
+					result.append(' ');
+				}
+			}
+		}
+
+		return result.toString();
 	}
 
 }
