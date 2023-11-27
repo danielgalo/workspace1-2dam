@@ -7,7 +7,7 @@ public class ImageProcessingSerevice {
 	public static void main(String[] args) {
 
 		PropertiesProcesser pp = new PropertiesProcesser("confg.properties");
-		System.out.println(pp.getInputFolder());
+		System.out.println(pp.getOutputFolder());
 	}
 
 }

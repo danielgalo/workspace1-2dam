@@ -1,5 +1,6 @@
 package psp.ud02.actividad203.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,9 +13,9 @@ import java.util.Properties;
 public class PropertiesProcesser {
 
 	/** Input folder by default (project workspace) */
-	private static final String DEFAULT_INPUT_FOLDER = "/";
+	private static final String DEFAULT_INPUT_FOLDER = "";
 	/** Output folder by default (project workspace) */
-	private static final String DEFAULT_OUTPUT_FOLDER = "/output/";
+	private static final String DEFAULT_OUTPUT_FOLDER = "output";
 	/** Maximun image width by default */
 	private static final int DEFAULT_MAX_WIDTH = 100;
 	/** Minimun image width by default */
@@ -54,52 +55,13 @@ public class PropertiesProcesser {
 	}
 
 	/**
+	 * Obtains the output folder path specified in the configuration file if it's
+	 * valid. If it's not valid return the default value.
 	 * 
-	 * @return
+	 * @return the output folder path
 	 */
-	public int getMaxWidth() {
-		return getImageScale(PROPERTY_MAX_WIDTH, DEFAULT_MAX_WIDTH);
-	}
-
-	/**
-	 * Obtains either the width or the heigth of an image if it's valid and the
-	 * configuration file is accessible. If not obtains it's default value
-	 * 
-	 * @param property     name of the property
-	 * @param defaultValue default value of the property. It's also the maximun
-	 *                     value it can be
-	 * @return
-	 */
-	private int getImageScale(String property, int defaultValue) {
-
-		Integer scale = 0;
-		// Properties instance
-		Properties properties = new Properties();
-		// Get the input stream
-		FileInputStream input = null;
-
-		try {
-			input = new FileInputStream(path);
-			// Load the properties
-			properties.load(input);
-
-			scale = Integer.parseInt(properties.getProperty(property));
-
-			if (scale == null || scale > defaultValue) {
-				scale = defaultValue;
-			}
-
-		} catch (IOException e) {
-			// If there was a problem accessing the configuration file, assing the default
-			// value too
-			scale = defaultValue;
-
-		}
-
-		// Close the input stream
-		closeInput(input);
-
-		return scale;
+	public String getOutputFolder() {
+		return getFolder(PROPERTY_OUTPUT_FOLDER, DEFAULT_OUTPUT_FOLDER);
 	}
 
 	/**
@@ -129,6 +91,7 @@ public class PropertiesProcesser {
 			// If the property exists and it's an existing folder
 			if (folder == null || !Files.isDirectory(Path.of(folder))) {
 				folder = defaultValue;
+				File outputFolder = new File(defaultValue);
 			}
 
 		} catch (IOException e) {
