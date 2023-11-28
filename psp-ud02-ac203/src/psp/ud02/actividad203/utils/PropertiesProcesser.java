@@ -18,8 +18,8 @@ public class PropertiesProcesser {
 	private static final String DEFAULT_OUTPUT_FOLDER = "output";
 	/** Maximun image width by default */
 	private static final int DEFAULT_MAX_WIDTH = 100;
-	/** Minimun image width by default */
-	private static final int DEFAULT_MIN_WIDTH = 100;
+	/** Maximun image heigth by default */
+	private static final int DEFAULT_MAX_HEIGTH = 100;
 
 	/** Input folder property name */
 	private static final String PROPERTY_INPUT_FOLDER = "inputfolder";
@@ -27,8 +27,8 @@ public class PropertiesProcesser {
 	private static final String PROPERTY_OUTPUT_FOLDER = "outputfolder";
 	/** Maximun image width property name */
 	private static final String PROPERTY_MAX_WIDTH = "maxwidth";
-	/** Minimun image width property name */
-	private static final String PROPERTY_MIN_WIDTH = "minwidth";
+	/** Maximun image height property name */
+	private static final String PROPERTY_MAX_HEIGHT = "maxheight";
 
 	/** Path of the configuration file */
 	private String path;
@@ -62,6 +62,50 @@ public class PropertiesProcesser {
 	 */
 	public String getOutputFolder() {
 		return getFolder(PROPERTY_OUTPUT_FOLDER, DEFAULT_OUTPUT_FOLDER);
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public int getMaxWidth() {
+		return getImageScale(PROPERTY_MAX_WIDTH, DEFAULT_MAX_WIDTH);
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public int getMaxHeigth() {
+		return getImageScale(PROPERTY_MAX_HEIGHT, DEFAULT_MAX_HEIGTH);
+	}
+
+	/**
+	 * Obtains the images max width specified in the configuration file. If the
+	 * value isn't correct or the configuration file isn't accesible, Obtain a
+	 * default value
+	 * 
+	 * @param property
+	 * @param defaultValue
+	 * @return the images max width specified in the config file
+	 */
+	private int getImageScale(String property, int defaultValue) {
+
+		Properties properties = new Properties();
+		FileInputStream input = null;
+		Integer value = null;
+		try {
+
+			input = new FileInputStream(path);
+			properties.load(input);
+
+			value = Integer.parseInt(properties.getProperty(property));
+
+		} catch (Exception e) {
+			value = defaultValue;
+		}
+
+		return value;
 	}
 
 	/**

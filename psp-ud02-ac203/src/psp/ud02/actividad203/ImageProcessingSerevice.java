@@ -6,8 +6,8 @@ public class ImageProcessingSerevice {
 
 	public static void main(String[] args) {
 
-		PropertiesProcesser pp = new PropertiesProcesser("confg.properties");
-		System.out.println(pp.getOutputFolder());
+		PropertiesProcesser pp = new PropertiesProcesser("config.properties");
+		System.out.println(pp.getMaxHeigth());
 	}
 
 }

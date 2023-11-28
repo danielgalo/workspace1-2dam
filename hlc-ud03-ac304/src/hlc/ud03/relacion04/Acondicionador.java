@@ -1,8 +1,13 @@
 package hlc.ud03.relacion04;
 
+import java.io.UnsupportedEncodingException;
+import java.util.regex.Pattern;
+
 public class Acondicionador {
 
+	private static final String REGEX_URL = "^[A-Za-z\\-\\._~\\d@]$";
 	private static final char[] caracteresCss = { '\'', '(', '<', '>', '&', ')', '/', '\"', '\\' };
+	private static final char[] caracteresSql = { '\'', '%', '_', '\"', '\\' };
 
 	/**
 	 * 
@@ -39,15 +44,15 @@ public class Acondicionador {
 		String contenidoConEspacios = insertarEspacio(contenidoCss);
 
 		// Sustituir carácteres especiales paso a paso
-		String sinComillasSimp = contenidoConEspacios.replaceAll("'", "\\27");
-		String sinComillasDob = sinComillasSimp.replaceAll("\"", "\\22");
-		String sinParentApert = sinComillasDob.replaceAll("\\(", "\\28");
-		String sinParentCierre = sinParentApert.replaceAll("\\)", "\\29");
-		String sinEtiqApert = sinParentCierre.replaceAll("<", "\\3c");
-		String sinEtiqCierre = sinEtiqApert.replaceAll(">", "\\3e");
-		String sinBarraInvertida = sinEtiqCierre.replaceAll("\\\\", "\\5c");
-		String sinBarra = sinBarraInvertida.replaceAll("/", "\\2f");
-		String resultado = sinBarra.replaceAll("&", "\\26");
+		String sinComillasSimp = contenidoConEspacios.replaceAll("'", "\\\\27");
+		String sinComillasDob = sinComillasSimp.replaceAll("\"", "\\\\22");
+		String sinParentApert = sinComillasDob.replaceAll("\\(", "\\\\28");
+		String sinParentCierre = sinParentApert.replaceAll("\\)", "\\\\29");
+		String sinEtiqApert = sinParentCierre.replaceAll("<", "\\\\3c");
+		String sinEtiqCierre = sinEtiqApert.replaceAll(">", "\\\\3e");
+		String sinBarraInvertida = sinEtiqCierre.replaceAll("\\\\", "\\\\5c");
+		String sinBarra = sinBarraInvertida.replaceAll("/", "\\\\2f");
+		String resultado = sinBarra.replaceAll("&", "\\\\26");
 
 		System.out.println(resultado);
 
@@ -60,8 +65,30 @@ public class Acondicionador {
 	 * @return
 	 */
 	public static String acondicionaUrl(String url) {
-		// TODO Auto-generated method stub
-		return url;
+
+		StringBuilder builder = new StringBuilder();
+
+		// Recorrer la cadena
+		for (int i = 0; i < url.length(); i++) {
+
+			// Obtener el caracter actual
+			char currentChar = url.charAt(i);
+
+			// Si el carácter no es correcto para una url
+			if (!isCaracterOkUrl(currentChar)) {
+
+				// Convertirlo a UTF-8 y añadirlo al builder
+				String utfChar = charToUTF8(currentChar);
+				builder.append(utfChar);
+
+			} else {
+				// Si es correcto, añadirlo directamente
+				builder.append(currentChar);
+			}
+		}
+
+		String result = builder.toString();
+		return result;
 	}
 
 	/**
@@ -70,8 +97,78 @@ public class Acondicionador {
 	 * @return
 	 */
 	public static String acondicionaLiteralSql(String literalSql) {
-		// TODO Auto-generated method stub
-		return literalSql;
+
+		StringBuilder builder = new StringBuilder();
+
+		// Recorrer la cadena
+		for (int i = 0; i < literalSql.length(); i++) {
+			// Obtengo el carácter actual
+			char currentChar = literalSql.charAt(i);
+
+			// Si es especial de SQL le añado \
+			if (isCaracterSql(currentChar)) {
+				String caracterNoSql = new String("\\" + currentChar);
+				builder.append(caracterNoSql);
+			} else {
+				// Si no es especial lo añado tal cual
+				builder.append(currentChar);
+			}
+
+		}
+
+		return builder.toString();
+	}
+
+	/**
+	 * Obtains the UTF-8 of a character
+	 * 
+	 * @param inputChar
+	 * @return the UTF-8 value of the input character
+	 */
+	public static String charToUTF8(char inputChar) {
+		try {
+			byte[] utf8Bytes = String.valueOf(inputChar).getBytes("UTF-8");
+
+			StringBuilder result = new StringBuilder();
+			for (byte b : utf8Bytes) {
+				result.append(String.format("%%%02X", b));
+			}
+
+			return result.toString();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
+	 * Verifica si un caracter es especial de SQL
+	 * 
+	 * @param caracter
+	 * @return true solo si el carácter es un carácter especial SQL
+	 */
+	private static boolean isCaracterSql(char caracter) {
+
+		boolean result = Boolean.FALSE;
+
+		for (char c : caracteresSql) {
+			if (c == caracter) {
+				result = Boolean.TRUE;
+				break;
+			}
+		}
+
+		return result;
+
+	}
+
+	/**
+	 * 
+	 * @param caracter
+	 * @return
+	 */
+	private static boolean isCaracterOkUrl(char caracter) {
+		return Pattern.matches(REGEX_URL, String.valueOf(caracter));
 	}
 
 	/**
