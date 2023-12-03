@@ -1,37 +1,32 @@
 package psp.ud02.actividad203.utils;
 
-import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Properties;
+
+import psp.ud02.actividad203.constants.PropertiesConstants;
 
 /**
  * 
  */
 public class PropertiesProcesser {
 
-	/** Input folder by default (project workspace) */
-	private static final String DEFAULT_INPUT_FOLDER = "";
-	/** Output folder by default (project workspace) */
-	private static final String DEFAULT_OUTPUT_FOLDER = "output";
-	/** Maximun image width by default */
-	private static final int DEFAULT_MAX_WIDTH = 100;
-	/** Minimun image width by default */
-	private static final int DEFAULT_MIN_WIDTH = 100;
-
-	/** Input folder property name */
-	private static final String PROPERTY_INPUT_FOLDER = "inputfolder";
-	/** Input folder property name */
-	private static final String PROPERTY_OUTPUT_FOLDER = "outputfolder";
-	/** Maximun image width property name */
-	private static final String PROPERTY_MAX_WIDTH = "maxwidth";
-	/** Minimun image width property name */
-	private static final String PROPERTY_MIN_WIDTH = "minwidth";
-
 	/** Path of the configuration file */
 	private String path;
+	/** File input */
+	private FileInputStream inputStream;
+	/** Properties object */
+	private Properties properties;
+
+	/** Output folder */
+	private String outputFolder;
+	/** Input Folder */
+	private String inputFolder;
+	/** Max width */
+	private Integer maxWidth;
+	/** Max heigth */
+	private Integer maxHeigth;
 
 	/**
 	 * Constructor
@@ -39,79 +34,203 @@ public class PropertiesProcesser {
 	 * @param path
 	 */
 	public PropertiesProcesser(String path) {
+		// Assign the file path
 		this.path = path;
+
+		// Initialize properties and the file input
+		initializeInputStream(path);
+		initializeProperties();
+
+		if (properties != null) {
+			// Obtain max width and heigth
+			setMaxWidth(getImgScale(false));
+			setMaxHeigth(getImgScale(true));
+			// Obtain input and output folders
+			setOutputFolder(getFolder(true));
+			setInputFolder(getFolder(false));
+		}
 	}
 
 	/**
-	 * Obtains the input folder path specified in the configuration file if it's
-	 * valid. If it's not valid return the default value.
+	 * Obtains the path of a folder
 	 * 
-	 * @return the intput folder path
+	 * @param output
+	 * @return the path to the output folder if "output" is true, if false return
+	 *         the input folder path
 	 */
-	public String getInputFolder() {
+	private String getFolder(boolean output) {
 
-		return getFolder(PROPERTY_INPUT_FOLDER, DEFAULT_INPUT_FOLDER);
+		String folder = "";
+		String propertyFolder;
+		String defaultValue;
 
-	}
+		// Obtain the output folder or the input folder
+		if (output) {
 
-	/**
-	 * Obtains the output folder path specified in the configuration file if it's
-	 * valid. If it's not valid return the default value.
-	 * 
-	 * @return the output folder path
-	 */
-	public String getOutputFolder() {
-		return getFolder(PROPERTY_OUTPUT_FOLDER, DEFAULT_OUTPUT_FOLDER);
-	}
+			propertyFolder = PropertiesConstants.PROPERTY_OUTPUT_FOLDER;
+			defaultValue = PropertiesConstants.DEFAULT_OUTPUT_FOLDER;
 
-	/**
-	 * Obtains the folder specified in a configuration file if it's valid and exists
-	 * 
-	 * @param property     name of the property in the file
-	 * @param defaultValue default value used if the property isnt found or the
-	 *                     configuration file isn't accessible
-	 * @return the path to the folder
-	 */
-	private String getFolder(String property, String defaultValue) {
+		} else {
 
-		String folder = null;
-		// Properties instance
-		Properties properties = new Properties();
-		// Get the input stream
-		FileInputStream input = null;
-
-		try {
-			input = new FileInputStream(path);
-			// Load the properties
-			properties.load(input);
-
-			// Assing the property
-			folder = properties.getProperty(property);
-
-			// If the property exists and it's an existing folder
-			if (folder == null || !Files.isDirectory(Path.of(folder))) {
-				folder = defaultValue;
-				File outputFolder = new File(defaultValue);
-			}
-
-		} catch (IOException e) {
-			// If there was a problem accessing the configuration file, assing the default
-			// value too
-			folder = defaultValue;
+			propertyFolder = PropertiesConstants.PROPERTY_INPUT_FOLDER;
+			defaultValue = PropertiesConstants.DEFAULT_INPUT_FOLDER;
 
 		}
 
-		// Close the input stream
-		closeInput(input);
+		// Get the value
+		folder = properties.getProperty(propertyFolder);
 
-		return folder;
+		if (folder != null) {
+			// If folder is not null (property name was correct)
+			return folder;
+		} else {
+			// If folder is null (property wasn't found)
+			return defaultValue;
+		}
 
+	}
+
+	/**
+	 * Obtains either the width or the heigth specified in the properties file. If
+	 * the property name is not valid, a default value is assigned.
+	 * 
+	 * @param heigth
+	 * @return the heigth property if "height" is true, if false return the width
+	 */
+	private int getImgScale(boolean heigth) {
+
+		String imgProperty;
+		int defaultValue = 0;
+		Integer value;
+
+		try {
+
+			// Obtain the height or the width
+			if (heigth) {
+
+				imgProperty = PropertiesConstants.PROPERTY_MAX_HEIGTH;
+				defaultValue = PropertiesConstants.DEFAULT_MAX_HEIGTH;
+
+			} else {
+
+				imgProperty = PropertiesConstants.PROPERTY_MAX_WIDTH;
+				defaultValue = PropertiesConstants.DEFAULT_MAX_WIDTH;
+
+			}
+
+			value = Integer.parseInt(properties.getProperty(imgProperty));
+
+		} catch (NumberFormatException | NullPointerException e) {
+
+			// If the value is null (the property name is not correct), assign the default
+			// value
+			value = defaultValue;
+
+		}
+
+		return value;
+	}
+
+	/**
+	 * Initialize and load properties
+	 */
+	private void initializeProperties() {
+
+		if (inputStream != null) {
+			// Initialize properties
+			properties = new Properties();
+
+			try {
+				// Load properties
+				properties.load(inputStream);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * Initializes the input stream of the properties file
+	 * 
+	 * @param path
+	 */
+	private void initializeInputStream(String path) {
+
+		try {
+
+			inputStream = new FileInputStream(path);
+
+		} catch (FileNotFoundException e) {
+
+			// If the file is not accesible, assign default values
+			setMaxHeigth(PropertiesConstants.DEFAULT_MAX_HEIGTH);
+			setMaxWidth(PropertiesConstants.DEFAULT_MAX_WIDTH);
+			setOutputFolder(PropertiesConstants.DEFAULT_OUTPUT_FOLDER);
+			setInputFolder(PropertiesConstants.DEFAULT_INPUT_FOLDER);
+
+		}
+	}
+
+	/**
+	 * @return the inputStream
+	 */
+	public FileInputStream getInputStream() {
+		return inputStream;
+	}
+
+	/**
+	 * @param inputStream the inputStream to set
+	 */
+	public void setInputStream(FileInputStream inputStream) {
+		this.inputStream = inputStream;
+	}
+
+	/**
+	 * @return the inputFolder
+	 */
+	public String getInputFolder() {
+		return inputFolder;
+	}
+
+	/**
+	 * @param inputFolder the inputFolder to set
+	 */
+	public void setInputFolder(String inputFolder) {
+		this.inputFolder = inputFolder;
+	}
+
+	/**
+	 * @return the maxWidth
+	 */
+	public Integer getMaxWidth() {
+		return maxWidth;
+	}
+
+	/**
+	 * @param maxWidth the maxWidth to set
+	 */
+	public void setMaxWidth(Integer maxWidth) {
+		this.maxWidth = maxWidth;
+	}
+
+	/**
+	 * @return the maxHeigth
+	 */
+	public Integer getMaxHeigth() {
+		return maxHeigth;
+	}
+
+	/**
+	 * @param maxHeigth the maxHeigth to set
+	 */
+	public void setMaxHeigth(Integer maxHeigth) {
+		this.maxHeigth = maxHeigth;
 	}
 
 	/**
 	 * @param input
 	 */
-	private void closeInput(FileInputStream input) {
+	public void closeInput(FileInputStream input) {
 		try {
 			if (input != null) {
 				input.close();
@@ -133,6 +252,14 @@ public class PropertiesProcesser {
 	 */
 	public void setPath(String path) {
 		this.path = path;
+	}
+
+	public String getOutputFolder() {
+		return outputFolder;
+	}
+
+	public void setOutputFolder(String outputFolder) {
+		this.outputFolder = outputFolder;
 	}
 
 }
