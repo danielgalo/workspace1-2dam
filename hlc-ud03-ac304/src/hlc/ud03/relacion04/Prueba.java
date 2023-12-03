@@ -1,5 +1,7 @@
 package hlc.ud03.relacion04;
 
+import java.io.UnsupportedEncodingException;
+
 public class Prueba {
 
 	private static final char[] caracteresCss = { '\'', '(' };
@@ -16,7 +18,7 @@ public class Prueba {
 			}
 		}
 
-		System.out.println(insertarEspacio(a));
+		System.out.println(charToUTF8('/'));
 
 	}
 
@@ -37,5 +39,21 @@ public class Prueba {
 		}
 
 		return result.toString();
+	}
+
+	public static String charToUTF8(char inputChar) {
+		try {
+			byte[] utf8Bytes = String.valueOf(inputChar).getBytes("UTF-8");
+
+			StringBuilder result = new StringBuilder();
+			for (byte b : utf8Bytes) {
+				result.append(String.format("%%%02X", b));
+			}
+
+			return result.toString();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

@@ -12,6 +12,27 @@ import psp.ud02.actividad203.constants.PropertiesConstants;
  */
 public class PropertiesProcesser {
 
+<<<<<<< HEAD
+=======
+	/** Input folder by default (project workspace) */
+	private static final String DEFAULT_INPUT_FOLDER = "";
+	/** Output folder by default (project workspace) */
+	private static final String DEFAULT_OUTPUT_FOLDER = "output";
+	/** Maximun image width by default */
+	private static final int DEFAULT_MAX_WIDTH = 100;
+	/** Maximun image heigth by default */
+	private static final int DEFAULT_MAX_HEIGTH = 100;
+
+	/** Input folder property name */
+	private static final String PROPERTY_INPUT_FOLDER = "inputfolder";
+	/** Input folder property name */
+	private static final String PROPERTY_OUTPUT_FOLDER = "outputfolder";
+	/** Maximun image width property name */
+	private static final String PROPERTY_MAX_WIDTH = "maxwidth";
+	/** Maximun image height property name */
+	private static final String PROPERTY_MAX_HEIGHT = "maxheight";
+
+>>>>>>> 201fef0c670f7d87f7c32796e4b38137ae982d68
 	/** Path of the configuration file */
 	private String path;
 	/** File input */
@@ -70,7 +91,63 @@ public class PropertiesProcesser {
 			propertyFolder = PropertiesConstants.PROPERTY_OUTPUT_FOLDER;
 			defaultValue = PropertiesConstants.DEFAULT_OUTPUT_FOLDER;
 
+<<<<<<< HEAD
 		} else {
+=======
+	/**
+	 * 
+	 * @return
+	 */
+	public int getMaxWidth() {
+		return getImageScale(PROPERTY_MAX_WIDTH, DEFAULT_MAX_WIDTH);
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public int getMaxHeigth() {
+		return getImageScale(PROPERTY_MAX_HEIGHT, DEFAULT_MAX_HEIGTH);
+	}
+
+	/**
+	 * Obtains the images max width specified in the configuration file. If the
+	 * value isn't correct or the configuration file isn't accesible, Obtain a
+	 * default value
+	 * 
+	 * @param property
+	 * @param defaultValue
+	 * @return the images max width specified in the config file
+	 */
+	private int getImageScale(String property, int defaultValue) {
+
+		Properties properties = new Properties();
+		FileInputStream input = null;
+		Integer value = null;
+		try {
+
+			input = new FileInputStream(path);
+			properties.load(input);
+
+			value = Integer.parseInt(properties.getProperty(property));
+
+		} catch (Exception e) {
+			value = defaultValue;
+		}
+
+		return value;
+	}
+
+	/**
+	 * Obtains the folder specified in a configuration file if it's valid and exists
+	 * 
+	 * @param property     name of the property in the file
+	 * @param defaultValue default value used if the property isnt found or the
+	 *                     configuration file isn't accessible
+	 * @return the path to the folder
+	 */
+	private String getFolder(String property, String defaultValue) {
+>>>>>>> 201fef0c670f7d87f7c32796e4b38137ae982d68
 
 			propertyFolder = PropertiesConstants.PROPERTY_INPUT_FOLDER;
 			defaultValue = PropertiesConstants.DEFAULT_INPUT_FOLDER;
