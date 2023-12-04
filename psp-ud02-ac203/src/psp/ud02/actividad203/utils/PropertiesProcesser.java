@@ -12,8 +12,6 @@ import psp.ud02.actividad203.constants.PropertiesConstants;
  */
 public class PropertiesProcesser {
 
-<<<<<<< HEAD
-=======
 	/** Input folder by default (project workspace) */
 	private static final String DEFAULT_INPUT_FOLDER = "";
 	/** Output folder by default (project workspace) */
@@ -32,7 +30,6 @@ public class PropertiesProcesser {
 	/** Maximun image height property name */
 	private static final String PROPERTY_MAX_HEIGHT = "maxheight";
 
->>>>>>> 201fef0c670f7d87f7c32796e4b38137ae982d68
 	/** Path of the configuration file */
 	private String path;
 	/** File input */
@@ -88,12 +85,10 @@ public class PropertiesProcesser {
 		// Obtain the output folder or the input folder
 		if (output) {
 
-			propertyFolder = PropertiesConstants.PROPERTY_OUTPUT_FOLDER;
-			defaultValue = PropertiesConstants.DEFAULT_OUTPUT_FOLDER;
+		
 
-<<<<<<< HEAD
 		} else {
-=======
+
 	/**
 	 * 
 	 * @return
@@ -154,16 +149,19 @@ public class PropertiesProcesser {
 
 		}
 
-		// Get the value
-		folder = properties.getProperty(propertyFolder);
+	// Get the value
+	folder=properties.getProperty(propertyFolder);
 
-		if (folder != null) {
-			// If folder is not null (property name was correct)
-			return folder;
-		} else {
-			// If folder is null (property wasn't found)
-			return defaultValue;
-		}
+	if(folder!=null)
+
+	{
+		// If folder is not null (property name was correct)
+		return folder;
+	}else
+	{
+		// If folder is null (property wasn't found)
+		return defaultValue;
+	}
 
 	}
 

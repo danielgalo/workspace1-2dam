@@ -11,6 +11,7 @@
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item key="qualifyReferences" value="false"/>
+		<item key="deleteSubPackages" value="false"/>
 	</section>
 	<section name="ExtractTempWizard">
 		<item key="declareFinal" value="false"/>

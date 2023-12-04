@@ -107,7 +107,7 @@ public class Acondicionador {
 
 			// Si es especial de SQL le añado \
 			if (isCaracterSql(currentChar)) {
-				String caracterNoSql = new String("\\" + currentChar);
+				String caracterNoSql = "\\" + currentChar;
 				builder.append(caracterNoSql);
 			} else {
 				// Si no es especial lo añado tal cual
