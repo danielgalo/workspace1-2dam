@@ -9171,3 +9171,24 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2023-12-05 11:49:28,974 [ForkJoinPool.commonPool-worker-1] INFO  j.exodus.gc.GarbageCollector - Queueing ComputeUtilizationFromScratchJob
 2023-12-05 11:49:38,745 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Started calculation of log utilization from scratch at C:\Users\Alumnado\.sonarlint\xodus-local-only-issue-store3265508609725312023
 2023-12-05 11:49:38,752 [Exodus shared background cleaner] INFO  j.exodus.gc.GarbageCollector - Finished calculation of log utilization from scratch at C:\Users\Alumnado\.sonarlint\xodus-local-only-issue-store3265508609725312023
+2023-12-05 11:50:22,637 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:22,641 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-05 11:50:22,651 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:22,652 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-12-05 11:50:23,331 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:23,332 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-05 11:50:23,336 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:23,336 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-12-05 11:50:23,576 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-12-05 11:50:23,588 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:23,588 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-jdbc-simulacionex\src\main\resources
+2023-12-05 11:50:23,590 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:23,590 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\dev\Software\Eclipse\Workspaces\Workspace 1\aadd-jdbc-simulacionex\src\test\resources
+2023-12-05 11:50:25,775 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:25,775 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-05 11:50:25,787 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:25,787 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-12-05 11:50:26,100 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:26,101 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-12-05 11:50:26,105 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-12-05 11:50:26,105 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

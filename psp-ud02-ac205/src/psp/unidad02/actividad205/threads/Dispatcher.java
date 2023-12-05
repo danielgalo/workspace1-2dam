@@ -21,6 +21,9 @@ import psp.unidad02.actividad205.utils.IndexServerFileWriter;
  */
 public class Dispatcher extends Thread {
 
+	/** Nombre de la clase para usar en logs */
+	private static final String CLASS_NAME = Dispatcher.class.getName();
+
 	/** Carpeta a monitorear */
 	private String folderMonitor;
 
@@ -43,12 +46,12 @@ public class Dispatcher extends Thread {
 		// Cuando acabe de vigilar la carpeta, imprimir el índice
 		printSharedIndexMap();
 
-		printLogs("./logs/log.txt");
+		printLogs("logs/log.txt");
 	}
 
-	private void printLogs(String folder) {
-		createFolderIfNotExists(folder);
-		IndexServerFileWriter writer = new IndexServerFileWriter(IndexServerLogger.getBuilder(), folder);
+	private void printLogs(String file) {
+
+		IndexServerFileWriter writer = new IndexServerFileWriter(IndexServerLogger.getBuilder(), file);
 		writer.writeFile();
 	}
 
@@ -77,7 +80,7 @@ public class Dispatcher extends Thread {
 			WatchService watchService = FileSystems.getDefault().newWatchService();
 			folderPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
 
-			System.out.println("Monitoring folder: " + folderPath);
+			IndexServerLogger.info("Monitoreando carpeta: " + folderPathStr, CLASS_NAME);
 
 			while (true) {
 				WatchKey key = watchService.take();
@@ -99,7 +102,7 @@ public class Dispatcher extends Thread {
 				}
 
 				if (!key.reset() || end) {
-					System.out.println("Acabando monitorizacion.");
+					IndexServerLogger.info("Acabando monitorización", CLASS_NAME);
 					break;
 				}
 			}
@@ -123,14 +126,14 @@ public class Dispatcher extends Thread {
 
 		// Comprobar que la ruta se refiera a un archivo de texto
 		if (Files.isRegularFile(newFilePath) && newFilePath.toString().endsWith(".txt")) {
-			System.out.println("File is txt, creating worker");
+			IndexServerLogger.info("Archivo es txt (" + newFilePath.toString() + "). Creando hilo", CLASS_NAME);
 			WorkerThread worker = new WorkerThread(newFilePath.toString());
 			worker.start();
 
 		} else if (newFilePath.toString().endsWith(".end")) {
 			end = true;
 		} else {
-			System.out.println("File is not txt");
+			IndexServerLogger.info("Archivo NO es txt (" + newFilePath.toString() + ")", CLASS_NAME);
 		}
 
 		return end;
@@ -151,12 +154,13 @@ public class Dispatcher extends Thread {
 			boolean created = folder.mkdirs();
 
 			if (created) {
-				System.out.println("La carpeta ha sido creada con éxito.");
+				IndexServerLogger.info("Carpeta creada con éxito", CLASS_NAME);
+
 			} else {
-				System.err.println("No se pudo crear la carpeta.");
+				IndexServerLogger.problem("No se pudo crear la carpeta", CLASS_NAME);
 			}
 		} else {
-			System.out.println("La carpeta ya existe.");
+			IndexServerLogger.info("Carpeta ya existe", CLASS_NAME);
 		}
 	}
 }

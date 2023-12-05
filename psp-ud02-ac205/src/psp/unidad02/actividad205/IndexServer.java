@@ -21,7 +21,7 @@ public class IndexServer {
 
 		IndexServerLogger.info(
 				"Output file: " + properties.getOutputFile() + " | Input folder: " + properties.getInputFolder(),
-				IndexServer.class.toString());
+				IndexServer.class.getName());
 
 		// Iniciar hilo principal
 		Dispatcher d = new Dispatcher(properties.getInputFolder());

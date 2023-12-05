@@ -9,17 +9,17 @@ import java.io.IOException;
  */
 public class IndexServerFileWriter {
 
-	private String outputFolder;
+	private String outputFile;
 	private StringBuilder builder;
 
-	public IndexServerFileWriter(StringBuilder builder, String outputFolder) {
+	public IndexServerFileWriter(StringBuilder builder, String outputFile) {
 		this.builder = builder;
-		this.outputFolder = outputFolder;
+		this.outputFile = outputFile;
 	}
 
 	public void writeFile() {
 
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder))) {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
 
 			writer.write(builder.toString());
 
