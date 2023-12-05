@@ -16,9 +16,9 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-javafx-tutorial" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-swing-examen-corregido" type="4"/>
 <item elementID="=di-javafx-prueba-tma" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=the-movie-app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=di-javafx-carrusel-imgs" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=tma" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=the-movie-app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud1-ejemplos" type="4"/>
@@ -36,6 +36,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud02-ac203" type="4"/>
 <item elementID="=psp-ud02-ac203-lb" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=psp-ud02-ac205" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=prueba.psp205" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695885738022_6" label="Acceso a Datos" name="Acceso a Datos">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tarea01-ficheros" type="4"/>

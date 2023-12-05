@@ -5,16 +5,15 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Class that process information from a properties file. Use getters to obtain
- * the properties.
+ * Clase encargada de procesar información de un archivo de propiedades
  */
 public class PropertiesProcessor {
 
-	/** Path to the properties file */
+	/** Ruta al archivo de propiedades */
 	private String propertiesfilePath;
-	/** Input folder where the files will be putted in */
+	/** Propiedad de la carpeta de entrada */
 	private String inputFolder;
-	/** Output file where de index file is gonna be created */
+	/** Propiedad de la carpeta de salida */
 	private String outputFile;
 
 	/**
@@ -33,16 +32,13 @@ public class PropertiesProcessor {
 	}
 
 	/**
-	 * Obtains the proper outputfile property value.
+	 * Obtiene el valor de una propiedad del archivo de propiedades. Si el archivo
+	 * no es accesible o las propiedades no son correctas, se usará un valor por
+	 * defecto de cada propiedad erronea.
 	 * 
-	 * If the properties file isn't accesible, or the property is not found or
-	 * incorrect, set a default value.
-	 * 
-	 * @param property     name of the property
-	 * @param defaultValue default value to assign in case of error
-	 * 
-	 * @return the output file value
-	 * 
+	 * @param property     nombre de la propiedad
+	 * @param defaultValue valor por defecto de la propiedad
+	 * @return el valor de la propiedad
 	 */
 	private String getProperty(String property, String defaultValue) {
 
@@ -50,12 +46,11 @@ public class PropertiesProcessor {
 		String propertyValue = null;
 
 		try (FileInputStream fileInputStream = new FileInputStream(propertiesfilePath)) {
-			// Load the properties
+			// Conseguir la propiedad
 			properties.load(fileInputStream);
-			// Get the property
 			propertyValue = properties.getProperty(property);
 
-			// If outputFileProperty is still null (property not found or incorrect)
+			// Si el valor es nulo (la propiedad no es correcta) asignar valor por defecto
 			if (propertyValue == null || propertyValue.isBlank()) {
 				// Set default value
 				propertyValue = defaultValue;
@@ -63,7 +58,7 @@ public class PropertiesProcessor {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			// If there was an error accessing the file, assign a default value
+			// Si hubo un error accediendo al archivo, asignar el valor por defecto
 			propertyValue = defaultValue;
 		}
 

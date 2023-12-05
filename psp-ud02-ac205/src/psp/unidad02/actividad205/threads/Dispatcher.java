@@ -9,13 +9,19 @@ import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
+import java.util.Map;
+
+import psp.unidad02.actividad205.indexes.SharedIndex;
+import psp.unidad02.actividad205.loggers.IndexServerLogger;
+import psp.unidad02.actividad205.utils.IndexServerFileWriter;
 
 /**
- * 
+ * Hilo maestro de la aplicación, encargado de vigilar una carpeta y crear hilos
+ * hijos. Imprime el índice cuando acaba de vigilar.
  */
 public class Dispatcher extends Thread {
 
-	/** Folder to monitor */
+	/** Carpeta a monitorear */
 	private String folderMonitor;
 
 	/**
@@ -32,16 +38,39 @@ public class Dispatcher extends Thread {
 	@Override
 	public void run() {
 
-		// Monitor the folder
+		// Vigilar la carpeta
 		monitorFolder(folderMonitor);
+		// Cuando acabe de vigilar la carpeta, imprimir el índice
+		printSharedIndexMap();
+
+		printLogs("./logs/log.txt");
+	}
+
+	private void printLogs(String folder) {
+		createFolderIfNotExists(folder);
+		IndexServerFileWriter writer = new IndexServerFileWriter(IndexServerLogger.getBuilder(), folder);
+		writer.writeFile();
 	}
 
 	/**
-	 * Monitors a folder and watches for entry events
 	 * 
-	 * @param folderPathStr
+	 */
+	private void printSharedIndexMap() {
+		for (Map.Entry<String, StringBuilder> entry : SharedIndex.getIndexes().entrySet()) {
+			System.out.println(entry.getKey() + ": ");
+			System.out.println(entry.getValue().toString().trim());
+			System.out.println();
+		}
+	}
+
+	/**
+	 * Monitorea una carpeta. Espera a eventos de entrada de archivos y crea hilos
+	 * según ocurran estos eventos.
+	 * 
+	 * @param folderPathStr ruta de la carpeta a vigilar
 	 */
 	public static void monitorFolder(String folderPathStr) {
+		// Verificar que la carpeta exista
 		createFolderIfNotExists(folderPathStr);
 		try {
 			Path folderPath = Path.of(folderPathStr);
@@ -53,6 +82,8 @@ public class Dispatcher extends Thread {
 			while (true) {
 				WatchKey key = watchService.take();
 
+				boolean end = false;
+
 				for (WatchEvent<?> event : key.pollEvents()) {
 					WatchEvent.Kind<?> kind = event.kind();
 
@@ -61,11 +92,14 @@ public class Dispatcher extends Thread {
 					}
 
 					if (kind == StandardWatchEventKinds.ENTRY_CREATE) {
-						createWorker(folderPath, event);
+						// Crear worker, si el worker detecta archivo .end, la bandera de acabar el
+						// ciclo pasa a true
+						end = createWorker(folderPath, event);
 					}
 				}
 
-				if (!key.reset()) {
+				if (!key.reset() || end) {
+					System.out.println("Acabando monitorizacion.");
 					break;
 				}
 			}
@@ -76,30 +110,36 @@ public class Dispatcher extends Thread {
 	}
 
 	/**
-	 * Creates a worker that recieves a file path
+	 * Crea hilos worker a los que se le pasan rutas de archivos encontrados
 	 * 
 	 * @param folderPath
 	 * @param event
 	 */
-	private static void createWorker(Path folderPath, WatchEvent<?> event) {
+	private static boolean createWorker(Path folderPath, WatchEvent<?> event) {
 		Path newPath = (Path) event.context();
 		Path newFilePath = folderPath.resolve(newPath);
 
-		// Check if the file path is a txt file
+		boolean end = false;
+
+		// Comprobar que la ruta se refiera a un archivo de texto
 		if (Files.isRegularFile(newFilePath) && newFilePath.toString().endsWith(".txt")) {
 			System.out.println("File is txt, creating worker");
 			WorkerThread worker = new WorkerThread(newFilePath.toString());
 			worker.start();
 
+		} else if (newFilePath.toString().endsWith(".end")) {
+			end = true;
 		} else {
 			System.out.println("File is not txt");
 		}
+
+		return end;
 	}
 
 	/**
-	 * Check if a folder is created, if not, creates it.
+	 * Verifica que la carpeta exista, si no la crea.
 	 * 
-	 * @param folderPath folder to check or/and create.
+	 * @param folderPath carpeta a comprobar y/o crear
 	 */
 	private static void createFolderIfNotExists(String folderPath) {
 		// Crear un objeto File con la ruta proporcionada

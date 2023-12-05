@@ -34,10 +34,19 @@ PAQUETES
 		-> SharedIndex.java 
 			Contiene el método sincronizado donde todos los hilos almacenan palabras
 		
-		-> IndexWriter.java
+		-> Index.java
 			Se encarga de crear el archivo del Indice y escribir la informacion del Sharedindex
-
-		-> IndexFormat.java
-			Se encarga de el formato del mensaje del indice
+			Se encarga de el formato del mensaje del indice.
+				private static Map<String, List<Index>> indexMap = new TreeMap<>();
+				Mapa con la palabra como clave, y las tripletas como valor
+				
+					clave->hola
+						valor->Lista:
+							(archivo, linea, posicion)
+							(archivo, linea, posicion)
+							(archivo, linea, posicion)
+							(archivo, linea, posicion)
+							
+			
 			
 

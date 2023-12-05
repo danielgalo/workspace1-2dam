@@ -7,12 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import psp.unidad02.actividad205.indexes.Index;
+import psp.unidad02.actividad205.indexes.SharedIndex;
+
+/**
+ * Hilo hijo, encargado de procesar un archivo y guardar información de su
+ * indexación.
+ */
 public class WorkerThread extends Thread {
 
+	/** Expresión regular que verifica una palabra */
 	private static final String REGEX_WORD = "^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+$";
-	private static List<String[]> words = new ArrayList<>();
+	/** Lista de indices */
+	private static List<Index> indexes = new ArrayList<>();
 
-	/** Path to the txt file */
+	/** Ruta del archivo de texto */
 	private String filePath;
 
 	/**
@@ -27,35 +36,38 @@ public class WorkerThread extends Thread {
 	@Override
 	public void run() {
 
-		try {
-
-			BufferedReader reader = new BufferedReader(new FileReader(filePath));
+		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
 			String line;
 			int lineCounter = 0;
+			// Leer el archivo
 			while ((line = reader.readLine()) != null) {
-				words.add(line.split(" "));
+				// Conteo de líneas
 				lineCounter++;
-			}
+				// Palabras de la línea
+				String[] lineWords = line.split("\\s+");
 
-			// For each array in the words list
-			for (String[] strings : words) {
-				// For each word in the array
-				for (String string : strings) {
-					// If the word is a proper word
-					if (Pattern.matches(REGEX_WORD, string)) {
-						// Add it to the index
-						// TODO Funciona, palabras que vayan seguidas o antecedidas de tabuladores no
-						// las pilla
-						System.out.println(string);
+				// Por cada palabra
+				for (int i = 0; i < lineWords.length; i++) {
+
+					// Si es una palabra correcta
+					if (Pattern.matches(REGEX_WORD, lineWords[i])) {
+
+						String word = lineWords[i].toLowerCase();
+
+						Index idx = new Index(word, (i + 1), lineCounter, filePath);
+						indexes.add(idx);
+
+						SharedIndex.addIndex(idx.getWord(), idx);
+
 					}
+
 				}
 			}
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }

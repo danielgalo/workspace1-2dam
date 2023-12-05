@@ -1,25 +1,25 @@
 package psp.unidad02.actividad205.properties;
 
 /**
- * Class that contains constants used to work with properties file
+ * Clase que contiene constantes del archivo de propiedades
  */
 public class PropertiesConstants {
 
 	/**
-	 * Private Constructor
+	 * Constructor privado
 	 */
 	private PropertiesConstants() {
 
 	}
 
-	/** Default value for output file */
+	/** Valor por defecto del archivo de salida */
 	public static final String OUTPUT_FILE_DEFAULT = "index.idx";
-	/** Default value for input folder */
+	/** Valor por defecto de la carpeta de entrada */
 	public static final String INPUT_FOLDER_DEFAULT = "./input";
 
-	/** Name of the property refering to the output file */
+	/** Nombre de la propiedad del archivo de salida */
 	public static final String OUTPUT_FILE_PROPERTY_NAME = "outputFile";
-	/** Name of the property refering to the input foldere */
+	/** Nombre de la propiedad de la carpeta de entrada */
 	public static final String INPUT_FOLDER_PROPERTY_NAME = "inputFile";
 
 }
