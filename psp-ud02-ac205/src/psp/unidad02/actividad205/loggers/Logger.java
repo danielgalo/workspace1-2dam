@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Logger de la aplicación
  */
-public class IndexServerLogger {
+public class Logger {
 
 	/** Nivel de información */
 	private static final String INFO_LEVEL = "INFO";
@@ -18,7 +18,7 @@ public class IndexServerLogger {
 	/**
 	 * Constructor privado para evitar instancias
 	 */
-	private IndexServerLogger() {
+	private Logger() {
 
 	}
 

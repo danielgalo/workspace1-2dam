@@ -4,13 +4,18 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import psp.unidad02.actividad205.loggers.Logger;
+
 /**
  * Clase encargada de procesar información de un archivo de propiedades
  */
 public class PropertiesProcessor {
 
+	/** Nombre de la clase para usar en logs */
+	private static final String CLASS_NAME = PropertiesProcessor.class.getName();
+
 	/** Ruta al archivo de propiedades */
-	private String propertiesfilePath;
+	private String propertiesFilePath;
 	/** Propiedad de la carpeta de entrada */
 	private String inputFolder;
 	/** Propiedad de la carpeta de salida */
@@ -21,9 +26,9 @@ public class PropertiesProcessor {
 	 * 
 	 * @param propertiesfilePath path to the properties file
 	 */
-	public PropertiesProcessor(String propertiesfilePath) {
-		this.propertiesfilePath = propertiesfilePath;
-		// Obtain the properties
+	public PropertiesProcessor(String propertiesFilePath) {
+		this.propertiesFilePath = propertiesFilePath;
+		// Obtener las propiedades
 		setOutputFile(
 				getProperty(PropertiesConstants.OUTPUT_FILE_PROPERTY_NAME, PropertiesConstants.OUTPUT_FILE_DEFAULT));
 		setInputFolder(
@@ -45,19 +50,27 @@ public class PropertiesProcessor {
 		Properties properties = new Properties();
 		String propertyValue = null;
 
-		try (FileInputStream fileInputStream = new FileInputStream(propertiesfilePath)) {
+		Logger.info("Procesando propiedades del archivo " + propertiesFilePath, CLASS_NAME);
+
+		try (FileInputStream fileInputStream = new FileInputStream(propertiesFilePath)) {
 			// Conseguir la propiedad
 			properties.load(fileInputStream);
 			propertyValue = properties.getProperty(property);
 
 			// Si el valor es nulo (la propiedad no es correcta) asignar valor por defecto
 			if (propertyValue == null || propertyValue.isBlank()) {
+				Logger.info("La propiedad \"" + property
+						+ "\" no existe, es null o su valor no es válido. Se le asignará el valor por defecto: \""
+						+ defaultValue + "\".", CLASS_NAME);
 				// Set default value
 				propertyValue = defaultValue;
 			}
 
+			Logger.info("Valor de la propiedad \"" + property + "\" es: \"" + propertyValue + "\".", CLASS_NAME);
+
 		} catch (IOException e) {
-			e.printStackTrace();
+			Logger.problem("Hubo un problema accediendo al archivo de propiedades: \"" + propertiesFilePath
+					+ "\". Asignando valor por defecto...", CLASS_NAME);
 			// Si hubo un error accediendo al archivo, asignar el valor por defecto
 			propertyValue = defaultValue;
 		}
@@ -70,14 +83,14 @@ public class PropertiesProcessor {
 	 * @return the propertiesfilePath
 	 */
 	public String getPropertiesfilePath() {
-		return propertiesfilePath;
+		return propertiesFilePath;
 	}
 
 	/**
 	 * @param propertiesfilePath the propertiesfilePath to set
 	 */
 	public void setPropertiesfilePath(String propertiesfilePath) {
-		this.propertiesfilePath = propertiesfilePath;
+		this.propertiesFilePath = propertiesfilePath;
 	}
 
 	/**

@@ -3,6 +3,8 @@ package psp.unidad02.actividad205.indexes;
 import java.util.Map;
 import java.util.TreeMap;
 
+import psp.unidad02.actividad205.loggers.Logger;
+
 /**
  * Clase estática usada para guardar y obtener índices.
  */
@@ -10,6 +12,8 @@ public class SharedIndex {
 
 	/** Mapa en el cual se guarda el índice */
 	private static Map<String, StringBuilder> indexes = new TreeMap<>();
+	/** Nombre de la clase para logs */
+	private static final String CLASS_NAME = SharedIndex.class.getName();
 
 	/**
 	 * Constuctor privado para evitar instancisas
@@ -33,11 +37,17 @@ public class SharedIndex {
 	 * @param idx     Indice que contiene la información de la tripleta
 	 */
 	public static synchronized void addIndex(String palabra, Index idx) {
+
 		if (!palabra.isEmpty()) {
+
+			Logger.info("Añadiendo índice a la palabra: \"" + palabra + "\"", CLASS_NAME);
+
 			// Agregar la ocurrencia de la palabra junto con la información de la línea
-			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("    ").append("(")
+			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("  ").append("(")
 					.append(idx.getFileName()).append(",").append(idx.getLine()).append(",")
 					.append(idx.getWordPosition()).append(") ").append("\n");
+		} else {
+			Logger.problem("Palabra entró null", CLASS_NAME);
 		}
 	}
 

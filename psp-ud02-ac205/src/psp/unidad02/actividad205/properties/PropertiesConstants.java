@@ -20,6 +20,6 @@ public class PropertiesConstants {
 	/** Nombre de la propiedad del archivo de salida */
 	public static final String OUTPUT_FILE_PROPERTY_NAME = "outputFile";
 	/** Nombre de la propiedad de la carpeta de entrada */
-	public static final String INPUT_FOLDER_PROPERTY_NAME = "inputFile";
+	public static final String INPUT_FOLDER_PROPERTY_NAME = "inputFolder";
 
 }

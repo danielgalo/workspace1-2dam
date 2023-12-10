@@ -1,6 +1,6 @@
 package psp.unidad02.actividad205;
 
-import psp.unidad02.actividad205.loggers.IndexServerLogger;
+import psp.unidad02.actividad205.loggers.Logger;
 import psp.unidad02.actividad205.properties.PropertiesProcessor;
 import psp.unidad02.actividad205.threads.Dispatcher;
 
@@ -9,6 +9,9 @@ import psp.unidad02.actividad205.threads.Dispatcher;
  */
 public class IndexServer {
 
+	/** Nombre de la clase para usar en logs */
+	private static final String CLASS_NAME = IndexServer.class.getName();
+
 	/**
 	 * Método principal
 	 * 
@@ -16,16 +19,18 @@ public class IndexServer {
 	 */
 	public static void main(String[] args) {
 
-		// Procesar propiedades
-		PropertiesProcessor properties = new PropertiesProcessor("server.properties");
+		Logger.info("Inicio de la aplicación", CLASS_NAME);
 
-		IndexServerLogger.info(
-				"Output file: " + properties.getOutputFile() + " | Input folder: " + properties.getInputFolder(),
-				IndexServer.class.getName());
+		// Procesar y obtener propiedades
+		PropertiesProcessor properties = new PropertiesProcessor("server.properties");
+		String outputFile = properties.getOutputFile();
+		String inputFolder = properties.getInputFolder();
+
+		Logger.info("Fichero de salida: " + outputFile + " | Carpeta de entrada: " + inputFolder, CLASS_NAME);
 
 		// Iniciar hilo principal
-		Dispatcher d = new Dispatcher(properties.getInputFolder());
-		d.start();
+		Dispatcher mainThread = new Dispatcher(inputFolder, outputFile);
+		mainThread.start();
 
 	}
 }

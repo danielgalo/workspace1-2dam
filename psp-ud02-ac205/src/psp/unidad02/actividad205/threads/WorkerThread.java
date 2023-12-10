@@ -3,12 +3,11 @@ package psp.unidad02.actividad205.threads;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Pattern;
 
 import psp.unidad02.actividad205.indexes.Index;
 import psp.unidad02.actividad205.indexes.SharedIndex;
+import psp.unidad02.actividad205.loggers.Logger;
 
 /**
  * Hilo hijo, encargado de procesar un archivo y guardar información de su
@@ -16,25 +15,30 @@ import psp.unidad02.actividad205.indexes.SharedIndex;
  */
 public class WorkerThread extends Thread {
 
+	/** Nombre de la clase para usar en logs */
+	private static final String CLASS_NAME = WorkerThread.class.getName();
 	/** Expresión regular que verifica una palabra */
 	private static final String REGEX_WORD = "^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+$";
-	/** Lista de indices */
-	private static List<Index> indexes = new ArrayList<>();
 
 	/** Ruta del archivo de texto */
 	private String filePath;
+	/** Id del worker */
+	private int workerId;
 
 	/**
 	 * Constructor
 	 * 
 	 * @param filePath
 	 */
-	public WorkerThread(String filePath) {
+	public WorkerThread(String filePath, int workerId) {
 		this.filePath = filePath;
+		this.workerId = workerId;
 	}
 
 	@Override
 	public void run() {
+
+		Logger.info("Hilo worker empezando. ID: " + workerId, CLASS_NAME);
 
 		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
@@ -54,10 +58,7 @@ public class WorkerThread extends Thread {
 					if (Pattern.matches(REGEX_WORD, lineWords[i])) {
 
 						String word = lineWords[i].toLowerCase();
-
 						Index idx = new Index(word, (i + 1), lineCounter, filePath);
-						indexes.add(idx);
-
 						SharedIndex.addIndex(idx.getWord(), idx);
 
 					}
@@ -65,9 +66,19 @@ public class WorkerThread extends Thread {
 				}
 			}
 
+			Logger.info("Hilo worker terminó. ID: " + workerId, CLASS_NAME);
+
 		} catch (IOException e) {
-			e.printStackTrace();
+			Logger.problem("Hilo worker tuvo un problema accediendo al archivo. ID: " + workerId + ". Error: "
+					+ e.getMessage(), CLASS_NAME);
 		}
+	}
+
+	/**
+	 * @return the workerId
+	 */
+	public int getWorkerId() {
+		return workerId;
 	}
 
 }

@@ -1,5 +1,0 @@
-[2023-12-05 14:39:48](INFO)<psp.unidad02.actividad205.IndexServer>: Output file: sadas | Input folder: ./input
-[2023-12-05 14:39:48](INFO)<psp.unidad02.actividad205.threads.Dispatcher>: Carpeta ya existe
-[2023-12-05 14:39:48](INFO)<psp.unidad02.actividad205.threads.Dispatcher>: Monitoreando carpeta: ./input
-[2023-12-05 14:39:55](INFO)<psp.unidad02.actividad205.threads.Dispatcher>: Archivo es txt (.\input\Estructura.txt). Creando hilo
-[2023-12-05 14:39:57](INFO)<psp.unidad02.actividad205.threads.Dispatcher>: Acabando monitorización

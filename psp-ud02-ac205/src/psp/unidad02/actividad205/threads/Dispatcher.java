@@ -12,7 +12,7 @@ import java.nio.file.WatchService;
 import java.util.Map;
 
 import psp.unidad02.actividad205.indexes.SharedIndex;
-import psp.unidad02.actividad205.loggers.IndexServerLogger;
+import psp.unidad02.actividad205.loggers.Logger;
 import psp.unidad02.actividad205.utils.IndexServerFileWriter;
 
 /**
@@ -21,20 +21,25 @@ import psp.unidad02.actividad205.utils.IndexServerFileWriter;
  */
 public class Dispatcher extends Thread {
 
+	/** Ruta del fichero logger para ver debug */
+	private static final String LOGGER_FILE = "log.txt";
 	/** Nombre de la clase para usar en logs */
 	private static final String CLASS_NAME = Dispatcher.class.getName();
 
 	/** Carpeta a monitorear */
 	private String folderMonitor;
+	/** Archivo de salida */
+	private String outputFile;
 
 	/**
 	 * Constructor
 	 * 
 	 * @param folderMonitor
 	 */
-	public Dispatcher(String folderMonitor) {
+	public Dispatcher(String folderMonitor, String outputFile) {
+		this.outputFile = outputFile;
 		this.folderMonitor = folderMonitor;
-		// Establecer prioridad para el hilo
+		// Establecer prioridad máxima para el hilo
 		this.setPriority(Thread.MAX_PRIORITY);
 	}
 
@@ -43,27 +48,45 @@ public class Dispatcher extends Thread {
 
 		// Vigilar la carpeta
 		monitorFolder(folderMonitor);
-		// Cuando acabe de vigilar la carpeta, imprimir el índice
-		printSharedIndexMap();
-
-		printLogs("logs/log.txt");
+		// Imprimir los logs de la aplicación
+		printLogs();
+		// Imprimir en fichero el indice
+		printIndex();
 	}
 
-	private void printLogs(String file) {
+	/**
+	 * Imprime en el fichero de salida el índice en formato:<br>
+	 * palabra<br>
+	 * (fichero,linea,posicion)<br>
+	 * (fichero,linea,posicion)<br>
+	 * ... <br>
+	 */
+	private void printIndex() {
 
-		IndexServerFileWriter writer = new IndexServerFileWriter(IndexServerLogger.getBuilder(), file);
+		StringBuilder builder = new StringBuilder();
+
+		// Obtener el valor de todas las claves y guardarlo en el StringBuilder
+		for (Map.Entry<String, StringBuilder> entry : SharedIndex.getIndexes().entrySet()) {
+
+			builder.append(entry.getKey());
+			builder.append("\n");
+			builder.append(entry.getValue().toString());
+
+		}
+
+		// Escribir en el fichero de salida el contenido del mapa
+		IndexServerFileWriter writer = new IndexServerFileWriter(builder, outputFile);
 		writer.writeFile();
 	}
 
 	/**
+	 * Imprime los logs generados por la aplicación al archivo de logs.
 	 * 
 	 */
-	private void printSharedIndexMap() {
-		for (Map.Entry<String, StringBuilder> entry : SharedIndex.getIndexes().entrySet()) {
-			System.out.println(entry.getKey() + ": ");
-			System.out.println(entry.getValue().toString().trim());
-			System.out.println();
-		}
+	private void printLogs() {
+
+		IndexServerFileWriter writer = new IndexServerFileWriter(Logger.getBuilder(), LOGGER_FILE);
+		writer.writeFile();
 	}
 
 	/**
@@ -73,67 +96,85 @@ public class Dispatcher extends Thread {
 	 * @param folderPathStr ruta de la carpeta a vigilar
 	 */
 	public static void monitorFolder(String folderPathStr) {
-		// Verificar que la carpeta exista
+		// Verificar que la carpeta exista, crearla si no existe
 		createFolderIfNotExists(folderPathStr);
 		try {
+
+			// Conseguir ruta de la carpeta a vigilar, crear WatchEvent
 			Path folderPath = Path.of(folderPathStr);
 			WatchService watchService = FileSystems.getDefault().newWatchService();
 			folderPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
 
-			IndexServerLogger.info("Monitoreando carpeta: " + folderPathStr, CLASS_NAME);
+			Logger.info("Monitoreando carpeta: " + folderPathStr, CLASS_NAME);
 
+			boolean endMonitoring = false;
+			int workerId = 0;
+
+			// Vigilar carpeta
 			while (true) {
-				WatchKey key = watchService.take();
 
-				boolean end = false;
+				WatchKey key = watchService.take();
 
 				for (WatchEvent<?> event : key.pollEvents()) {
 					WatchEvent.Kind<?> kind = event.kind();
 
-					if (kind == StandardWatchEventKinds.OVERFLOW) {
-						continue;
-					}
-
+					// Si se ha introducido archivo
 					if (kind == StandardWatchEventKinds.ENTRY_CREATE) {
+						Logger.info("Archivo detectado", CLASS_NAME);
+						workerId++;
 						// Crear worker, si el worker detecta archivo .end, la bandera de acabar el
 						// ciclo pasa a true
-						end = createWorker(folderPath, event);
+						endMonitoring = createWorker(folderPath, event, workerId);
 					}
 				}
 
-				if (!key.reset() || end) {
-					IndexServerLogger.info("Acabando monitorización", CLASS_NAME);
+				// Acabar la monitorización
+				if (!key.reset() || endMonitoring) {
+					Logger.info("Acabando monitorización", CLASS_NAME);
 					break;
 				}
 			}
 
 		} catch (IOException | InterruptedException e) {
-			e.printStackTrace();
+			Logger.problem("Hubo un problema monitoreando la carpeta: " + e.getMessage(), CLASS_NAME);
+			// Interrumpir el hilo
+			Thread.currentThread().interrupt();
 		}
 	}
 
 	/**
-	 * Crea hilos worker a los que se le pasan rutas de archivos encontrados
+	 * Crea hilos worker, encargados de procesar el archivo introducido.
 	 * 
-	 * @param folderPath
-	 * @param event
+	 * @param folderPath ruta de la carpeta monitoreada
+	 * @param event      evento de monitoreo
+	 * @param workerId   identificador a asignar al worker
+	 * @return true sólo si el archivo introducido no es ".end".
 	 */
-	private static boolean createWorker(Path folderPath, WatchEvent<?> event) {
+	private static boolean createWorker(Path folderPath, WatchEvent<?> event, int workerId) {
 		Path newPath = (Path) event.context();
 		Path newFilePath = folderPath.resolve(newPath);
 
+		// Bandera para acabar la monitorización
 		boolean end = false;
 
 		// Comprobar que la ruta se refiera a un archivo de texto
 		if (Files.isRegularFile(newFilePath) && newFilePath.toString().endsWith(".txt")) {
-			IndexServerLogger.info("Archivo es txt (" + newFilePath.toString() + "). Creando hilo", CLASS_NAME);
-			WorkerThread worker = new WorkerThread(newFilePath.toString());
+
+			Logger.info("Archivo es txt (" + newFilePath.toString() + "). Creando hilo", CLASS_NAME);
+
+			// Crear hilo
+			WorkerThread worker = new WorkerThread(newFilePath.toString(), workerId);
 			worker.start();
 
+			Logger.info("Hilo worker creado. Worker nº" + workerId, CLASS_NAME);
+
 		} else if (newFilePath.toString().endsWith(".end")) {
+			// Si el archivo es .end, la bandera para acabar la monitorización pasa a true
+			Logger.info("El archivo (" + newFilePath.toString() + ") indica fin.", CLASS_NAME);
 			end = true;
 		} else {
-			IndexServerLogger.info("Archivo NO es txt (" + newFilePath.toString() + ")", CLASS_NAME);
+			// Si es de cualquier otro tipo, ignorarlo (informar por log)
+			Logger.info("Archivo NO es txt (" + newFilePath.toString() + ")", CLASS_NAME);
 		}
 
 		return end;
@@ -154,13 +195,13 @@ public class Dispatcher extends Thread {
 			boolean created = folder.mkdirs();
 
 			if (created) {
-				IndexServerLogger.info("Carpeta creada con éxito", CLASS_NAME);
+				Logger.info("Carpeta creada con éxito", CLASS_NAME);
 
 			} else {
-				IndexServerLogger.problem("No se pudo crear la carpeta", CLASS_NAME);
+				Logger.problem("No se pudo crear la carpeta", CLASS_NAME);
 			}
 		} else {
-			IndexServerLogger.info("Carpeta ya existe", CLASS_NAME);
+			Logger.info("Carpeta ya existe", CLASS_NAME);
 		}
 	}
 }
