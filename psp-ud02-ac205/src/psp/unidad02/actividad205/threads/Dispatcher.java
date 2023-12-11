@@ -9,6 +9,8 @@ import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import psp.unidad02.actividad205.indexes.SharedIndex;
@@ -21,10 +23,10 @@ import psp.unidad02.actividad205.utils.IndexServerFileWriter;
  */
 public class Dispatcher extends Thread {
 
-	/** Ruta del fichero logger para ver debug */
-	private static final String LOGGER_FILE = "log.txt";
 	/** Nombre de la clase para usar en logs */
 	private static final String CLASS_NAME = Dispatcher.class.getName();
+	/** Lista de hilos worker */
+	private static List<WorkerThread> workers = new ArrayList<>();
 
 	/** Carpeta a monitorear */
 	private String folderMonitor;
@@ -48,10 +50,11 @@ public class Dispatcher extends Thread {
 
 		// Vigilar la carpeta
 		monitorFolder(folderMonitor);
-		// Imprimir los logs de la aplicación
-		printLogs();
+		// Esperar a que los hilos acaben
+		waitForWorkers();
 		// Imprimir en fichero el indice
 		printIndex();
+
 	}
 
 	/**
@@ -68,24 +71,16 @@ public class Dispatcher extends Thread {
 		// Obtener el valor de todas las claves y guardarlo en el StringBuilder
 		for (Map.Entry<String, StringBuilder> entry : SharedIndex.getIndexes().entrySet()) {
 
+			// Guardar palabra
 			builder.append(entry.getKey());
 			builder.append("\n");
+			// Guardar tuplas
 			builder.append(entry.getValue().toString());
 
 		}
 
 		// Escribir en el fichero de salida el contenido del mapa
 		IndexServerFileWriter writer = new IndexServerFileWriter(builder, outputFile);
-		writer.writeFile();
-	}
-
-	/**
-	 * Imprime los logs generados por la aplicación al archivo de logs.
-	 * 
-	 */
-	private void printLogs() {
-
-		IndexServerFileWriter writer = new IndexServerFileWriter(Logger.getBuilder(), LOGGER_FILE);
 		writer.writeFile();
 	}
 
@@ -164,6 +159,8 @@ public class Dispatcher extends Thread {
 
 			// Crear hilo
 			WorkerThread worker = new WorkerThread(newFilePath.toString(), workerId);
+			// Lo añade a la lista de hilos
+			workers.add(worker);
 			worker.start();
 
 			Logger.info("Hilo worker creado. Worker nº" + workerId, CLASS_NAME);
@@ -178,6 +175,21 @@ public class Dispatcher extends Thread {
 		}
 
 		return end;
+	}
+
+	/**
+	 * Espera a que los hilos worker acaben antes de finalizar el hilo Dispatcher.
+	 */
+	private void waitForWorkers() {
+		for (WorkerThread worker : workers) {
+			try {
+				Logger.info("Esperando a que termine el hilo...", CLASS_NAME);
+				worker.join();
+			} catch (InterruptedException e) {
+				Logger.problem("Error al esperar a que el hilo worker acabe. ID: " + worker.getId(), CLASS_NAME);
+				Thread.currentThread().interrupt();
+			}
+		}
 	}
 
 	/**
@@ -200,6 +212,7 @@ public class Dispatcher extends Thread {
 			} else {
 				Logger.problem("No se pudo crear la carpeta", CLASS_NAME);
 			}
+
 		} else {
 			Logger.info("Carpeta ya existe", CLASS_NAME);
 		}

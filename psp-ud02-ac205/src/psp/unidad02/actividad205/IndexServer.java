@@ -19,6 +19,8 @@ public class IndexServer {
 	 */
 	public static void main(String[] args) {
 
+		Logger.initializeBuffer();
+
 		Logger.info("Inicio de la aplicación", CLASS_NAME);
 
 		// Procesar y obtener propiedades
@@ -27,10 +29,22 @@ public class IndexServer {
 		String inputFolder = properties.getInputFolder();
 
 		Logger.info("Fichero de salida: " + outputFile + " | Carpeta de entrada: " + inputFolder, CLASS_NAME);
-
 		// Iniciar hilo principal
 		Dispatcher mainThread = new Dispatcher(inputFolder, outputFile);
 		mainThread.start();
+
+		try {
+			// Esperar a que el hilo Dispatcher termine
+			mainThread.join();
+		} catch (InterruptedException e) {
+			Logger.problem("Error al esperar a que el hilo principal termine. " + e.getMessage(), CLASS_NAME);
+			Thread.currentThread().interrupt();
+		} finally {
+			Logger.info("Fin de la aplicación", CLASS_NAME);
+			// Cerrar el BufferedWriter
+			Logger.closeWriter();
+
+		}
 
 	}
 }

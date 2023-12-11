@@ -1,6 +1,7 @@
 package psp.unidad02.actividad205.loggers;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -19,25 +20,31 @@ public class Logger {
 	private static final StringBuilder BUILDER = new StringBuilder();
 	/** Buffer para escribir */
 	private static BufferedWriter writer;
-
 	/** Archivo de logs */
-	private String logFile;
+	private static final String LOGGER_FILE = "indexer.log";
 
 	/**
 	 * Constructor privado para evitar instancias
 	 */
-	public Logger(String logFile) {
-// TODO hacer que se vaya escribiendo en archivo a medida que se hagan logs, en vez de escribirlo todo cuando acaba el programa
-		this.logFile = logFile;
-		initializeBuffer();
+	private Logger() {
+
 	}
 
 	/**
 	 * @param logFile
 	 */
-	private static void initializeBuffer() {
+	public static void initializeBuffer() {
 		try {
-			writer = new BufferedWriter(new FileWriter(logFile));
+			File logFile = new File(LOGGER_FILE);
+
+			// Verificar si el archivo ya existe
+			if (!logFile.exists()) {
+				// Si no existe, crearlo
+				writer = new BufferedWriter(new FileWriter(logFile));
+			} else {
+				// Si ya existe, abrirlo sin eliminar su contenido
+				writer = new BufferedWriter(new FileWriter(logFile, true));
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -49,7 +56,7 @@ public class Logger {
 	 * @param msg    de información
 	 * @param module el módulo que produce el mensaje
 	 */
-	public static void info(String msg, String module) {
+	public static synchronized void info(String msg, String module) {
 
 		log(INFO_LEVEL, module, msg);
 
@@ -61,7 +68,7 @@ public class Logger {
 	 * @param msg    mensaje de error
 	 * @param module el módulo que produce el error
 	 */
-	public static void problem(String msg, String module) {
+	public static synchronized void problem(String msg, String module) {
 
 		log(PROBLEM_LEVEL, module, msg);
 
@@ -98,6 +105,16 @@ public class Logger {
 		// Salto de línea
 		BUILDER.append("\n");
 
+		// Escribir log
+		try {
+			writer.write(BUILDER.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// Limpiar el StringBuilder
+		BUILDER.setLength(0);
+
 	}
 
 	/**
@@ -116,6 +133,22 @@ public class Logger {
 
 		// Formatear el timestamp
 		return dateFormat.format(new Date(tiempoEnMilisegundos));
+	}
+
+	/**
+	 * Cierra el Buffer del Logger
+	 * 
+	 * @param writer
+	 */
+	public static void closeWriter() {
+		if (writer != null) {
+			try {
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
 	}
 
 	/**
