@@ -11,6 +11,15 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 public class HibernateUtils {
 
 	/**
+	 * Constructor privado
+	 */
+	private HibernateUtils() {
+
+	}
+
+	/**
+	 * Obtiene la session factory
+	 * 
 	 * @return
 	 */
 	public static SessionFactory getSessionFactory() {

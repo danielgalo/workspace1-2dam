@@ -43,9 +43,12 @@ public class SharedIndex {
 			Logger.info("Añadiendo índice a la palabra: \"" + palabra + "\"", CLASS_NAME);
 
 			// Agregar la ocurrencia de la palabra junto con la información de la línea
-			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("  ").append("(")
-					.append(idx.getFileName()).append(",").append(idx.getLine()).append(",")
-					.append(idx.getWordPosition()).append(") ").append("\n");
+//			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("  ").append("(")
+//					.append(idx.getFileName()).append(",").append(idx.getLine()).append(",")
+//					.append(idx.getWordPosition()).append(") ").append("\n");
+
+			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("  ").append(idx.getMsgTupla())
+					.append("\n");
 		} else {
 			Logger.problem("Palabra entró null", CLASS_NAME);
 		}

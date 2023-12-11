@@ -40,6 +40,18 @@ public class WorkerThread extends Thread {
 
 		Logger.info("Hilo worker empezando. ID: " + workerId, CLASS_NAME);
 
+		// Crea y añade índice
+		createIndex();
+
+		Logger.info("Hilo worker terminó. ID: " + workerId, CLASS_NAME);
+
+	}
+
+	/**
+	 * Procesa el archivo y crea un índice según su información. Añade el índice al
+	 * mapa de la clase SharedIndex.
+	 */
+	private void createIndex() {
 		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
 			String line;
@@ -49,24 +61,24 @@ public class WorkerThread extends Thread {
 				// Conteo de líneas
 				lineCounter++;
 				// Palabras de la línea
-				String[] lineWords = line.split("\\s+");
+				String[] lineWords = line.split("[^a-zA-ZáéíóúüñÁÉÍÓÚÜÑ]+");
 
 				// Por cada palabra
 				for (int i = 0; i < lineWords.length; i++) {
 
-					// Si es una palabra correcta
-					if (Pattern.matches(REGEX_WORD, lineWords[i])) {
+					String word = lineWords[i];
 
-						String word = lineWords[i].toLowerCase();
-						Index idx = new Index(word, (i + 1), lineCounter, filePath);
+					// Si es una palabra correcta
+					if (Pattern.matches(REGEX_WORD, word)) {
+
+						String finalWord = word.toLowerCase();
+						Index idx = new Index(finalWord, (i + 1), lineCounter, filePath);
 						SharedIndex.addIndex(idx.getWord(), idx);
 
 					}
 
 				}
 			}
-
-			Logger.info("Hilo worker terminó. ID: " + workerId, CLASS_NAME);
 
 		} catch (IOException e) {
 			Logger.problem("Hilo worker tuvo un problema accediendo al archivo. ID: " + workerId + ". Error: "

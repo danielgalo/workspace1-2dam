@@ -13,10 +13,11 @@
 		<property name="hibernate.default_schema">hibernate_tarea02</property>
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
-		<property name="hibernate.hbm2ddl.auto">create-drop</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 		
 		<mapping class="aadd.hibernate.tarea02.entidades.Profesor" />
 		<mapping class="aadd.hibernate.tarea02.entidades.Correo" />
+			<mapping class="aadd.hibernate.tarea02.entidades.Modulo" />
 		
 
         

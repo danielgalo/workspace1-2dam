@@ -1,5 +1,7 @@
 package aadd.hibernate.tarea02.entidades;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,11 +16,13 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "T_CORREO")
-public class Correo {
+public class Correo implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	/** Id del correo */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_CORREO")
 	private int id;
 

@@ -28,7 +28,7 @@ public class Index {
 	}
 
 	public String getMsgTupla() {
-		return "(" + word + "," + line + ", " + wordPosition + ", " + fileName + ")";
+		return "(" + fileName + "," + wordPosition + "," + line + ")";
 	}
 
 	/**

@@ -1,0 +1,3 @@
+Aprende Java con Ejercicios es un manual práctico para aprender a programar en Java desde cero.
+No es necesario tener conocimientos previos de programación. La dificultad del libro es gradual, empieza con conceptos muy básicos y ejercicios muy sencillos y va aumentando en complejidad y dificultad a medida que avanzan los capítulos.
+La práctica hace al maestro. Como de verdad se aprende a programar es programando desde el principio y esa es la filosofía que sigue este libro. En cada capítulo se explican una serie de conceptos de programación y se ilustran con ejemplos. Al final de cada uno de los capítulos se plantean ejercicios de diferente dificultad.

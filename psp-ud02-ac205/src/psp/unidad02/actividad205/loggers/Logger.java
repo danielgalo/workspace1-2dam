@@ -1,5 +1,8 @@
 package psp.unidad02.actividad205.loggers;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,12 +17,30 @@ public class Logger {
 	private static final String PROBLEM_LEVEL = "PROBLEM";
 	/** StringBuilder para guardar los mensajes */
 	private static final StringBuilder BUILDER = new StringBuilder();
+	/** Buffer para escribir */
+	private static BufferedWriter writer;
+
+	/** Archivo de logs */
+	private String logFile;
 
 	/**
 	 * Constructor privado para evitar instancias
 	 */
-	private Logger() {
+	public Logger(String logFile) {
+// TODO hacer que se vaya escribiendo en archivo a medida que se hagan logs, en vez de escribirlo todo cuando acaba el programa
+		this.logFile = logFile;
+		initializeBuffer();
+	}
 
+	/**
+	 * @param logFile
+	 */
+	private static void initializeBuffer() {
+		try {
+			writer = new BufferedWriter(new FileWriter(logFile));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -76,6 +97,7 @@ public class Logger {
 
 		// Salto de línea
 		BUILDER.append("\n");
+
 	}
 
 	/**
