@@ -22,7 +22,7 @@ public class PropertiesProcessor {
 	private String outputFile;
 
 	/**
-	 * Constructor
+	 * Constructor, inicia las propiedades del archivo.
 	 * 
 	 * @param propertiesfilePath path to the properties file
 	 */

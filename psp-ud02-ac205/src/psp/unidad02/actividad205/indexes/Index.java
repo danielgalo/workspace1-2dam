@@ -27,6 +27,11 @@ public class Index {
 		this.fileName = fileName;
 	}
 
+	/**
+	 * Obtiene una cadena con el mensaje que representa a una tupla del índice
+	 * 
+	 * @return el mensaje de la tupla
+	 */
 	public String getMsgTupla() {
 		return "(" + fileName + "," + wordPosition + "," + line + ")";
 	}

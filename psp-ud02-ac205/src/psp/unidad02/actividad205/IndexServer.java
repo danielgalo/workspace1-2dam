@@ -20,7 +20,6 @@ public class IndexServer {
 	public static void main(String[] args) {
 
 		Logger.initializeBuffer();
-
 		Logger.info("Inicio de la aplicación", CLASS_NAME);
 
 		// Procesar y obtener propiedades

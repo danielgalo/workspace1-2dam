@@ -90,7 +90,7 @@ public class Dispatcher extends Thread {
 	 * 
 	 * @param folderPathStr ruta de la carpeta a vigilar
 	 */
-	public static void monitorFolder(String folderPathStr) {
+	private static void monitorFolder(String folderPathStr) {
 		// Verificar que la carpeta exista, crearla si no existe
 		createFolderIfNotExists(folderPathStr);
 		try {

@@ -18,7 +18,9 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-javafx-prueba-tma" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-javafx-carrusel-imgs" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/tma" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/the-movie-app" type="4"/>
+<item elementID="=the-movie-app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/di-prueba-api" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/api-tmdb" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud1-ejemplos" type="4"/>
@@ -51,7 +53,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-jdbc-examen" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hibernate-ejemplo" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-hibernate-tarea01" type="4"/>
-<item elementID="=aadd-hibernate-tarea02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/aadd-hibernate-tarea02" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1696240710560_7" label="Seguridad en Programacion" name="Seguridad en Programacion">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ud02-actividad2.01" type="4"/>
@@ -61,11 +63,11 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-ac204" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-ac203" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud02-examen" type="4"/>
-<item elementID="=hlc-ud03-ac302" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac302" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303-javaproject" type="4"/>
-<item elementID="=hlc-ud03-ac303" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac304" type="4"/>
-<item elementID="=hlc-ud03-examen" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-examen" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>

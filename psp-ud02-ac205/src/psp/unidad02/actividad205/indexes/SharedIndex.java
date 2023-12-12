@@ -16,7 +16,7 @@ public class SharedIndex {
 	private static final String CLASS_NAME = SharedIndex.class.getName();
 
 	/**
-	 * Constuctor privado para evitar instancisas
+	 * Constuctor privado para evitar instancias
 	 */
 	private SharedIndex() {
 
@@ -33,17 +33,16 @@ public class SharedIndex {
 	 * 
 	 * Si la clave ya existe, añade al StringBuilder la tripleta, si no, lo crea.
 	 * 
-	 * @param palabra palabra del índice
-	 * @param idx     Indice que contiene la información de la tripleta
+	 * @param word palabra del índice
+	 * @param idx  Indice que contiene la información de la tripleta
 	 */
-	public static synchronized void addIndex(String palabra, Index idx) {
+	public static synchronized void addIndex(String word, Index idx) {
 
-		if (!palabra.isEmpty()) {
+		if (!word.isEmpty()) {
 
-			Logger.info("Añadiendo índice a la palabra: \"" + palabra + "\"", CLASS_NAME);
+			Logger.info("Añadiendo índice a la palabra: \"" + word + "\"", CLASS_NAME);
 			// Añade un StringBuilder a la clave, si ya existe la clave añade una tripleta
-			indexes.computeIfAbsent(palabra, k -> new StringBuilder()).append("  ").append(idx.getMsgTupla())
-					.append("\n");
+			indexes.computeIfAbsent(word, k -> new StringBuilder()).append("  ").append(idx.getMsgTupla()).append("\n");
 		} else {
 			Logger.problem("Palabra entró vacía", CLASS_NAME);
 		}

@@ -28,7 +28,8 @@ public class WorkerThread extends Thread {
 	/**
 	 * Constructor
 	 * 
-	 * @param filePath
+	 * @param filePath ruta del archivo a procesar
+	 * @param workerId identificador del worker
 	 */
 	public WorkerThread(String filePath, int workerId) {
 		this.filePath = filePath;
@@ -70,7 +71,7 @@ public class WorkerThread extends Thread {
 
 					// Si es una palabra correcta
 					if (Pattern.matches(REGEX_WORD, word)) {
-
+						// Convierte la palabra a minúscula, añade al index compartido
 						String finalWord = word.toLowerCase();
 						Index idx = new Index(finalWord, (i + 1), lineCounter, filePath);
 						SharedIndex.addIndex(idx.getWord(), idx);

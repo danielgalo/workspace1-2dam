@@ -1,0 +1,21 @@
+/** Styles de la pantalla de login */
+
+/* Fondo gradiente */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #CEF3FF, #00789E);
+}
+
+
+
+/* Estilos generales de los botones */
+.button{
+	-fx-font-family: "Inter";
+	-fx-text-fill:#FFFFFF;
+	-fx-font-size: 15px;
+    -fx-border-width: 2px;
+    -fx-border-radius: 25;
+    -fx-background-color:#000AFF;
+    -fx-background-radius: 25;
+    -fx-padding: 3 6 6 6;
+}
+

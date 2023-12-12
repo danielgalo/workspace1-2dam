@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.apache.commons.csv.CSVRecord"/>
-    <fullyQualifiedTypeName name="utils.CSVFileUtils"/>
-    <fullyQualifiedTypeName name="utils.ValidateCSV"/>
     <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
     <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
     <fullyQualifiedTypeName name="hilos.Worker"/>
     <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
     <fullyQualifiedTypeName name="commons.ListaPrimos"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
     <fullyQualifiedTypeName name="application.Main"/>
     <fullyQualifiedTypeName name="java.awt.PageAttributes"/>
@@ -49,15 +45,19 @@
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.properties.PropertiesConstants"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.threads.Dispatcher"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.indexes.Index"/>
     <fullyQualifiedTypeName name="java.util.TreeMap"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.indexes.SharedIndex"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.utils.IndexServerFileWriter"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.loggers.IndexServerLogger"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="hlc.ud03.examen.datos.BloqueDatosEnFichero"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="hlc.ud03.examen.validation.Validation"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="hlc.ud03.examen.validation.ValidationInfo"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

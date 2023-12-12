@@ -31,7 +31,9 @@ public class Logger {
 	}
 
 	/**
-	 * @param logFile
+	 * Inicia el BufferedReader con el archivo de logs. Si este ya existe, lo inicia
+	 * en modo append (no sobreescribe el contenido existente). Si no exisite lo
+	 * crea.
 	 */
 	public static void initializeBuffer() {
 		try {
