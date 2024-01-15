@@ -307,7 +307,7 @@ public class DBManagement {
 	 */
 	private static void addProveedoresToList(Connection con) throws SQLException {
 
-		listaProveedores = new ArrayList<Proveedores>();
+		listaProveedores = new ArrayList<>();
 
 		PreparedStatement sentenciaProveedor = con.prepareStatement(SELECT_PROVEEDORES);
 

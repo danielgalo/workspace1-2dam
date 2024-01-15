@@ -1,4 +1,4 @@
-package aadd.hibernate.tarea02.persistencias.dao;
+package aadd.hibernate.tarea02.persistencia.dao;
 
 import org.hibernate.Session;
 

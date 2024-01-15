@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="utils.ProcesaParametros"/>
-    <fullyQualifiedTypeName name="exceptions.ParametrosException"/>
-    <fullyQualifiedTypeName name="hilos.Worker"/>
-    <fullyQualifiedTypeName name="commons.CalculaPrimosApp"/>
-    <fullyQualifiedTypeName name="commons.ListaPrimos"/>
-    <fullyQualifiedTypeName name="javafx.fxml.FXMLLoader"/>
-    <fullyQualifiedTypeName name="application.Main"/>
-    <fullyQualifiedTypeName name="java.awt.PageAttributes"/>
-    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.utils.Parametros"/>
-    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.models.Pizzero"/>
-    <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.commons.Bandeja"/>
     <fullyQualifiedTypeName name="psp.unidad02.relacion02.actividad02.PizzeriaLuigi"/>
     <fullyQualifiedTypeName name="java.awt.font.NumericShaper"/>
     <fullyQualifiedTypeName name="java.awt.TextField"/>
@@ -18,7 +7,6 @@
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
     <fullyQualifiedTypeName name="java.nio.file.Path"/>
     <fullyQualifiedTypeName name="javafx.scene.control.Label"/>
-    <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
     <fullyQualifiedTypeName name="javafx.scene.input.MouseEvent"/>
     <fullyQualifiedTypeName name="javafx.scene.effect.DropShadow"/>
     <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
@@ -50,8 +38,6 @@
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.indexes.SharedIndex"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.utils.IndexServerFileWriter"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.loggers.IndexServerLogger"/>
-    <fullyQualifiedTypeName name="org.hibernate.Session"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="hlc.ud03.examen.datos.BloqueDatosEnFichero"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
@@ -60,4 +46,18 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="hlc.ud03.examen.validation.ValidationInfo"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="api.RespuestaAPI"/>
+    <fullyQualifiedTypeName name="api.utils.TMDBApiUtils"/>
+    <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.hibernate.Session"/>
+    <fullyQualifiedTypeName name="utils.HQLUtils"/>
+    <fullyQualifiedTypeName name="okhttp3.MediaType"/>
+    <fullyQualifiedTypeName name="java.net.Socket"/>
+    <fullyQualifiedTypeName name="javafx.application.Application"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
+    <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
+    <fullyQualifiedTypeName name="utils.TMDBApi"/>
 </qualifiedTypeNameHistroy>

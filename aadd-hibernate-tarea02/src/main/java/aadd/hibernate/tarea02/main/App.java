@@ -6,8 +6,8 @@ import org.hibernate.SessionFactory;
 import aadd.hibernate.tarea02.entidades.Correo;
 import aadd.hibernate.tarea02.entidades.Modulo;
 import aadd.hibernate.tarea02.entidades.Profesor;
-import aadd.hibernate.tarea02.persistencias.dao.CorreoDaoImpl;
-import aadd.hibernate.tarea02.persistencias.dao.ProfesorDaoImpl;
+import aadd.hibernate.tarea02.persistencia.dao.CorreoDaoImpl;
+import aadd.hibernate.tarea02.persistencia.dao.ProfesorDaoImpl;
 import aadd.hibernate.tarea02.utils.HibernateUtils;
 
 /**
