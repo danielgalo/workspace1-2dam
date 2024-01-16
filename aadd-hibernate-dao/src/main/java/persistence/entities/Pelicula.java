@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -31,14 +32,18 @@ public class Pelicula {
 
 	/** Descripcion de la pelicula */
 	@Column(name = "descripcion")
-	private String descripcion;
+	private String overview;
+
+	@Column(name = "release_date")
+	private String releaseDate;
 
 	/** Año de la pelicula */
 	@Column(name = "year")
 	private int year;
 
 	/** Compañia asociadad */
-	@JoinColumn(name = "id_company")
+	@ManyToOne
+	@JoinColumn(name = "company_id")
 	private Company company;
 
 	/** Imagen del cartel de la pelicula */
@@ -70,7 +75,8 @@ public class Pelicula {
 	private String comentariosUsuario;
 
 	/** Localización de la película */
-	@Column(name = "localizacion")
+	@ManyToOne
+	@JoinColumn(name = "localizacion_id")
 	private Localizacion localizacion;
 
 	/**
@@ -102,17 +108,31 @@ public class Pelicula {
 	}
 
 	/**
-	 * @return the descripcion
+	 * @return the overview
 	 */
-	public String getDescripcion() {
-		return descripcion;
+	public String getOverview() {
+		return overview;
 	}
 
 	/**
-	 * @param descripcion the descripcion to set
+	 * @param overview the overview to set
 	 */
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setOverview(String overview) {
+		this.overview = overview;
+	}
+
+	/**
+	 * @return the releaseDate
+	 */
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+
+	/**
+	 * @param releaseDate the releaseDate to set
+	 */
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
 	}
 
 	/**

@@ -64,6 +64,7 @@ public class TMDBApi {
 				String releaseDate = firstResult.get("release_date").getAsString();
 				String posterPath = firstResult.get("poster_path").getAsString();
 				String urlImagen = "https://image.tmdb.org/t/p/w500" + posterPath;
+				String genre = firstResult.get("genre").getAsString();
 
 				pelicula = new Pelicula(title, overview, releaseDate, urlImagen);
 

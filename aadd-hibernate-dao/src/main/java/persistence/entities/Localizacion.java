@@ -1,8 +1,13 @@
 package persistence.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -12,10 +17,17 @@ import javax.persistence.Table;
 @Table(name = "localizaciones")
 public class Localizacion {
 
-	/** Nombre de la localizacion */
 	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	/** Nombre de la localizacion */
 	@Column(name = "localizacion")
 	private String nombreLocalizacion;
+
+	@OneToMany(mappedBy = "localizacion")
+	private List<Pelicula> peliculas;
 
 	/**
 	 * @return the nombreLocalizacion

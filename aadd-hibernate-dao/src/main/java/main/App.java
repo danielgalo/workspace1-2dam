@@ -19,7 +19,6 @@ public class App {
 
 		// Abro sesi�n
 		Session session = HibernateUtil.getSession();
-
 		PeliculaDaoImpl peliDao = new PeliculaDaoImpl(session);
 
 		try {

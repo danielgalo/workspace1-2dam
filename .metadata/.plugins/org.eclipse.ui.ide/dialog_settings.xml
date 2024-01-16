@@ -6,4 +6,19 @@
 			<item value="org.eclipse.fx.ide"/>
 		</list>
 	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\dev\Tareas\PSP\TEMA 3\Ejemplos\Ejemplo3.03"/>
+			<item value="C:\dev\Tareas\PSP\TEMA 3\Ejemplos\Ejemplo3.02"/>
+			<item value="C:\dev\Tareas\PSP\TEMA 3\Ejemplos\Ejemplo3.01"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 </section>
