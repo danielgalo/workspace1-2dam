@@ -2,13 +2,13 @@ package persistence.entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -18,6 +18,7 @@ import javax.persistence.Table;
 @Table(name = "generos")
 public class Genero {
 
+	/** Id deld genero */
 	@Id
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +29,8 @@ public class Genero {
 	private String nombre;
 
 	/** Peliculas del genero */
-	@ManyToMany
-	@JoinColumn(name = "generos")
-	private List<Pelicula> peliculas;
+	@OneToMany(mappedBy = "id.genero", cascade = CascadeType.ALL)
+	private List<GeneroPelicula> generoPelicula;
 
 	/**
 	 * @return the nombre
@@ -47,17 +47,31 @@ public class Genero {
 	}
 
 	/**
-	 * @return the peliculas
+	 * @return the id
 	 */
-	public List<Pelicula> getPeliculas() {
-		return peliculas;
+	public Long getId() {
+		return id;
 	}
 
 	/**
-	 * @param peliculas the peliculas to set
+	 * @param id the id to set
 	 */
-	public void setPeliculas(List<Pelicula> peliculas) {
-		this.peliculas = peliculas;
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the generoPelicula
+	 */
+	public List<GeneroPelicula> getGeneroPelicula() {
+		return generoPelicula;
+	}
+
+	/**
+	 * @param generoPelicula the generoPelicula to set
+	 */
+	public void setGeneroPelicula(List<GeneroPelicula> generoPelicula) {
+		this.generoPelicula = generoPelicula;
 	}
 
 }

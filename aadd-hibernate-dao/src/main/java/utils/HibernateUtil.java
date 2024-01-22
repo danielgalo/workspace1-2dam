@@ -7,13 +7,26 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 
+/**
+ * Clase de utilodades para Hibernate
+ */
 public class HibernateUtil {
 
+	/** Session Factory */
 	private static SessionFactory sessionFactory;
+
+	/** Session */
 	private static Session session;
 
 	/**
-	 * M�todo que devuelve el objeto Session.
+	 * Constructor sobrecargado
+	 */
+	private HibernateUtil() {
+
+	}
+
+	/**
+	 * Metodo que devuelve el objeto Session.
 	 * 
 	 * @return
 	 *         <ul>
@@ -38,10 +51,14 @@ public class HibernateUtil {
 		if (session != null) {
 			session.close();
 		}
-		closeSessionFactory();
+		closeSessionFactory(sessionFactory);
 	}
 
-	private static SessionFactory getSessionFactory() {
+	/**
+	 * 
+	 * @return the sessionFactory
+	 */
+	public static SessionFactory getSessionFactory() {
 		if (sessionFactory == null) {
 			StandardServiceRegistry sr = new StandardServiceRegistryBuilder().configure().build();
 			sessionFactory = new MetadataSources(sr).buildMetadata().buildSessionFactory();
@@ -49,7 +66,12 @@ public class HibernateUtil {
 		return sessionFactory;
 	}
 
-	private static void closeSessionFactory() {
+	/**
+	 * Cierra la factoria de sesiones
+	 * 
+	 * @param sessionFactory sesiones a cerrar
+	 */
+	private static void closeSessionFactory(SessionFactory sessionFactory) {
 		if ((sessionFactory != null) && (sessionFactory.isClosed() == false)) {
 			sessionFactory.close();
 		}

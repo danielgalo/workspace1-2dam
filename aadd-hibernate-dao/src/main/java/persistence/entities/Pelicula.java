@@ -3,6 +3,7 @@ package persistence.entities;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -34,6 +36,7 @@ public class Pelicula {
 	@Column(name = "descripcion")
 	private String overview;
 
+	/** Fecha de salida */
 	@Column(name = "release_date")
 	private String releaseDate;
 
@@ -51,8 +54,22 @@ public class Pelicula {
 	private String cartel;
 
 	/** Generos de la pelicula */
-	@ManyToMany(mappedBy = "peliculas")
-	private List<Genero> generos;
+	@OneToMany(mappedBy = "id.pelicula", cascade = CascadeType.ALL)
+	private List<GeneroPelicula> generoPelicula;
+
+	/**
+	 * @return the generoPelicula
+	 */
+	public List<GeneroPelicula> getGeneroPelicula() {
+		return generoPelicula;
+	}
+
+	/**
+	 * @param generoPelicula the generoPelicula to set
+	 */
+	public void setGeneroPelicula(List<GeneroPelicula> generoPelicula) {
+		this.generoPelicula = generoPelicula;
+	}
 
 	/** Generos de la pelicula */
 	@ManyToMany(mappedBy = "peliculas")
@@ -175,20 +192,6 @@ public class Pelicula {
 	 */
 	public void setCartel(String cartel) {
 		this.cartel = cartel;
-	}
-
-	/**
-	 * @return the generos
-	 */
-	public List<Genero> getGeneros() {
-		return generos;
-	}
-
-	/**
-	 * @param generos the generos to set
-	 */
-	public void setGeneros(List<Genero> generos) {
-		this.generos = generos;
 	}
 
 	/**

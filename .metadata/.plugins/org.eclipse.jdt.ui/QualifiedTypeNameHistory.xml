@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="aadd.hibernate.tarea02.utils.HibernateUtils"/>
-    <fullyQualifiedTypeName name="aadd.hibernate.tarea02.entidades.Profesor"/>
-    <fullyQualifiedTypeName name="aadd.hibernate.tarea02.entidades.Correo"/>
-    <fullyQualifiedTypeName name="aadd.hibernate.tarea02.persistencias.dao.ProfesorDaoImpl"/>
-    <fullyQualifiedTypeName name="aadd.hibernate.tarea02.persistencias.dao.CorreoDaoImpl"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
-    <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
-    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
-    <fullyQualifiedTypeName name="psp.ud02.actividad203.utils.ImageCompressor"/>
-    <fullyQualifiedTypeName name="java.util.Properties"/>
-    <fullyQualifiedTypeName name="psp.unidad02.actividad205.properties.PropertiesProcessor"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.properties.PropertiesConstants"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.threads.Dispatcher"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
@@ -19,11 +8,9 @@
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.indexes.SharedIndex"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.utils.IndexServerFileWriter"/>
     <fullyQualifiedTypeName name="psp.unidad02.actividad205.loggers.IndexServerLogger"/>
-    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="hlc.ud03.examen.datos.BloqueDatosEnFichero"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="hlc.ud03.examen.validation.Validation"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="hlc.ud03.examen.validation.ValidationInfo"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -50,14 +37,27 @@
     <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="persistence.dao.implementations.PeliculaDaoImpl"/>
-    <fullyQualifiedTypeName name="persistence.entities.Pelicula"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="javafx.scene.control.TextArea"/>
     <fullyQualifiedTypeName name="utils.NavegacionPantallas"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="okhttp3.OkHttpClient"/>
     <fullyQualifiedTypeName name="okhttp3.Request"/>
     <fullyQualifiedTypeName name="okhttp3.Response"/>
     <fullyQualifiedTypeName name="models.GeneroDTO"/>
+    <fullyQualifiedTypeName name="javax.persistence.Embeddable"/>
+    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
+    <fullyQualifiedTypeName name="persistence.entities.Company"/>
+    <fullyQualifiedTypeName name="persistence.dao.CompanyDaoImpl"/>
+    <fullyQualifiedTypeName name="persistence.entities.Genero"/>
+    <fullyQualifiedTypeName name="persistence.entities.Pelicula"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="persistence.entities.GeneroPelicula"/>
+    <fullyQualifiedTypeName name="persistence.dao.GeneroDaoImpl"/>
+    <fullyQualifiedTypeName name="javax.transaction.Transaction"/>
+    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="persistence.dao.PeliculaDaoImpl"/>
+    <fullyQualifiedTypeName name="utils.HibernateUtil"/>
 </qualifiedTypeNameHistroy>
