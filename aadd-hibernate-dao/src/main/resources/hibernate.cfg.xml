@@ -23,6 +23,7 @@
 		<mapping class="persistence.entities.Pelicula" />
 		<mapping class="persistence.entities.Usuario" />
 		<mapping class="persistence.entities.GeneroPelicula" />
+				<mapping class="persistence.entities.User" />
 	
 		
 

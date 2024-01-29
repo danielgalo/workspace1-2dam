@@ -8252,3 +8252,1016 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IResou
 	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:100)
 	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:421)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+!SESSION 2024-01-23 08:21:12.233 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-01-23 08:21:57.056
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-01-23 08:21:57.274
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-01-23 08:22:00.424
+!MESSAGE Logback config file: C:\dev\Software\Eclipse\Workspaces\Workspace 1\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-01-23 08:22:03.982
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-23 08:22:03.982
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-01-23 08:22:09.310
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Alumnado'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 08:22:11.224
+!MESSAGE Can't open directory channel. Log directory fsync won't be performed.
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.609
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.610
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.610
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.611
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.616
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 08:48:47.618
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.debug.ui 4 0 2024-01-23 09:07:24.295
+!MESSAGE Launch shortcut 'org.jboss.ide.eclipse.as.ui.eapxp.run.command.shortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.jboss.ide.eclipse.as.ui.eapxp to type class org.eclipse.jdt.internal.core.JavaProject
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:132)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:104)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.WithExpression.evaluate(WithExpression.java:84)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:59)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:280)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.isApplicable(ContextualLaunchAction.java:302)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction.fillMenu(ContextualLaunchAction.java:220)
+	at org.eclipse.debug.ui.actions.ContextualLaunchAction$1.menuShown(ContextualLaunchAction.java:141)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1191)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1171)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$7(ActionContributionItem.java:1134)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1071)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5141)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4773)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2306)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5040)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4113)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3654)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:645)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:552)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2024-01-23 09:07:24.295
+!MESSAGE No property tester contributes a property org.jboss.ide.eclipse.as.ui.eapxp to type class org.eclipse.jdt.internal.core.JavaProject
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.541
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.542
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.542
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.543
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.547
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:09:43.549
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:09:49.146
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:09:49.156
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:24.685
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:24.690
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:27.356
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:27.360
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:43.031
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:43.035
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:47.833
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:10:47.837
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:11:34.630
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:11:34.634
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:13:50.695
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:13:50.706
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:14:31.306
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:14:31.310
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:17:00.003
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:17:00.009
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:17:03.292
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:17:03.295
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 2 2 2024-01-23 09:23:57.218
+!MESSAGE Invalid preference category path: org.jboss.tools.vpe.editor (bundle: org.jboss.tools.jst.web.ui, page: org.jboss.tools.jsf.ui.editor.pref.template)
+
+!ENTRY org.eclipse.ui 2 2 2024-01-23 09:23:57.219
+!MESSAGE Invalid preference category path: org.jboss.tools.vpe.editor (bundle: org.jboss.tools.jst.web.ui, page: org.jboss.tools.jsf.ui.editor.pref.contentassist)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:25:52.708
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-23 09:25:52.712
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.431
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.431
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.432
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.432
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.437
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 09:45:26.439
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.259
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.262
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.263
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.270
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.278
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.286
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.294
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.498
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.503
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:37.511
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.087
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.094
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.102
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.110
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.119
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.127
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.135
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.142
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.151
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.159
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.167
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.175
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.182
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.190
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.201
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.207
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.215
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.223
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.231
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:52:58.238
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:07.431
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:07.439
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.623
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.630
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.639
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.647
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.655
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.662
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.670
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:53:26.678
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:07.058
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:07.139
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:07.176
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:09.270
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:09.277
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:09.279
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:09.287
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:25.978
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:25.983
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:25.991
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:25.999
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.007
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.015
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.023
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.031
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.039
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.047
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.055
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.062
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.071
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.078
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.086
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.095
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.102
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.110
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.118
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.126
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.175
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.183
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.191
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.362
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.369
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.375
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.383
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.390
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.399
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.407
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.422
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.430
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.446
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.454
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:26.463
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.735
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.751
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.759
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.767
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.783
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.791
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.799
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.807
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.815
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.823
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.838
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.846
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.855
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.863
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.871
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.879
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.887
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.895
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.903
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.911
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.919
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.927
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.935
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.942
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.950
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.958
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.967
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.975
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.983
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.991
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:27.999
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 09:54:28.007
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:07:46.981
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.018
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.021
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.029
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.037
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.045
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.053
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.186
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.188
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.190
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.201
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.208
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.214
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.222
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.230
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.238
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.246
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.253
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.261
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.270
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.277
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.285
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:36.294
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.112
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.119
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.125
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.133
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.142
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.149
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.175
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.177
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.187
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.189
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.198
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.205
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:08:55.213
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:18.549
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:18.574
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:18.581
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:18.598
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.459
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.463
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.469
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.477
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.485
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.534
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.542
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.550
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.572
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.574
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:09:46.581
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:10:44.105
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:10:44.116
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:10:44.118
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.435
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.437
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.453
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.461
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.469
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.485
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.493
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.519
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.525
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:37.557
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:38.528
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:38.536
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:12:38.544
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:25.149
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:25.157
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.848
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.853
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.861
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.869
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.877
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.885
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.893
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.901
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.909
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.917
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.925
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.933
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.941
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.949
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.957
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.965
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.972
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.980
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.989
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:41.997
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.007
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.013
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.021
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.111
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.128
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.141
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.148
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:14:42.157
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:15:54.607
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:15:54.615
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:15:54.644
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:15:54.652
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wst.sse.core 2 2 2024-01-23 10:15:54.660
+!MESSAGE Detected content type did not match one for which a model handler is registered: org.eclipse.fx.ide.css.ui.fxcontenttype vs. org.eclipse.wst.css.core.csssource
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.375
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.376
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.376
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.377
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.381
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-01-23 10:53:13.383
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+!SESSION 2024-01-29 08:21:25.026 -----------------------------------------------
+eclipse.buildId=4.29.0.20230907-1200
+java.version=17.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-01-29 08:22:35.886
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-01-29 08:22:36.141
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-01-29 08:22:39.782
+!MESSAGE Logback config file: C:\dev\Software\Eclipse\Workspaces\Workspace 1\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.2.0.20230625-0847.xml
+
+!ENTRY org.eclipse.jface 2 0 2024-01-29 08:22:42.683
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-29 08:22:42.683
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-01-29 08:22:48.867
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Alumnado'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-01-29 08:22:50.681
+!MESSAGE Can't open directory channel. Log directory fsync won't be performed.
+
+!ENTRY org.eclipse.jdt.core 4 2 2024-01-29 10:05:29.124
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.core".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IResource.exists()" because the return value of "org.eclipse.jdt.core.ICompilationUnit.getCorrespondingResource()" is null
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.compilationUnitResourceExists(AbstractJpaProject.java:1438)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaCompilationUnitDeltaIsRelevant(AbstractJpaProject.java:1427)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaCompilationUnitDeltaIsRelevant(InternalJpaProjectManager.java:1008)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaCompilationUnitDelta(InternalJpaProjectManager.java:1000)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaDelta(InternalJpaProjectManager.java:935)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaElementChangedEvent(InternalJpaProjectManager.java:918)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged(InternalJpaProjectManager.java:861)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaElementChangeListener.elementChanged(InternalJpaProjectManager.java:1387)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1757)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1745)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1596)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1555)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:781)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:189)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:125)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:144)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:100)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:421)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.eclipse.jdt.core 4 4 2024-01-29 10:05:29.126
+!MESSAGE Exception occurred in listener of Java element change notification
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IResource.exists()" because the return value of "org.eclipse.jdt.core.ICompilationUnit.getCorrespondingResource()" is null
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.compilationUnitResourceExists(AbstractJpaProject.java:1438)
+	at org.eclipse.jpt.jpa.core.internal.AbstractJpaProject.javaCompilationUnitDeltaIsRelevant(AbstractJpaProject.java:1427)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaCompilationUnitDeltaIsRelevant(InternalJpaProjectManager.java:1008)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaCompilationUnitDelta(InternalJpaProjectManager.java:1000)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaDelta(InternalJpaProjectManager.java:935)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.handleJavaElementChangedEvent(InternalJpaProjectManager.java:918)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager.javaElementChanged(InternalJpaProjectManager.java:861)
+	at org.eclipse.jpt.jpa.core.internal.InternalJpaProjectManager$JavaElementChangeListener.elementChanged(InternalJpaProjectManager.java:1387)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1757)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1745)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fireReconcileDelta(DeltaProcessor.java:1596)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1555)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:781)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:806)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1325)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:94)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:91)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.initialReconcile(JavaReconcilingStrategy.java:189)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.initialReconcile(CompositeReconcilingStrategy.java:125)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:144)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:100)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:421)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
