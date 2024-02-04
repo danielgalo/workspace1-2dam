@@ -21,6 +21,7 @@
 <item elementID="=di-prueba-api" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=api-tmdb" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=di-the-movie-app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ddii-the-movie-app" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695641627410_5" label="Programacion de Servicios y Procesos" name="Programacion de Servicios y Procesos">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/psp-ud1-ejemplos" type="4"/>
@@ -74,8 +75,9 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac302" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303-javaproject" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac303" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-ac304" type="4"/>
+<item elementID="=hlc-ud03-ac304" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/hlc-ud03-examen" type="4"/>
+<item elementID="=hlc-ud04-ac401" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695021286649_2" label="Window Working Set" name="Aggregate for window 1695021286649"/>
 <mruList name="Seguridad en Programacion"/>

@@ -4,10 +4,9 @@
 		<item value="Programacion de Servicios y Procesos"/>
 	</list>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.jdt.ui.newappclass"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.fxml.wizard1"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.fx.ide"/>
-			<item value="org.eclipse.fx.ide/org.eclipse.fx.ide.clazz"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">

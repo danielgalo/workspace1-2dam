@@ -3,6 +3,25 @@
     <libraryInfo home="C:\dev\Software\Eclipse\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre" version="17.0.8.1"/>
     <libraryInfo home="C:\dev\Entornos\JDK\jdk-19.0.2" version="19.0.2"/>
     <libraryInfo home="C:\dev\Software\Eclipse\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047" version="17.0.8.1"/>
+    <libraryInfo home="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\bin" version="1.8.0_392-392">
+        <bootpath>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\ext"/>
+            <entry path="C:\Windows\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
     <libraryInfo home="C:\dev\Entornos\JDK\jdk1.8.0_191" version="1.8.0_191">
         <bootpath>
             <entry path="C:\dev\Entornos\JDK\jdk1.8.0_191\jre\lib\resources.jar"/>
@@ -23,4 +42,23 @@
         </endorsedDirs>
     </libraryInfo>
     <libraryInfo home="C:\dev\Entornos\JDK\jdk-17.0.8.1+1" version="17.0.8.1"/>
+    <libraryInfo home="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64" version="1.8.0_392-392">
+        <bootpath>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\ext"/>
+            <entry path="C:\Windows\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
 </libraryInfos>
