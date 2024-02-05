@@ -85,9 +85,9 @@ public class PropertiesProcesser {
 		// Obtain the output folder or the input folder
 		if (output) {
 
-		
-
 		} else {
+		}
+	}
 
 	/**
 	 * 
@@ -142,28 +142,23 @@ public class PropertiesProcesser {
 	 * @return the path to the folder
 	 */
 	private String getFolder(String property, String defaultValue) {
->>>>>>> 201fef0c670f7d87f7c32796e4b38137ae982d68
 
-			propertyFolder = PropertiesConstants.PROPERTY_INPUT_FOLDER;
-			defaultValue = PropertiesConstants.DEFAULT_INPUT_FOLDER;
+		propertyFolder = PropertiesConstants.PROPERTY_INPUT_FOLDER;
+		defaultValue = PropertiesConstants.DEFAULT_INPUT_FOLDER;
+		folder = properties.getProperty(propertyFolder);
 
+		if (folder != null)
+
+		{
+			// If folder is not null (property name was correct)
+			return folder;
+		} else {
+			// If folder is null (property wasn't found)
+			return defaultValue;
 		}
+	}
 
 	// Get the value
-	folder=properties.getProperty(propertyFolder);
-
-	if(folder!=null)
-
-	{
-		// If folder is not null (property name was correct)
-		return folder;
-	}else
-	{
-		// If folder is null (property wasn't found)
-		return defaultValue;
-	}
-
-	}
 
 	/**
 	 * Obtains either the width or the heigth specified in the properties file. If
@@ -274,12 +269,7 @@ public class PropertiesProcesser {
 		this.inputFolder = inputFolder;
 	}
 
-	/**
-	 * @return the maxWidth
-	 */
-	public Integer getMaxWidth() {
-		return maxWidth;
-	}
+
 
 	/**
 	 * @param maxWidth the maxWidth to set
@@ -288,12 +278,7 @@ public class PropertiesProcesser {
 		this.maxWidth = maxWidth;
 	}
 
-	/**
-	 * @return the maxHeigth
-	 */
-	public Integer getMaxHeigth() {
-		return maxHeigth;
-	}
+
 
 	/**
 	 * @param maxHeigth the maxHeigth to set
