@@ -6,6 +6,7 @@ import java.net.URL;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -18,6 +19,9 @@ public class PantallaPrincipalController {
 
 	@FXML
 	private Button btnBuscar;
+
+	@FXML
+	private Label lblTitulo;
 
 	@FXML
 	private ImageView imgPelicula;
@@ -66,7 +70,7 @@ public class PantallaPrincipalController {
 	@FXML
 	void btnSiguientePressed(MouseEvent event) {
 
-		if (posicionPelicula >= TMDBApi.getResultsLength()) {
+		if (posicionPelicula >= TMDBApi.getResultsLength() || TMDBApi.getResultsLength() == 0) {
 			txtAreaDescripcionPelicula.setText("No hay pelicula siguiente.");
 		} else {
 			posicionPelicula++;
@@ -98,8 +102,9 @@ public class PantallaPrincipalController {
 	@FXML
 	void btnBuscarPressed(MouseEvent event) {
 
-		posicionPelicula = 0;
-		setPelicula();
+		lblTitulo.setText(txtPelicula.getText());
+		// posicionPelicula = 0;
+		// setPelicula();
 
 	}
 

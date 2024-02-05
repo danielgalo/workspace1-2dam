@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="workingset_selection_history">
-		<item value="Programacion de Servicios y Procesos"/>
+		<item value="Seguridad en Programacion"/>
 	</list>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.fx.ide.fxml.wizard1"/>
@@ -17,7 +17,6 @@
 		</list>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
-			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
 	<section name="EditorSelectionDialog">

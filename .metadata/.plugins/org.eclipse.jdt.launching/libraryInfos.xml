@@ -42,6 +42,7 @@
         </endorsedDirs>
     </libraryInfo>
     <libraryInfo home="C:\dev\Entornos\JDK\jdk-17.0.8.1+1" version="17.0.8.1"/>
+    <libraryInfo home="C:\dev\Entornos\JDK\jdk-21.0.2" version="21.0.2"/>
     <libraryInfo home="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64" version="1.8.0_392-392">
         <bootpath>
             <entry path="C:\dev\Entornos\JDK\openlogic-openjdk-8u392-b08-windows-64\jre\lib\resources.jar"/>

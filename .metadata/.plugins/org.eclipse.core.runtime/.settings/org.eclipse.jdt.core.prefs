@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
 org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/dev/Software/Eclipse/eclipse/
-org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/dev/Entornos/JDK/jdk-19.0.2/lib/jrt-fs.jar
-org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/dev/Entornos/JDK/jdk-19.0.2/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/dev/Entornos/JDK/jdk-21.0.2/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/dev/Entornos/JDK/jdk-21.0.2/lib/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/dev/Software/Eclipse/eclipse/plugins/org.junit_4.13.2.v20230809-1000.jar
 org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Alumnado/.m2/repository

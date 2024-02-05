@@ -7,7 +7,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PantallaPrincipalController">
    <children>
       <TextField fx:id="txtPelicula" layoutX="371.0" layoutY="355.0" />
@@ -15,7 +14,7 @@
       <ImageView fx:id="imgPelicula" fitHeight="277.0" fitWidth="200.0" layoutX="386.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
       <TextArea fx:id="txtAreaDescripcionPelicula" layoutX="14.0" layoutY="44.0" prefHeight="178.0" prefWidth="200.0" />
       <Label layoutX="14.0" layoutY="27.0" text="Descripción" />
-      <Label layoutX="260.0" layoutY="359.0" text="Introduce el título:" />
+      <Label fx:id="lblTitulo" layoutX="260.0" layoutY="359.0" text="Introduce el título:" />
       <Label layoutX="14.0" layoutY="232.0" text="Fecha de estreno:" />
       <TextArea fx:id="txtAreaFechaEstreno" layoutX="14.0" layoutY="249.0" prefHeight="31.0" prefWidth="200.0" />
       <Button fx:id="btnSiguiente" layoutX="86.0" layoutY="355.0" mnemonicParsing="false" onMousePressed="#btnSiguientePressed" text="Siguiente" />
