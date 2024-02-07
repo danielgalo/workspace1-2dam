@@ -20,7 +20,7 @@ public class SistemaSeguridadTOTP implements SistemaSeguridad {
 	private Autenticador autenticador;
 
 	/** Control de acceso, verifica qué puede hacer el usuario */
-	private ControlAcceso ControlAcceso;
+	private ControlAcceso controlAcceso;
 
 	/**
 	 * @param autenticador
@@ -28,7 +28,7 @@ public class SistemaSeguridadTOTP implements SistemaSeguridad {
 	 */
 	public SistemaSeguridadTOTP(Autenticador autenticador, ControlAcceso controlAcceso) {
 		this.autenticador = autenticador;
-		ControlAcceso = controlAcceso;
+		this.controlAcceso = controlAcceso;
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class SistemaSeguridadTOTP implements SistemaSeguridad {
 
 	@Override
 	public boolean estaPermitido(Usuario arg0, Operacion arg1, Recurso arg2) {
-		return false;
+		return controlAcceso.estaPermitido(arg0, arg1, arg2);
 	}
 
 }

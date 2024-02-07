@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import hlc.ud04.actividad401.auth.otp.GeneradorHOTP;
+import hlc.ud04.actividad401.persistencia.UsuarioManagementSQLite;
 import hlc.ud04.appsec.seguridad.autenticacion.Autenticador;
 import hlc.ud04.appsec.seguridad.autenticacion.Desafio;
 import hlc.ud04.appsec.seguridad.autenticacion.RespuestaDesafio;
@@ -41,6 +42,8 @@ public class AutenticadorTOTP implements Autenticador {
 		if (otpPassword.equals(respuestaTOTP.getPin())) {
 
 			// El pin es correcto, busca al usuario en la base de datos para devolverlo
+			UsuarioManagementSQLite management = new UsuarioManagementSQLite(DB_PATH);
+			usuario = management.getUsuarioByNombreUsuario(desafioTOTP.getUsuario());
 		}
 
 		return usuario;
