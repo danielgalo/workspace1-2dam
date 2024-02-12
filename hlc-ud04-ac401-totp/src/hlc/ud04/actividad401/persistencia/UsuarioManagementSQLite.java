@@ -49,6 +49,26 @@ public class UsuarioManagementSQLite {
 		return usuarioEncontrado;
 	}
 
+	public String getPermisosUsuario(Usuario usuario) {
+		String permiso = "";
+		try (Connection con = DriverManager.getConnection(dbPath);
+				PreparedStatement pStmnt = con.prepareStatement("SELECT * FROM control_acceso WHERE id_usuario = ?");) {
+
+			pStmnt.setLong(1, usuario.getUid());
+
+			ResultSet result = pStmnt.executeQuery();
+
+			if (result.next()) {
+				permiso = result.getString("permiso");
+
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return permiso;
+	}
+
 	/**
 	 * @return the dbPath
 	 */

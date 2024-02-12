@@ -49,15 +49,14 @@ public class SistemaSeguridadTOTP implements SistemaSeguridad {
 		System.out.print("Introduce el PIN: ");
 		String pin = sc.nextLine();
 
-		sc.close();
 		// Finalizar la autenticación. Comprueba que el pin introducido en la respuesta
 		// sea válido
 		return autenticador.finalizaAutenticacion(desafio, new RespuestaDesafioTOTP(pin));
 	}
 
 	@Override
-	public boolean estaPermitido(Usuario arg0, Operacion arg1, Recurso arg2) {
-		return controlAcceso.estaPermitido(arg0, arg1, arg2);
+	public boolean estaPermitido(Usuario usuario, Operacion operacion, Recurso recurso) {
+		return controlAcceso.estaPermitido(usuario, operacion, recurso);
 	}
 
 }

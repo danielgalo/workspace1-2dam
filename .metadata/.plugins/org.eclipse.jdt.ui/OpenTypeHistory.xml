@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=psp-ud03-ac302/C:\/dev\/Entornos\/JDK\/jdk-17.0.8.1+1\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1692807806000"/>
-    <typeInfo handle="=aadd-hibernate-dao/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;persistence.dao{UserDaoI.java[UserDaoI" modifiers="513" timestamp="1705995288281"/>
-    <typeInfo handle="=aadd-hibernate-dao/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;persistence.dao{CommonDaoImpl.java[CommonDaoImpl" modifiers="1025" timestamp="1705917352020"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
